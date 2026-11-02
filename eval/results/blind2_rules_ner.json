@@ -1,0 +1,2500 @@
+{
+  "notes": 150,
+  "gold_entities": 1499,
+  "protection_recall": 0.8199,
+  "precision": 0.8942,
+  "predicted_spans": 1474,
+  "false_alarms": 156,
+  "leak_free_notes": 0.2267,
+  "seconds_total": 293.35,
+  "ms_per_note": 1955.68,
+  "per_type": {
+    "AADHAAR": {
+      "gold": 45,
+      "protected": 38,
+      "partial": 0,
+      "recall": 0.8444
+    },
+    "ABHA_ADDRESS": {
+      "gold": 13,
+      "protected": 13,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_NUMBER": {
+      "gold": 18,
+      "protected": 18,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ADDRESS": {
+      "gold": 86,
+      "protected": 84,
+      "partial": 0,
+      "recall": 0.9767
+    },
+    "DOB": {
+      "gold": 53,
+      "protected": 42,
+      "partial": 2,
+      "recall": 0.7925
+    },
+    "EMAIL": {
+      "gold": 33,
+      "protected": 33,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "MRN": {
+      "gold": 200,
+      "protected": 111,
+      "partial": 20,
+      "recall": 0.555
+    },
+    "PAN": {
+      "gold": 12,
+      "protected": 12,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PERSON": {
+      "gold": 844,
+      "protected": 702,
+      "partial": 37,
+      "recall": 0.8318
+    },
+    "PHONE": {
+      "gold": 142,
+      "protected": 127,
+      "partial": 14,
+      "recall": 0.8944
+    },
+    "PINCODE": {
+      "gold": 38,
+      "protected": 34,
+      "partial": 0,
+      "recall": 0.8947
+    },
+    "VOTER_ID": {
+      "gold": 15,
+      "protected": 15,
+      "partial": 0,
+      "recall": 1.0
+    }
+  },
+  "false_alarms_by_type": {
+    "ADDRESS": 20,
+    "DOB": 12,
+    "ID_NUMBER": 45,
+    "PERSON": 79
+  },
+  "leaks": [
+    {
+      "id": "b2-0001",
+      "type": "MRN",
+      "text": "C-1425-63652",
+      "covered": "9/10"
+    },
+    {
+      "id": "b2-0001",
+      "type": "PHONE",
+      "text": "(+91) 92018 47593",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0002",
+      "type": "MRN",
+      "text": "104-TY-82012595",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0002",
+      "type": "PERSON",
+      "text": "Naseem Siddiqui",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0003",
+      "type": "PERSON",
+      "text": "Md. Shakeel Khan",
+      "covered": "11/13"
+    },
+    {
+      "id": "b2-0003",
+      "type": "PERSON",
+      "text": "Mohd. Imran Khan",
+      "covered": "9/13"
+    },
+    {
+      "id": "b2-0004",
+      "type": "MRN",
+      "text": "104-ET-90270854",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0004",
+      "type": "AADHAAR",
+      "text": "XXXXXXXX1647",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0004",
+      "type": "PERSON",
+      "text": "Ratan Jamatia",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0006",
+      "type": "PERSON",
+      "text": "मो. इरफ़ान अंसारी",
+      "covered": "12/14"
+    },
+    {
+      "id": "b2-0007",
+      "type": "PERSON",
+      "text": "Laishram Memcha Devi",
+      "covered": "8/18"
+    },
+    {
+      "id": "b2-0007",
+      "type": "PERSON",
+      "text": "Rina Debbarma",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0008",
+      "type": "DOB",
+      "text": "19th May 1981",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0010",
+      "type": "DOB",
+      "text": "1994-05-26",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0011",
+      "type": "MRN",
+      "text": "IPD-184292",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0011",
+      "type": "PHONE",
+      "text": "(+91) 63572 01434",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0013",
+      "type": "MRN",
+      "text": "MLC/341/2026",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0013",
+      "type": "PERSON",
+      "text": "भूपेंद्र रावत",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0015",
+      "type": "MRN",
+      "text": "104-ER-11158400",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0016",
+      "type": "MRN",
+      "text": "BC/26/92361",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0017",
+      "type": "PERSON",
+      "text": "SAVIO",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0019",
+      "type": "MRN",
+      "text": "104-GA-21435401",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0019",
+      "type": "PERSON",
+      "text": "shaheen alvi",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0020",
+      "type": "MRN",
+      "text": "DU-7301",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0020",
+      "type": "PERSON",
+      "text": "Jahangir",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0020",
+      "type": "MRN",
+      "text": "PMNDP-28058",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0020",
+      "type": "PERSON",
+      "text": "Ainul",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0020",
+      "type": "MRN",
+      "text": "NDBG68436",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0021",
+      "type": "MRN",
+      "text": "IP5643647",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0021",
+      "type": "DOB",
+      "text": "13/02/1975",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0021",
+      "type": "PHONE",
+      "text": "+916048172891",
+      "covered": "12/13"
+    },
+    {
+      "id": "b2-0022",
+      "type": "PERSON",
+      "text": "नाज़िया सिद्दीकी",
+      "covered": "0/15"
+    },
+    {
+      "id": "b2-0023",
+      "type": "MRN",
+      "text": "KW2152529",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0023",
+      "type": "DOB",
+      "text": "2005-11-19",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0024",
+      "type": "PERSON",
+      "text": "एतवा मिंज",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0025",
+      "type": "MRN",
+      "text": "104-HY-43393806",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0025",
+      "type": "PERSON",
+      "text": "रिंकू महतो",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0027",
+      "type": "PERSON",
+      "text": "Kusum Srivastava",
+      "covered": "10/15"
+    },
+    {
+      "id": "b2-0029",
+      "type": "ADDRESS",
+      "text": "Puthenveettil (H), Changanassery, Kottayam Dist.",
+      "covered": "0/39"
+    },
+    {
+      "id": "b2-0030",
+      "type": "PERSON",
+      "text": "Manoj Ram",
+      "covered": "3/8"
+    },
+    {
+      "id": "b2-0030",
+      "type": "PERSON",
+      "text": "Zothansanga",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0030",
+      "type": "PERSON",
+      "text": "Abdul Rashid Alvi",
+      "covered": "0/15"
+    },
+    {
+      "id": "b2-0031",
+      "type": "PERSON",
+      "text": "सोमारी नेताम",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0032",
+      "type": "PERSON",
+      "text": "Phoolmati",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0032",
+      "type": "PERSON",
+      "text": "Phoolmati",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0032",
+      "type": "PERSON",
+      "text": "Phoolmati",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0032",
+      "type": "PERSON",
+      "text": "Phoolmati",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0033",
+      "type": "MRN",
+      "text": "HL262739593",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0033",
+      "type": "PERSON",
+      "text": "नवीन मलिक",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0034",
+      "type": "PHONE",
+      "text": "(+९१) ९४०७९ ५९९१७",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0035",
+      "type": "MRN",
+      "text": "95347/26",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0035",
+      "type": "PERSON",
+      "text": "Zothanpuii Chhangte",
+      "covered": "0/18"
+    },
+    {
+      "id": "b2-0035",
+      "type": "PERSON",
+      "text": "Sreelekha",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0036",
+      "type": "PERSON",
+      "text": "सरोज निषाद",
+      "covered": "5/9"
+    },
+    {
+      "id": "b2-0036",
+      "type": "PERSON",
+      "text": "बुधराम नेताम",
+      "covered": "5/11"
+    },
+    {
+      "id": "b2-0036",
+      "type": "PERSON",
+      "text": "सुशीला हेम्ब्रम",
+      "covered": "8/14"
+    },
+    {
+      "id": "b2-0037",
+      "type": "PERSON",
+      "text": "Shahid Alvi",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0039",
+      "type": "MRN",
+      "text": "D8721069",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0040",
+      "type": "PERSON",
+      "text": "Bhavna Desai",
+      "covered": "5/11"
+    },
+    {
+      "id": "b2-0040",
+      "type": "PERSON",
+      "text": "Kulkarni",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0041",
+      "type": "PERSON",
+      "text": "Reshma",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0042",
+      "type": "PERSON",
+      "text": "Sukanta",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0043",
+      "type": "PHONE",
+      "text": "(+91) 95761 46699",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0043",
+      "type": "PERSON",
+      "text": "Ketan",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0044",
+      "type": "MRN",
+      "text": "C-7512-58055",
+      "covered": "9/10"
+    },
+    {
+      "id": "b2-0046",
+      "type": "MRN",
+      "text": "DU-3365",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0046",
+      "type": "PERSON",
+      "text": "Sreejith",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0046",
+      "type": "MRN",
+      "text": "HD/175",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0046",
+      "type": "PERSON",
+      "text": "Anusha",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0046",
+      "type": "MRN",
+      "text": "HD/178",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0046",
+      "type": "PERSON",
+      "text": "Sreejith",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0046",
+      "type": "MRN",
+      "text": "PMNDP-36475",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0046",
+      "type": "PERSON",
+      "text": "Anusha",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0046",
+      "type": "MRN",
+      "text": "NEP/HD/1012",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0046",
+      "type": "PERSON",
+      "text": "Sreejith",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0046",
+      "type": "MRN",
+      "text": "TPT5AG4WH",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "मांगी लाल चौधरी",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0048",
+      "type": "PERSON",
+      "text": "Maria D'Costa",
+      "covered": "5/12"
+    },
+    {
+      "id": "b2-0049",
+      "type": "ADDRESS",
+      "text": "Lilong Locality, Thoubal",
+      "covered": "0/21"
+    },
+    {
+      "id": "b2-0050",
+      "type": "PERSON",
+      "text": "Kyrshan",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0050",
+      "type": "PERSON",
+      "text": "Manoj Yadav",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0053",
+      "type": "PERSON",
+      "text": "Temsu Sekhose",
+      "covered": "7/12"
+    },
+    {
+      "id": "b2-0053",
+      "type": "PERSON",
+      "text": "Vitono",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0053",
+      "type": "PERSON",
+      "text": "Lalthanpuia",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0053",
+      "type": "PERSON",
+      "text": "Akhrielie Rengma",
+      "covered": "6/15"
+    },
+    {
+      "id": "b2-0054",
+      "type": "MRN",
+      "text": "IP8051991",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0054",
+      "type": "PERSON",
+      "text": "Nayana Parmar",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0054",
+      "type": "MRN",
+      "text": "26-17367",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0055",
+      "type": "MRN",
+      "text": "70424/26",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0055",
+      "type": "PHONE",
+      "text": "(+91) 75704 96731",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0055",
+      "type": "MRN",
+      "text": "26-30806",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0055",
+      "type": "MRN",
+      "text": "IP/2026/66863",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0055",
+      "type": "PERSON",
+      "text": "Kiran Yadav",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0055",
+      "type": "MRN",
+      "text": "26-64482",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0055",
+      "type": "PERSON",
+      "text": "Yadav",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0055",
+      "type": "PERSON",
+      "text": "Ambili",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0057",
+      "type": "AADHAAR",
+      "text": "xxxx-xxxx-5319",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0058",
+      "type": "PERSON",
+      "text": "Somari Markam",
+      "covered": "6/12"
+    },
+    {
+      "id": "b2-0058",
+      "type": "PINCODE",
+      "text": "481 661",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0059",
+      "type": "MRN",
+      "text": "104-PR-49332605",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0059",
+      "type": "PHONE",
+      "text": "(+91) 93287 43216",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0060",
+      "type": "MRN",
+      "text": "BC/26/81142",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0060",
+      "type": "PINCODE",
+      "text": "673 001",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0062",
+      "type": "PERSON",
+      "text": "Rukhsar Ansari",
+      "covered": "6/13"
+    },
+    {
+      "id": "b2-0063",
+      "type": "DOB",
+      "text": "August 18, 2026",
+      "covered": "6/12"
+    },
+    {
+      "id": "b2-0064",
+      "type": "MRN",
+      "text": "3254634",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0064",
+      "type": "PHONE",
+      "text": "(0674) 3344158",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0065",
+      "type": "PERSON",
+      "text": "Babita",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0065",
+      "type": "PERSON",
+      "text": "Babita",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0065",
+      "type": "PERSON",
+      "text": "Babita",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0065",
+      "type": "PERSON",
+      "text": "Babita",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0065",
+      "type": "PERSON",
+      "text": "Babita",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0066",
+      "type": "PERSON",
+      "text": "Rukhsar",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0066",
+      "type": "PERSON",
+      "text": "Rukhsar",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0066",
+      "type": "PERSON",
+      "text": "Rukhsar",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0066",
+      "type": "PERSON",
+      "text": "Rukhsar",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0067",
+      "type": "PERSON",
+      "text": "Rinku",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0070",
+      "type": "MRN",
+      "text": "IP/2026/24237",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0070",
+      "type": "PERSON",
+      "text": "मो. ज़ुबैर कुरैशी",
+      "covered": "12/14"
+    },
+    {
+      "id": "b2-0070",
+      "type": "MRN",
+      "text": "IP4080977",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0071",
+      "type": "PERSON",
+      "text": "Bhupendra",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0072",
+      "type": "PERSON",
+      "text": "Manohar Netam",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0073",
+      "type": "PERSON",
+      "text": "मो. ज़ुबैर कुरैशी",
+      "covered": "12/14"
+    },
+    {
+      "id": "b2-0073",
+      "type": "MRN",
+      "text": "MLC/447/2026",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0074",
+      "type": "MRN",
+      "text": "104-GY-59738312",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0074",
+      "type": "PERSON",
+      "text": "रामवती कुशवाहा",
+      "covered": "0/13"
+    },
+    {
+      "id": "b2-0075",
+      "type": "MRN",
+      "text": "HL265190007",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0075",
+      "type": "PERSON",
+      "text": "Kyrshan Dkhar",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0076",
+      "type": "MRN",
+      "text": "DMHP/1996",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0077",
+      "type": "MRN",
+      "text": "DNR-26-70703",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0078",
+      "type": "MRN",
+      "text": "C-8856-70494",
+      "covered": "9/10"
+    },
+    {
+      "id": "b2-0079",
+      "type": "AADHAAR",
+      "text": "XXXXXXXX4081",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0081",
+      "type": "MRN",
+      "text": "UW2255286",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0082",
+      "type": "PERSON",
+      "text": "कुलविंदर सिंह",
+      "covered": "4/12"
+    },
+    {
+      "id": "b2-0083",
+      "type": "PERSON",
+      "text": "Ab. Rashid Ganai",
+      "covered": "7/13"
+    },
+    {
+      "id": "b2-0084",
+      "type": "PHONE",
+      "text": "(+91) 81142 00999",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0086",
+      "type": "MRN",
+      "text": "DNR-26-93947",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0087",
+      "type": "MRN",
+      "text": "104-VN-61758865",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0088",
+      "type": "PERSON",
+      "text": "SANCHITA",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0089",
+      "type": "PERSON",
+      "text": "Javid Iqbal Dar",
+      "covered": "0/13"
+    },
+    {
+      "id": "b2-0090",
+      "type": "PERSON",
+      "text": "Mousumi Kalita",
+      "covered": "6/13"
+    },
+    {
+      "id": "b2-0090",
+      "type": "PERSON",
+      "text": "Saroj Maurya",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0091",
+      "type": "MRN",
+      "text": "IP/2026/48937",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0091",
+      "type": "MRN",
+      "text": "IPD-897565",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0091",
+      "type": "MRN",
+      "text": "IPD-136346",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0091",
+      "type": "MRN",
+      "text": "IP/2026/73340",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0092",
+      "type": "MRN",
+      "text": "HL264032949",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0092",
+      "type": "PERSON",
+      "text": "मो. ज़ुबैर",
+      "covered": "6/8"
+    },
+    {
+      "id": "b2-0093",
+      "type": "PERSON",
+      "text": "Sunita",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0094",
+      "type": "MRN",
+      "text": "26-84340",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0094",
+      "type": "DOB",
+      "text": "2013-09-26",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0094",
+      "type": "PHONE",
+      "text": "(+91) 74239 88015",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0095",
+      "type": "MRN",
+      "text": "PMNDP-73518",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0095",
+      "type": "PERSON",
+      "text": "Anirban",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0095",
+      "type": "MRN",
+      "text": "DU-6571",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0095",
+      "type": "PERSON",
+      "text": "Tapas",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0095",
+      "type": "MRN",
+      "text": "PMNDP-98479",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0095",
+      "type": "PERSON",
+      "text": "SABINA HOQUE",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0095",
+      "type": "PERSON",
+      "text": "Tapas",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0095",
+      "type": "MRN",
+      "text": "HD/475",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0095",
+      "type": "PERSON",
+      "text": "Anirban",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0095",
+      "type": "MRN",
+      "text": "DU-1965",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0095",
+      "type": "PERSON",
+      "text": "REHANA SHEIKH",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0095",
+      "type": "PERSON",
+      "text": "Tapas",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0095",
+      "type": "MRN",
+      "text": "NKPMLLYHZ",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0098",
+      "type": "PERSON",
+      "text": "Varsha",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0100",
+      "type": "PERSON",
+      "text": "Sagar",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0100",
+      "type": "PERSON",
+      "text": "Sushma Desai",
+      "covered": "5/11"
+    },
+    {
+      "id": "b2-0100",
+      "type": "PERSON",
+      "text": "Vibha Kamat",
+      "covered": "5/10"
+    },
+    {
+      "id": "b2-0100",
+      "type": "PERSON",
+      "text": "Shripad Kamat",
+      "covered": "8/12"
+    },
+    {
+      "id": "b2-0100",
+      "type": "PERSON",
+      "text": "Savio",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0100",
+      "type": "PHONE",
+      "text": "(+91) 74787 34816",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0101",
+      "type": "MRN",
+      "text": "BC/26/38709",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0104",
+      "type": "MRN",
+      "text": "IP8669842",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0104",
+      "type": "MRN",
+      "text": "IP3164698",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0104",
+      "type": "MRN",
+      "text": "IP1092509",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0105",
+      "type": "MRN",
+      "text": "335/2026",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0105",
+      "type": "PERSON",
+      "text": "मनोहर धुर्वे",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0106",
+      "type": "PHONE",
+      "text": "(+91) 77256 12003",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0107",
+      "type": "MRN",
+      "text": "C-2657-42902",
+      "covered": "9/10"
+    },
+    {
+      "id": "b2-0108",
+      "type": "MRN",
+      "text": "IPD-660987",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0108",
+      "type": "MRN",
+      "text": "26-90833",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0108",
+      "type": "PHONE",
+      "text": "(+91) 65797 95183",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0108",
+      "type": "MRN",
+      "text": "IP/2026/10523",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0108",
+      "type": "MRN",
+      "text": "IP/2026/58620",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0108",
+      "type": "PERSON",
+      "text": "Md. Shakeel",
+      "covered": "2/9"
+    },
+    {
+      "id": "b2-0108",
+      "type": "PERSON",
+      "text": "Muhammed Ashraf",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0109",
+      "type": "PERSON",
+      "text": "Pramila",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0109",
+      "type": "PERSON",
+      "text": "Pramila",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0109",
+      "type": "PERSON",
+      "text": "Pramila",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0109",
+      "type": "PERSON",
+      "text": "Pramila",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0110",
+      "type": "PINCODE",
+      "text": "680 001",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0110",
+      "type": "AADHAAR",
+      "text": "XXXXXXXX4960",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0110",
+      "type": "DOB",
+      "text": "1984-05-24",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0111",
+      "type": "MRN",
+      "text": "RBSK/HAE/39984",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0113",
+      "type": "PERSON",
+      "text": "Deepali",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0115",
+      "type": "MRN",
+      "text": "BC/26/64882",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0115",
+      "type": "PERSON",
+      "text": "मो. इरफ़ान ख़ान",
+      "covered": "10/12"
+    },
+    {
+      "id": "b2-0115",
+      "type": "PERSON",
+      "text": "बबीता राम",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0117",
+      "type": "PERSON",
+      "text": "फ़रज़ाना मलिक",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0119",
+      "type": "MRN",
+      "text": "DNR-26-17107",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0120",
+      "type": "PERSON",
+      "text": "Rakesh Kachroo",
+      "covered": "7/13"
+    },
+    {
+      "id": "b2-0120",
+      "type": "PERSON",
+      "text": "Shazia Lone",
+      "covered": "4/10"
+    },
+    {
+      "id": "b2-0120",
+      "type": "PERSON",
+      "text": "Ashok Kachroo",
+      "covered": "7/12"
+    },
+    {
+      "id": "b2-0120",
+      "type": "PERSON",
+      "text": "Rakesh Kachroo",
+      "covered": "7/13"
+    },
+    {
+      "id": "b2-0121",
+      "type": "MRN",
+      "text": "92602/26",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0123",
+      "type": "DOB",
+      "text": "July 28, 1962",
+      "covered": "4/10"
+    },
+    {
+      "id": "b2-0123",
+      "type": "PHONE",
+      "text": "(+91) 74977 42118",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0123",
+      "type": "PERSON",
+      "text": "Abdul Rashid Siddiqui",
+      "covered": "0/19"
+    },
+    {
+      "id": "b2-0125",
+      "type": "PERSON",
+      "text": "नवीन",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0127",
+      "type": "MRN",
+      "text": "IP/2026/88598",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0127",
+      "type": "MRN",
+      "text": "IP/2026/90362",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0127",
+      "type": "MRN",
+      "text": "IP5560537",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0127",
+      "type": "PERSON",
+      "text": "Md. Rafiqul Sheikh",
+      "covered": "2/15"
+    },
+    {
+      "id": "b2-0128",
+      "type": "DOB",
+      "text": "13/9/26",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0129",
+      "type": "PERSON",
+      "text": "कुलविंदर",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0129",
+      "type": "PERSON",
+      "text": "सतबीर हुड्डा",
+      "covered": "6/11"
+    },
+    {
+      "id": "b2-0129",
+      "type": "PERSON",
+      "text": "शम्भू",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0129",
+      "type": "PERSON",
+      "text": "मनोहर उइके",
+      "covered": "4/9"
+    },
+    {
+      "id": "b2-0130",
+      "type": "MRN",
+      "text": "IPD-652398",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0130",
+      "type": "MRN",
+      "text": "IP4413481",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0131",
+      "type": "PINCODE",
+      "text": "842 001",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0131",
+      "type": "AADHAAR",
+      "text": "XXXXXXXX4229",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0131",
+      "type": "DOB",
+      "text": "14.11.1947",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0132",
+      "type": "MRN",
+      "text": "MLC/267/2026",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0132",
+      "type": "PHONE",
+      "text": "(+91) 63809 88056",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0134",
+      "type": "MRN",
+      "text": "PMNDP-36485",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0134",
+      "type": "PERSON",
+      "text": "Mary Stella",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0134",
+      "type": "MRN",
+      "text": "NEP/HD/2976",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0134",
+      "type": "PERSON",
+      "text": "Mary Stella",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0134",
+      "type": "PERSON",
+      "text": "Velmurugan S",
+      "covered": "10/11"
+    },
+    {
+      "id": "b2-0135",
+      "type": "PERSON",
+      "text": "Paramita Mondal",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0135",
+      "type": "PERSON",
+      "text": "Pooja",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0137",
+      "type": "PERSON",
+      "text": "Basavaraj",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0138",
+      "type": "MRN",
+      "text": "9524/26",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0138",
+      "type": "PERSON",
+      "text": "जसवंत सिंह",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0139",
+      "type": "DOB",
+      "text": "28 Jan 2014",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0143",
+      "type": "MRN",
+      "text": "HL268722481",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0143",
+      "type": "AADHAAR",
+      "text": "xxxx-xxxx-2546",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "Anusha",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "Anusha",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "Nagamani Kandula",
+      "covered": "7/15"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "Anusha",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "Anusha",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "Anusha",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "Anusha",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "Anusha",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0145",
+      "type": "PERSON",
+      "text": "नसरीन कुरैशी",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0146",
+      "type": "MRN",
+      "text": "DU-2319",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0146",
+      "type": "MRN",
+      "text": "PMNDP-54190",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0147",
+      "type": "PERSON",
+      "text": "Manoj",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0148",
+      "type": "MRN",
+      "text": "RBSK/JXL/82530",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0148",
+      "type": "PERSON",
+      "text": "Sukhdev Singh Sandhu",
+      "covered": "6/18"
+    },
+    {
+      "id": "b2-0148",
+      "type": "AADHAAR",
+      "text": "XXXX XXXX 0522",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0150",
+      "type": "MRN",
+      "text": "DU-6566",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0150",
+      "type": "MRN",
+      "text": "DU-3708",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0150",
+      "type": "MRN",
+      "text": "PMNDP-79844",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0150",
+      "type": "MRN",
+      "text": "PMNDP-52084",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0150",
+      "type": "MRN",
+      "text": "NEP/HD/3919",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0150",
+      "type": "MRN",
+      "text": "T88YW6R5L",
+      "covered": "0/9"
+    }
+  ],
+  "false_alarm_examples": [
+    {
+      "id": "b2-0001",
+      "type": "ADDRESS",
+      "text": "Thanagazi"
+    },
+    {
+      "id": "b2-0006",
+      "type": "PERSON",
+      "text": "भीमराव आंबेडकर छात्रावास"
+    },
+    {
+      "id": "b2-0007",
+      "type": "PERSON",
+      "text": "EPIC"
+    },
+    {
+      "id": "b2-0009",
+      "type": "ID_NUMBER",
+      "text": "2611-8809"
+    },
+    {
+      "id": "b2-0009",
+      "type": "ADDRESS",
+      "text": "77/F"
+    },
+    {
+      "id": "b2-0011",
+      "type": "ID_NUMBER",
+      "text": "2100/1650"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0014",
+      "type": "ID_NUMBER",
+      "text": "272602936442"
+    },
+    {
+      "id": "b2-0017",
+      "type": "ID_NUMBER",
+      "text": "3293/6149"
+    },
+    {
+      "id": "b2-0017",
+      "type": "ID_NUMBER",
+      "text": "4541  12/28  1"
+    },
+    {
+      "id": "b2-0017",
+      "type": "ID_NUMBER",
+      "text": "04/2028  10"
+    },
+    {
+      "id": "b2-0018",
+      "type": "DOB",
+      "text": "02/02/2026"
+    },
+    {
+      "id": "b2-0018",
+      "type": "DOB",
+      "text": "02/02/2026"
+    },
+    {
+      "id": "b2-0018",
+      "type": "DOB",
+      "text": "02/02/2026"
+    },
+    {
+      "id": "b2-0018",
+      "type": "DOB",
+      "text": "02/02/2026"
+    },
+    {
+      "id": "b2-0018",
+      "type": "ADDRESS",
+      "text": "02/02/2026, 14:25 - ASHA"
+    },
+    {
+      "id": "b2-0018",
+      "type": "DOB",
+      "text": "02/02/2026"
+    },
+    {
+      "id": "b2-0018",
+      "type": "DOB",
+      "text": "02/02/2026"
+    },
+    {
+      "id": "b2-0022",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0022",
+      "type": "ID_NUMBER",
+      "text": "291337105070"
+    },
+    {
+      "id": "b2-0024",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0024",
+      "type": "ID_NUMBER",
+      "text": "200170198029"
+    },
+    {
+      "id": "b2-0027",
+      "type": "PERSON",
+      "text": "hua"
+    },
+    {
+      "id": "b2-0027",
+      "type": "ID_NUMBER",
+      "text": "198597615762"
+    },
+    {
+      "id": "b2-0028",
+      "type": "PERSON",
+      "text": "Vasantrao"
+    },
+    {
+      "id": "b2-0031",
+      "type": "ADDRESS",
+      "text": "भेजो"
+    },
+    {
+      "id": "b2-0032",
+      "type": "ADDRESS",
+      "text": "Netaji Subhas Chandra Bose Medical College, Jabalpur"
+    },
+    {
+      "id": "b2-0034",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0034",
+      "type": "ID_NUMBER",
+      "text": "558175002669"
+    },
+    {
+      "id": "b2-0035",
+      "type": "ID_NUMBER",
+      "text": "2100/1650"
+    },
+    {
+      "id": "b2-0036",
+      "type": "PERSON",
+      "text": "श्यामा प्रसाद मुखर्जी"
+    },
+    {
+      "id": "b2-0039",
+      "type": "ID_NUMBER",
+      "text": "3379-69836"
+    },
+    {
+      "id": "b2-0041",
+      "type": "ID_NUMBER",
+      "text": "2100/1650"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "कितने बजे हुआ"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0049",
+      "type": "PERSON",
+      "text": "hearing voices commenting"
+    },
+    {
+      "id": "b2-0049",
+      "type": "PERSON",
+      "text": "head injury or"
+    },
+    {
+      "id": "b2-0051",
+      "type": "PERSON",
+      "text": "low mood"
+    },
+    {
+      "id": "b2-0051",
+      "type": "PERSON",
+      "text": "head injury or"
+    },
+    {
+      "id": "b2-0052",
+      "type": "PERSON",
+      "text": "रिपोर्ट आ"
+    },
+    {
+      "id": "b2-0053",
+      "type": "PERSON",
+      "text": "Swami Vivekananda Vidya Mandir"
+    },
+    {
+      "id": "b2-0056",
+      "type": "PERSON",
+      "text": "roz sharab"
+    },
+    {
+      "id": "b2-0058",
+      "type": "ID_NUMBER",
+      "text": "175670551795"
+    },
+    {
+      "id": "b2-0060",
+      "type": "ADDRESS",
+      "text": "Kasturba Hospital, Manipal"
+    },
+    {
+      "id": "b2-0060",
+      "type": "ID_NUMBER",
+      "text": "5825-73527"
+    },
+    {
+      "id": "b2-0061",
+      "type": "PERSON",
+      "text": "kaan"
+    },
+    {
+      "id": "b2-0063",
+      "type": "ID_NUMBER",
+      "text": "456916750620"
+    },
+    {
+      "id": "b2-0064",
+      "type": "ID_NUMBER",
+      "text": "2611-1865"
+    },
+    {
+      "id": "b2-0064",
+      "type": "ID_NUMBER",
+      "text": "3313/9873"
+    },
+    {
+      "id": "b2-0066",
+      "type": "PERSON",
+      "text": "Kalpana Chawla"
+    },
+    {
+      "id": "b2-0067",
+      "type": "ID_NUMBER",
+      "text": "3071/9794"
+    },
+    {
+      "id": "b2-0069",
+      "type": "PERSON",
+      "text": "hui"
+    },
+    {
+      "id": "b2-0069",
+      "type": "ID_NUMBER",
+      "text": "483413127076"
+    },
+    {
+      "id": "b2-0071",
+      "type": "ID_NUMBER",
+      "text": "1377/7980"
+    },
+    {
+      "id": "b2-0072",
+      "type": "PERSON",
+      "text": "EPIC"
+    },
+    {
+      "id": "b2-0073",
+      "type": "PERSON",
+      "text": "थानाध्यक्ष महोदय"
+    },
+    {
+      "id": "b2-0073",
+      "type": "ADDRESS",
+      "text": "थाना सदर, दरभंगा"
+    },
+    {
+      "id": "b2-0073",
+      "type": "PERSON",
+      "text": "महोदय"
+    },
+    {
+      "id": "b2-0076",
+      "type": "PERSON",
+      "text": "repeated hand-washing up"
+    },
+    {
+      "id": "b2-0076",
+      "type": "PERSON",
+      "text": "head injury or"
+    },
+    {
+      "id": "b2-0079",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0079",
+      "type": "ID_NUMBER",
+      "text": "532648243969"
+    },
+    {
+      "id": "b2-0080",
+      "type": "PERSON",
+      "text": "hua"
+    },
+    {
+      "id": "b2-0080",
+      "type": "ID_NUMBER",
+      "text": "567609587585"
+    },
+    {
+      "id": "b2-0081",
+      "type": "ID_NUMBER",
+      "text": "2100/1650"
+    },
+    {
+      "id": "b2-0082",
+      "type": "PERSON",
+      "text": "रिपोर्ट आ"
+    },
+    {
+      "id": "b2-0086",
+      "type": "ID_NUMBER",
+      "text": "1554-50459"
+    },
+    {
+      "id": "b2-0088",
+      "type": "ID_NUMBER",
+      "text": "3123/1750"
+    },
+    {
+      "id": "b2-0089",
+      "type": "PERSON",
+      "text": "Kashibai"
+    },
+    {
+      "id": "b2-0090",
+      "type": "ADDRESS",
+      "text": "Village/Address"
+    },
+    {
+      "id": "b2-0090",
+      "type": "ID_NUMBER",
+      "text": "566142803107"
+    },
+    {
+      "id": "b2-0094",
+      "type": "PERSON",
+      "text": "Singh"
+    },
+    {
+      "id": "b2-0097",
+      "type": "PERSON",
+      "text": "in-law"
+    },
+    {
+      "id": "b2-0097",
+      "type": "ID_NUMBER",
+      "text": "2611-0644"
+    },
+    {
+      "id": "b2-0097",
+      "type": "ID_NUMBER",
+      "text": "3780/6826"
+    },
+    {
+      "id": "b2-0098",
+      "type": "ADDRESS",
+      "text": "khane ke baad"
+    },
+    {
+      "id": "b2-0098",
+      "type": "ADDRESS",
+      "text": "khane ke baad"
+    },
+    {
+      "id": "b2-0098",
+      "type": "ADDRESS",
+      "text": "raat ko sote waqt"
+    },
+    {
+      "id": "b2-0099",
+      "type": "ADDRESS",
+      "text": "ARV + RIG"
+    },
+    {
+      "id": "b2-0099",
+      "type": "PERSON",
+      "text": "Nil Ratan Sircar Medical College"
+    },
+    {
+      "id": "b2-0099",
+      "type": "ADDRESS",
+      "text": "Kolkata"
+    },
+    {
+      "id": "b2-0102",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0102",
+      "type": "ID_NUMBER",
+      "text": "894676683260"
+    },
+    {
+      "id": "b2-0105",
+      "type": "PERSON",
+      "text": "थानाध्यक्ष महोदय"
+    },
+    {
+      "id": "b2-0105",
+      "type": "PERSON",
+      "text": "महोदय"
+    },
+    {
+      "id": "b2-0105",
+      "type": "PERSON",
+      "text": "जयप्रकाश नारायण"
+    },
+    {
+      "id": "b2-0107",
+      "type": "PERSON",
+      "text": "आभा"
+    },
+    {
+      "id": "b2-0107",
+      "type": "PERSON",
+      "text": "आभा"
+    },
+    {
+      "id": "b2-0109",
+      "type": "DOB",
+      "text": "06/07/2026"
+    },
+    {
+      "id": "b2-0109",
+      "type": "PERSON",
+      "text": "Good"
+    },
+    {
+      "id": "b2-0109",
+      "type": "PERSON",
+      "text": "sir"
+    },
+    {
+      "id": "b2-0109",
+      "type": "DOB",
+      "text": "06/07/2026"
+    },
+    {
+      "id": "b2-0109",
+      "type": "PERSON",
+      "text": "Sir"
+    },
+    {
+      "id": "b2-0109",
+      "type": "DOB",
+      "text": "06/07/2026"
+    },
+    {
+      "id": "b2-0109",
+      "type": "DOB",
+      "text": "06/07/2026"
+    },
+    {
+      "id": "b2-0109",
+      "type": "DOB",
+      "text": "06/07/2026"
+    },
+    {
+      "id": "b2-0109",
+      "type": "DOB",
+      "text": "06/07/2026"
+    },
+    {
+      "id": "b2-0110",
+      "type": "PERSON",
+      "text": "Auditor"
+    },
+    {
+      "id": "b2-0110",
+      "type": "ID_NUMBER",
+      "text": "1943/7144"
+    },
+    {
+      "id": "b2-0110",
+      "type": "ID_NUMBER",
+      "text": "2611-5430"
+    },
+    {
+      "id": "b2-0112",
+      "type": "PERSON",
+      "text": "साथ"
+    },
+    {
+      "id": "b2-0113",
+      "type": "ID_NUMBER",
+      "text": "11/2027  10"
+    },
+    {
+      "id": "b2-0113",
+      "type": "ID_NUMBER",
+      "text": "02/2027  28"
+    },
+    {
+      "id": "b2-0113",
+      "type": "ID_NUMBER",
+      "text": "8885  06/2027  60"
+    },
+    {
+      "id": "b2-0113",
+      "type": "ID_NUMBER",
+      "text": "7263  07/2028  10"
+    },
+    {
+      "id": "b2-0114",
+      "type": "ID_NUMBER",
+      "text": "2611-0162"
+    },
+    {
+      "id": "b2-0117",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0117",
+      "type": "ID_NUMBER",
+      "text": "673296063310"
+    },
+    {
+      "id": "b2-0118",
+      "type": "PERSON",
+      "text": "hua"
+    },
+    {
+      "id": "b2-0118",
+      "type": "ID_NUMBER",
+      "text": "823421971214"
+    },
+    {
+      "id": "b2-0120",
+      "type": "PERSON",
+      "text": "Teresa Convent School"
+    },
+    {
+      "id": "b2-0120",
+      "type": "ADDRESS",
+      "text": "father mob"
+    },
+    {
+      "id": "b2-0128",
+      "type": "ADDRESS",
+      "text": "village/address"
+    },
+    {
+      "id": "b2-0128",
+      "type": "ID_NUMBER",
+      "text": "671488925835"
+    },
+    {
+      "id": "b2-0131",
+      "type": "ID_NUMBER",
+      "text": "5201/7864"
+    },
+    {
+      "id": "b2-0132",
+      "type": "PERSON",
+      "text": "थानाध्यक्ष महोदय"
+    },
+    {
+      "id": "b2-0132",
+      "type": "PERSON",
+      "text": "महोदय"
+    },
+    {
+      "id": "b2-0133",
+      "type": "ADDRESS",
+      "text": "C/o"
+    },
+    {
+      "id": "b2-0133",
+      "type": "PERSON",
+      "text": "daily alcohol use"
+    },
+    {
+      "id": "b2-0133",
+      "type": "ADDRESS",
+      "text": "since age 19"
+    },
+    {
+      "id": "b2-0133",
+      "type": "PERSON",
+      "text": "head injury or"
+    },
+    {
+      "id": "b2-0133",
+      "type": "PERSON",
+      "text": "alcohol"
+    },
+    {
+      "id": "b2-0133",
+      "type": "PERSON",
+      "text": "use"
+    },
+    {
+      "id": "b2-0133",
+      "type": "PERSON",
+      "text": "Alcohol"
+    },
+    {
+      "id": "b2-0133",
+      "type": "ADDRESS",
+      "text": "Aadhaar"
+    },
+    {
+      "id": "b2-0137",
+      "type": "ID_NUMBER",
+      "text": "2611-3046"
+    },
+    {
+      "id": "b2-0138",
+      "type": "PERSON",
+      "text": "डॉ. श्यामा प्रसाद मुखर्जी"
+    },
+    {
+      "id": "b2-0139",
+      "type": "ADDRESS",
+      "text": "CHC Nilanga | Mob"
+    },
+    {
+      "id": "b2-0140",
+      "type": "PERSON",
+      "text": "low mood"
+    },
+    {
+      "id": "b2-0140",
+      "type": "PERSON",
+      "text": "head injury or"
+    },
+    {
+      "id": "b2-0141",
+      "type": "PERSON",
+      "text": "daily alcohol use"
+    },
+    {
+      "id": "b2-0141",
+      "type": "PERSON",
+      "text": "head injury or"
+    },
+    {
+      "id": "b2-0141",
+      "type": "PERSON",
+      "text": "Alcohol"
+    },
+    {
+      "id": "b2-0142",
+      "type": "PERSON",
+      "text": "decreased need"
+    },
+    {
+      "id": "b2-0142",
+      "type": "PERSON",
+      "text": "head injury or"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "Sir"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "Sir"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "BP"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "sir"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "yes sir"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "Sir"
+    },
+    {
+      "id": "b2-0144",
+      "type": "PERSON",
+      "text": "ok sir"
+    },
+    {
+      "id": "b2-0145",
+      "type": "ADDRESS",
+      "text": "भेजो"
+    },
+    {
+      "id": "b2-0146",
+      "type": "PERSON",
+      "text": "cramps"
+    },
+    {
+      "id": "b2-0147",
+      "type": "ID_NUMBER",
+      "text": "4504/9466"
+    },
+    {
+      "id": "b2-0147",
+      "type": "ID_NUMBER",
+      "text": "2172  09/2028  28"
+    },
+    {
+      "id": "b2-0147",
+      "type": "ID_NUMBER",
+      "text": "05/2028  60"
+    },
+    {
+      "id": "b2-0148",
+      "type": "PERSON",
+      "text": "Sh"
+    }
+  ],
+  "config": {
+    "set": "data/blind2.jsonl",
+    "ner": "ollama:qwen2.5:7b-instruct",
+    "lang": null
+  }
+}

@@ -56,13 +56,46 @@ built from similar lists and miss real names anyway.
 
 ## Measured results
 
-RESULTS_PLACEHOLDER
+Two synthetic test sets were written by separate authors (AI agents briefed to write their own
+templates) who never saw the detection code. Rules v1 were committed before set 1 existed
+(commit `1d32c7e`). After scoring v1 on set 1, we studied its misses and wrote rules v2. Set 2 was
+then written from scratch by a fresh author, so it is the only honest measure for v2.
+
+| Set · detector | Notes | Identifiers | Protection recall | Precision | Leak-free notes |
+|---|---:|---:|---:|---:|---:|
+| **Set 2, blind · rules v2** | 150 | 1,499 | **69.9%** | **90.0%** | 8.7% |
+| **Set 2, blind · rules v2 + local LLM-NER (qwen2.5 7B)** | 150 | 1,499 | **82.0%** | **89.4%** | 22.7% |
+| Set 1, blind at the time · rules v1 | 200 | 1,795 | 67.5% | 94.2% | 6.0% |
+| Set 1 after error analysis · rules v2 | 200 | 1,795 | 95.7% | 98.6% | 70.0% |
+| Set 1 · rules v2 + local LLM-NER | 200 | 1,795 | 97.5% | 97.2% | 80.5% |
+| Dev set (rule author's own templates) · rules v2 | 150 | 1,273 | 100% | 100% | 100% |
+
+Sources: `eval/results/*.json` (every leak and false alarm is listed there), sets in `data/`
+(`HELDOUT.md`, `BLIND2.md`). Rules-only speed: 3.6 ms per note in a single Python process; with the
+local NER pass about 2 s per note on our workstation.
+
+Per type on the blind set 2 (rules v2): Aadhaar 84.4% (45), ABHA number 100% (18), ABHA address
+100% (13), PAN 100% (12), voter ID 100% (15), e-mail 100% (33), phone 88.0% (142), PIN 86.8% (38),
+address 93.0% (86), DOB 79.2% (53), hospital/programme IDs 55.5% (200), names 62.4% (844).
+
+What this says:
+
+- Structured identifiers with a fixed format (ABHA, PAN, voter ID, e-mail) generalise well.
+- Names and record IDs depend on layout. Rules fitted to one set of layouts jump to 96% there and
+  stay near 70% on layouts they have never seen. The local NER pass lifts names on unseen layouts
+  from 62.4% to 83.2%.
+- The misses on set 2 are concrete: names inside pipe-separated tables (dialysis registers),
+  masked Aadhaar written as `xxxx-xxxx-5319` after labels such as "Aadhaar (for e-KYC)", phones
+  written `(+91) 75704 96731`, and IDs with labels the rules had never seen (MLC no., call ID).
+- Neither configuration is safe enough to run unattended on real notes today. That is why the
+  agent has a guard pass and a block step, and why the next step is a pilot that measures leaks
+  on real, consented text before anyone relies on it.
 
 ## Run it
 
 ```bash
 pip install -e ".[dev]"     # no runtime dependencies, standard library only
-pytest                      # 20+ unit tests
+pytest                      # 27 unit tests
 
 # redact only; nothing leaves the machine
 python -m gopniya redact examples/discharge_en.txt

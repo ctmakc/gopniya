@@ -181,14 +181,14 @@ footer{border-top:1px solid var(--rule);padding:var(--s4) 0 var(--s5);display:fl
       <div class="tw"><table class="m" id="metrics"><tr><td class="empty">Loading measurements…</td></tr></table></div>
       <div class="fine" style="margin-top:var(--s3)">
         <p>Protection recall counts an identifier as protected only when every character of it is covered. Precision counts a redaction as correct when it overlaps a labelled identifier.</p>
-        <p>All test notes are synthetic and generated from templates. The held-out set was written by a separate author who did not see the detection code. Real notes will be messier; the numbers above are an upper bound until a clinic pilot measures them on real text.</p>
+        <p>All test notes are synthetic. Each test set was written by a separate author who never saw the detection code. Blind set 2 is the honest measure for the current rules; set 1 was used to improve them after its first, blind run. Real notes will be messier, so treat these numbers as an upper bound until a clinic pilot measures leaks on real, consented text.</p>
         <p>Redaction runs in your browser through Pyodide. Only the redacted note crosses the perimeter. The demo endpoint re-checks for identifiers and refuses text that still contains them, caches answers, and stops after a small daily number of model calls.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <span>MIT licence · <a href="https://github.com/" id="repoLink">source code</a> · built for Code for a Billion 2026 (Health)</span>
+    <span>MIT licence · <!-- REPO_LINK: add <a href="https://github.com/...">source code</a> · after publishing --> built for Code for a Billion 2026 (Health) · all sample data is synthetic</span>
     <a class="credit" href="https://mmix.ua/" rel="noopener">Development &amp; promotion — <img src="mmix-logo.png" alt="MMIX — Marketing Mix" width="37" height="36"></a>
   </footer>
 </div>

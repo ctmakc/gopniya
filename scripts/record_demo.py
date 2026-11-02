@@ -115,7 +115,8 @@ async def main() -> None:
         await cap(page, "If anything still looks like an identifier after three rounds, the agent blocks the call. The demo endpoint also refuses such text on its own.", 8)
 
         await scroll_to(page, "#h-facts", 40)
-        await cap(page, "Measured on synthetic notes, including a held-out set written by a separate author who never saw the detection code.", 8)
+        await cap(page, "Blind test: 150 synthetic notes written by an author who never saw the code. Rules alone protected 69.9% of identifiers; with a local model added, 82.0%.", 9)
+        await cap(page, "That is not yet safe to run unattended, which is why the guard and the block step exist.", 6)
         await cap(page, "No clinic has used this yet, so there is no field data. The next step is a pilot with a clinic or health programme on real, consented notes.", 8)
         await cap(page, "", 0.3)
         await card(page, "<div style='font:700 64px/1 \"Anek Latin\";font-stretch:80%'>Gopniya</div>"

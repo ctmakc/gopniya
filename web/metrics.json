@@ -1,13 +1,49 @@
 {
   "rows": [
     {
-      "label": "Dev set (used for tuning) · rules only",
+      "label": "Blind set 2 (unseen) · rules v2",
       "notes": 150,
-      "gold": 1273,
-      "recall": 1.0,
-      "precision": 1.0,
-      "leak_free": 1.0,
-      "source": "eval/results/dev_rules.json"
+      "gold": 1499,
+      "recall": 0.6985,
+      "precision": 0.8996,
+      "leak_free": 0.0867,
+      "source": "eval/results/blind2_rules.json"
+    },
+    {
+      "label": "Blind set 2 (unseen) · rules v2 + local LLM-NER",
+      "notes": 150,
+      "gold": 1499,
+      "recall": 0.8199,
+      "precision": 0.8942,
+      "leak_free": 0.2267,
+      "source": "eval/results/blind2_rules_ner.json"
+    },
+    {
+      "label": "Held-out set 1 (unseen at the time) · rules v1",
+      "notes": 200,
+      "gold": 1795,
+      "recall": 0.6747,
+      "precision": 0.9415,
+      "leak_free": 0.06,
+      "source": "eval/results/heldout_rules_v1_frozen.json"
+    },
+    {
+      "label": "Held-out set 1 after error analysis · rules v2",
+      "notes": 200,
+      "gold": 1795,
+      "recall": 0.9571,
+      "precision": 0.9863,
+      "leak_free": 0.7,
+      "source": "eval/results/heldout_rules.json"
+    },
+    {
+      "label": "Held-out set 1 · rules v2 + local LLM-NER",
+      "notes": 200,
+      "gold": 1795,
+      "recall": 0.9749,
+      "precision": 0.9723,
+      "leak_free": 0.805,
+      "source": "eval/results/heldout_rules_ner.json"
     }
   ]
 }

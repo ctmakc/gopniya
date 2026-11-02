@@ -73,7 +73,14 @@ https://gopniya.pages.dev (live). Video: TO FILL BY PUBLISHER after uploading `v
 No field deployment yet, and no real users. What we can show is measured detection quality on
 synthetic notes (no real personal data anywhere):
 
-HELDOUT_SUMMARY_PLACEHOLDER
+- Blind test (150 synthetic notes, 1,499 identifiers, written by an author who never saw our code):
+  rules only protected 69.9% of identifiers at 90.0% precision; rules plus a local LLM-NER pass
+  protected 82.0% at 89.4% precision.
+- Fixed-format IDs (ABHA number and address, PAN, voter ID, e-mail) were caught 100% on that blind
+  set; Aadhaar 84.4%, phone 88.0%, names 62.4% rules-only (83.2% with local NER).
+- On the first test set, after we studied its misses, rules reached 95.7% recall and 98.6% precision;
+  that number is optimistic because the rules were tuned on it. All results with every leak listed:
+  `eval/results/`.
 
 Method: protection recall counts an identifier as protected only when every character is covered;
 precision counts a redaction as correct when it overlaps a labelled identifier. The held-out set was

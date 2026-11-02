@@ -167,7 +167,7 @@
     } catch { $("metrics").innerHTML = '<tr><td class="empty">Measurements unavailable.</td></tr>'; }
   }
 
-  function pct(x) { return x == null ? "—" : (x * 100).toFixed(1) + "%"; }
+  function pct(x) { return x == null ? "—" : (Math.round(x * 1000) / 10).toFixed(1) + "%"; }
   function renderMetrics(m) {
     const rows = m.rows.map((r) => `<tr><td>${esc(r.label)}</td><td class="n">${r.notes}</td><td class="n">${r.gold}</td><td class="n">${pct(r.recall)}</td><td class="n">${pct(r.precision)}</td><td class="n">${pct(r.leak_free)}</td></tr>`).join("");
     $("metrics").innerHTML = `<tr><th>Set · detector</th><th>Notes</th><th>Identifiers</th><th>Protection recall</th><th>Precision</th><th>Leak-free notes</th></tr>${rows}`;
