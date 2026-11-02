@@ -1,0 +1,937 @@
+{
+  "notes": 40,
+  "gold_entities": 373,
+  "protection_recall": 0.6971,
+  "precision": 0.9006,
+  "predicted_spans": 322,
+  "false_alarms": 32,
+  "leak_free_notes": 0.1,
+  "seconds_total": 0.14,
+  "ms_per_note": 3.44,
+  "per_type": {
+    "AADHAAR": {
+      "gold": 15,
+      "protected": 14,
+      "partial": 0,
+      "recall": 0.9333
+    },
+    "ABHA_ADDRESS": {
+      "gold": 3,
+      "protected": 3,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_NUMBER": {
+      "gold": 7,
+      "protected": 7,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ADDRESS": {
+      "gold": 26,
+      "protected": 25,
+      "partial": 0,
+      "recall": 0.9615
+    },
+    "DOB": {
+      "gold": 13,
+      "protected": 13,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "EMAIL": {
+      "gold": 4,
+      "protected": 4,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "MRN": {
+      "gold": 44,
+      "protected": 19,
+      "partial": 6,
+      "recall": 0.4318
+    },
+    "PAN": {
+      "gold": 2,
+      "protected": 2,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PERSON": {
+      "gold": 213,
+      "protected": 131,
+      "partial": 19,
+      "recall": 0.615
+    },
+    "PHONE": {
+      "gold": 32,
+      "protected": 28,
+      "partial": 4,
+      "recall": 0.875
+    },
+    "PINCODE": {
+      "gold": 12,
+      "protected": 12,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "VOTER_ID": {
+      "gold": 2,
+      "protected": 2,
+      "partial": 0,
+      "recall": 1.0
+    }
+  },
+  "false_alarms_by_type": {
+    "ADDRESS": 2,
+    "ID_NUMBER": 7,
+    "PERSON": 23
+  },
+  "leaks": [
+    {
+      "id": "b2-0006",
+      "type": "PERSON",
+      "text": "मो. इरफ़ान अंसारी",
+      "covered": "12/14"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बसंती बिष्ट",
+      "covered": "5/10"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0013",
+      "type": "PERSON",
+      "text": "ओम प्रकाश चौधरी",
+      "covered": "5/13"
+    },
+    {
+      "id": "b2-0013",
+      "type": "MRN",
+      "text": "MLC/341/2026",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0013",
+      "type": "PERSON",
+      "text": "भूपेंद्र रावत",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0016",
+      "type": "MRN",
+      "text": "BC/26/92361",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0022",
+      "type": "PERSON",
+      "text": "नाज़िया सिद्दीकी",
+      "covered": "0/15"
+    },
+    {
+      "id": "b2-0024",
+      "type": "PERSON",
+      "text": "एतवा मिंज",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0025",
+      "type": "MRN",
+      "text": "104-HY-43393806",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0025",
+      "type": "PERSON",
+      "text": "रिंकू महतो",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0031",
+      "type": "PERSON",
+      "text": "सोमारी नेताम",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0033",
+      "type": "MRN",
+      "text": "HL262739593",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0033",
+      "type": "PERSON",
+      "text": "नवीन मलिक",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0034",
+      "type": "PHONE",
+      "text": "(+९१) ९४०७९ ५९९१७",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0034",
+      "type": "PERSON",
+      "text": "ललिता पासवान",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0036",
+      "type": "PERSON",
+      "text": "सरोज निषाद",
+      "covered": "5/9"
+    },
+    {
+      "id": "b2-0036",
+      "type": "PERSON",
+      "text": "बुधराम नेताम",
+      "covered": "5/11"
+    },
+    {
+      "id": "b2-0036",
+      "type": "PERSON",
+      "text": "सुशीला हेम्ब्रम",
+      "covered": "8/14"
+    },
+    {
+      "id": "b2-0036",
+      "type": "PERSON",
+      "text": "सुखविंदर",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0039",
+      "type": "MRN",
+      "text": "D8721069",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "मांगी लाल चौधरी",
+      "covered": "0/13"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "कमला",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0052",
+      "type": "PERSON",
+      "text": "सुनैना यादव",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0052",
+      "type": "PERSON",
+      "text": "सुनैना यादव",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0052",
+      "type": "PERSON",
+      "text": "ललन राम",
+      "covered": "3/6"
+    },
+    {
+      "id": "b2-0052",
+      "type": "PERSON",
+      "text": "सुनैना यादव",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0052",
+      "type": "PERSON",
+      "text": "सुनैना यादव",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0068",
+      "type": "PERSON",
+      "text": "राजेंद्र प्रसाद पाल",
+      "covered": "3/17"
+    },
+    {
+      "id": "b2-0068",
+      "type": "PERSON",
+      "text": "राजेंद्र प्रसाद",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0070",
+      "type": "PERSON",
+      "text": "सतबीर मलिक",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0070",
+      "type": "MRN",
+      "text": "IP/2026/24237",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0070",
+      "type": "PERSON",
+      "text": "मो. ज़ुबैर कुरैशी",
+      "covered": "12/14"
+    },
+    {
+      "id": "b2-0070",
+      "type": "MRN",
+      "text": "IP4080977",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0070",
+      "type": "PERSON",
+      "text": "हरप्रीत कौर",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0070",
+      "type": "PERSON",
+      "text": "सोमरा",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0073",
+      "type": "PERSON",
+      "text": "मो. ज़ुबैर कुरैशी",
+      "covered": "12/14"
+    },
+    {
+      "id": "b2-0073",
+      "type": "PERSON",
+      "text": "जसवंत सिंह ढिल्लों",
+      "covered": "4/16"
+    },
+    {
+      "id": "b2-0073",
+      "type": "MRN",
+      "text": "MLC/447/2026",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0073",
+      "type": "PERSON",
+      "text": "संजय हेम्ब्रम",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0074",
+      "type": "MRN",
+      "text": "104-GY-59738312",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0074",
+      "type": "PERSON",
+      "text": "रामवती कुशवाहा",
+      "covered": "0/13"
+    },
+    {
+      "id": "b2-0077",
+      "type": "MRN",
+      "text": "DNR-26-70703",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0079",
+      "type": "AADHAAR",
+      "text": "XXXXXXXX4081",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0079",
+      "type": "PERSON",
+      "text": "सलीम मलिक",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0082",
+      "type": "PERSON",
+      "text": "कुलविंदर सिंह",
+      "covered": "4/12"
+    },
+    {
+      "id": "b2-0084",
+      "type": "PHONE",
+      "text": "(+91) 81142 00999",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0091",
+      "type": "MRN",
+      "text": "IP/2026/48937",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0091",
+      "type": "PERSON",
+      "text": "रमेश",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0091",
+      "type": "PERSON",
+      "text": "मोनिका दहिया",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0091",
+      "type": "MRN",
+      "text": "IPD-897565",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0091",
+      "type": "PERSON",
+      "text": "धर्मबीर",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0091",
+      "type": "MRN",
+      "text": "IPD-136346",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0091",
+      "type": "PERSON",
+      "text": "कुलविंदर",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0091",
+      "type": "PERSON",
+      "text": "पार्वती जोशी",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0091",
+      "type": "MRN",
+      "text": "IP/2026/73340",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0091",
+      "type": "PERSON",
+      "text": "सुखिया मरावी",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0091",
+      "type": "PERSON",
+      "text": "रामबाबू",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0092",
+      "type": "MRN",
+      "text": "HL264032949",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0092",
+      "type": "PERSON",
+      "text": "मो. ज़ुबैर",
+      "covered": "6/8"
+    },
+    {
+      "id": "b2-0092",
+      "type": "PERSON",
+      "text": "कुसुम निषाद",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0102",
+      "type": "PERSON",
+      "text": "सुरेश मिश्रा",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0104",
+      "type": "PERSON",
+      "text": "शम्भू ठाकुर",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0104",
+      "type": "MRN",
+      "text": "IP8669842",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0104",
+      "type": "PHONE",
+      "text": "(+91) 66443 61551",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0104",
+      "type": "PERSON",
+      "text": "ओम प्रकाश गुर्जर",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0104",
+      "type": "MRN",
+      "text": "IP3164698",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0104",
+      "type": "PERSON",
+      "text": "विकास राम",
+      "covered": "3/8"
+    },
+    {
+      "id": "b2-0104",
+      "type": "MRN",
+      "text": "IP1092509",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0104",
+      "type": "PERSON",
+      "text": "मनोज",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0104",
+      "type": "PERSON",
+      "text": "हेमा रावत",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0104",
+      "type": "PERSON",
+      "text": "संदीप",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0105",
+      "type": "PERSON",
+      "text": "रामसागर निषाद",
+      "covered": "5/12"
+    },
+    {
+      "id": "b2-0105",
+      "type": "MRN",
+      "text": "335/2026",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0105",
+      "type": "PERSON",
+      "text": "मनोहर धुर्वे",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0107",
+      "type": "MRN",
+      "text": "C-2657-42902",
+      "covered": "9/10"
+    },
+    {
+      "id": "b2-0107",
+      "type": "PERSON",
+      "text": "फ़रज़ाना कुरैशी",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0115",
+      "type": "MRN",
+      "text": "BC/26/64882",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0115",
+      "type": "PERSON",
+      "text": "मो. इरफ़ान ख़ान",
+      "covered": "10/12"
+    },
+    {
+      "id": "b2-0115",
+      "type": "PERSON",
+      "text": "बबीता राम",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0117",
+      "type": "PERSON",
+      "text": "फ़रज़ाना मलिक",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0125",
+      "type": "PERSON",
+      "text": "नवीन",
+      "covered": "0/4"
+    },
+    {
+      "id": "b2-0129",
+      "type": "PERSON",
+      "text": "कुलविंदर",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0129",
+      "type": "PERSON",
+      "text": "सतबीर हुड्डा",
+      "covered": "6/11"
+    },
+    {
+      "id": "b2-0129",
+      "type": "PERSON",
+      "text": "शम्भू",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0129",
+      "type": "PERSON",
+      "text": "मनोहर उइके",
+      "covered": "4/9"
+    },
+    {
+      "id": "b2-0130",
+      "type": "MRN",
+      "text": "IPD-652398",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0130",
+      "type": "PERSON",
+      "text": "मोहम्मद शाकिर",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0130",
+      "type": "MRN",
+      "text": "IP4413481",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0130",
+      "type": "PERSON",
+      "text": "रामवती राजभर",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0130",
+      "type": "PERSON",
+      "text": "फ़रज़ाना",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0132",
+      "type": "PERSON",
+      "text": "रामवती शुक्ला",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0132",
+      "type": "MRN",
+      "text": "MLC/267/2026",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0132",
+      "type": "PHONE",
+      "text": "(+91) 63809 88056",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0138",
+      "type": "PERSON",
+      "text": "भूपेंद्र बिष्ट",
+      "covered": "5/13"
+    },
+    {
+      "id": "b2-0138",
+      "type": "PERSON",
+      "text": "रिंकू महतो",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0138",
+      "type": "MRN",
+      "text": "9524/26",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0138",
+      "type": "PERSON",
+      "text": "जसवंत सिंह",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0145",
+      "type": "PERSON",
+      "text": "शाहीन सैफ़ी",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0145",
+      "type": "PERSON",
+      "text": "शाहीन सैफ़ी",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0145",
+      "type": "PERSON",
+      "text": "नसरीन कुरैशी",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0145",
+      "type": "PERSON",
+      "text": "शाहीन सैफ़ी",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0145",
+      "type": "PERSON",
+      "text": "शाहीन सैफ़ी",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0145",
+      "type": "ADDRESS",
+      "text": "मौजा मुशहरी, पो. सकरा, जि. मुजफ्फरपुर",
+      "covered": "0/28"
+    },
+    {
+      "id": "b2-0145",
+      "type": "PERSON",
+      "text": "शाहीन सैफ़ी",
+      "covered": "0/10"
+    }
+  ],
+  "false_alarm_examples": [
+    {
+      "id": "b2-0006",
+      "type": "PERSON",
+      "text": "भीमराव आंबेडकर छात्रावास"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0012",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0022",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0022",
+      "type": "ID_NUMBER",
+      "text": "291337105070"
+    },
+    {
+      "id": "b2-0024",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0024",
+      "type": "ID_NUMBER",
+      "text": "200170198029"
+    },
+    {
+      "id": "b2-0031",
+      "type": "ADDRESS",
+      "text": "भेजो"
+    },
+    {
+      "id": "b2-0034",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0034",
+      "type": "ID_NUMBER",
+      "text": "558175002669"
+    },
+    {
+      "id": "b2-0036",
+      "type": "PERSON",
+      "text": "श्यामा"
+    },
+    {
+      "id": "b2-0039",
+      "type": "ID_NUMBER",
+      "text": "3379-69836"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "कितने बजे हुआ"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0047",
+      "type": "PERSON",
+      "text": "बहू"
+    },
+    {
+      "id": "b2-0052",
+      "type": "PERSON",
+      "text": "रिपोर्ट आ"
+    },
+    {
+      "id": "b2-0079",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0079",
+      "type": "ID_NUMBER",
+      "text": "532648243969"
+    },
+    {
+      "id": "b2-0082",
+      "type": "PERSON",
+      "text": "रिपोर्ट आ"
+    },
+    {
+      "id": "b2-0102",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0102",
+      "type": "ID_NUMBER",
+      "text": "894676683260"
+    },
+    {
+      "id": "b2-0112",
+      "type": "PERSON",
+      "text": "साथ"
+    },
+    {
+      "id": "b2-0117",
+      "type": "PERSON",
+      "text": "प्रोत्साहन"
+    },
+    {
+      "id": "b2-0117",
+      "type": "ID_NUMBER",
+      "text": "673296063310"
+    },
+    {
+      "id": "b2-0138",
+      "type": "PERSON",
+      "text": "श्यामा"
+    },
+    {
+      "id": "b2-0145",
+      "type": "ADDRESS",
+      "text": "भेजो"
+    }
+  ],
+  "config": {
+    "set": "data/blind2.jsonl",
+    "ner": null,
+    "lang": "hi"
+  }
+}

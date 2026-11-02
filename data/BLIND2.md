@@ -1,0 +1,13 @@
+# blind2.jsonl: second blind PII evaluation set
+
+**What it is.** 150 synthetic Indian clinical notes: 85 English, 40 Hindi (Devanagari), 25 Hinglish/code-switched. Thirteen document types written as fresh layouts: doctor's narrative letters and ward-round notes, ASHA-to-MO WhatsApp chats, nurse shift handovers, pharmacy dispensing slips, mental-health OPD notes, dialysis unit register pages, RBSK school health cards and visit reports, police MLC intimations, blood-bank donor slips, JSY payment notes, 104 helpline call logs, referral e-mails and medical reimbursement claims. Schema matches heldout.jsonl: `{id, lang, doc_type, text, entities[{start, end, type, text}]}`.
+
+**How and when.** Generated on 1 November 2026 by `python3 make_blind2.py` (stdlib only, seed **7071947**). Output is byte-for-byte deterministic. The script checks every span (`text[start:end] == text`), rejects overlaps, validates every Aadhaar with Verhoeff (first digit 2-9; masked forms allowed), and confirms that every other 12-digit string in the text (CR/RCH numbers, PFMS references, `+91` phones) fails Verhoeff.
+
+**Gold counts (total / en / hi / mixed):** PERSON 844 / 483 / 213 / 148 · MRN 200 / 124 / 44 / 32 · PHONE 142 / 85 / 32 / 25 · ADDRESS 86 / 50 / 26 / 10 · DOB 53 / 35 / 13 / 5 · AADHAAR 45 / 24 / 15 / 6 · PINCODE 38 / 21 / 12 / 5 · EMAIL 33 / 28 / 4 / 1 · ABHA_NUMBER 18 / 8 / 7 / 3 · VOTER_ID 15 / 10 / 2 / 3 · ABHA_ADDRESS 13 / 8 / 3 / 2 · PAN 12 / 9 / 2 / 1. Total 1,499.
+
+**Labelling.** Follows the guideline in HELDOUT.md exactly: the same twelve entity types, the same span rules (honorifics outside, Mohd./Md. inside, "Baby of X" labels only X, PIN inside an address belongs to ADDRESS) and the same hard negatives. Unlabelled distractors include eponyms (Hashimoto's, Brescia-Cimino, Colles'), facility and school names that contain person names (Sonam Norboo Memorial Hospital, Bai Jerbai Wadia Hospital, Netaji Subhas Chandra Bose school), drug names such as Tab. Arjuna, lab values, bill/batch/bag/segment/bed/machine/roll numbers, IFSC codes, helpline numbers (104, 108, 14416) and admission/discharge/review dates written in the same formats as DOBs.
+
+**Independence.** The author wrote all templates, name pools and layouts from scratch for this set. The author saw neither the detector code (`gopniya/`, `scripts/`, `eval/`, `redactgate/`) nor the earlier test material (`make_heldout.py`, `heldout.jsonl`, `dev.jsonl`); only HELDOUT.md was read, for the labelling guideline.
+
+**Privacy.** Fully synthetic. Names are random combinations from regional pools, places are real towns used only as scenery, and every number is randomly generated. No real person's data appears anywhere.

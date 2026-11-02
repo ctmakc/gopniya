@@ -1,0 +1,629 @@
+{
+  "notes": 200,
+  "gold_entities": 1795,
+  "protection_recall": 0.9749,
+  "precision": 0.9723,
+  "predicted_spans": 1878,
+  "false_alarms": 52,
+  "leak_free_notes": 0.805,
+  "seconds_total": 435.11,
+  "ms_per_note": 2175.55,
+  "per_type": {
+    "AADHAAR": {
+      "gold": 59,
+      "protected": 59,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_ADDRESS": {
+      "gold": 25,
+      "protected": 25,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_NUMBER": {
+      "gold": 37,
+      "protected": 34,
+      "partial": 3,
+      "recall": 0.9189
+    },
+    "ADDRESS": {
+      "gold": 178,
+      "protected": 177,
+      "partial": 1,
+      "recall": 0.9944
+    },
+    "DOB": {
+      "gold": 68,
+      "protected": 68,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "EMAIL": {
+      "gold": 23,
+      "protected": 23,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "MRN": {
+      "gold": 204,
+      "protected": 191,
+      "partial": 7,
+      "recall": 0.9363
+    },
+    "PAN": {
+      "gold": 24,
+      "protected": 24,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PERSON": {
+      "gold": 864,
+      "protected": 843,
+      "partial": 12,
+      "recall": 0.9757
+    },
+    "PHONE": {
+      "gold": 221,
+      "protected": 214,
+      "partial": 5,
+      "recall": 0.9683
+    },
+    "PINCODE": {
+      "gold": 69,
+      "protected": 69,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "VOTER_ID": {
+      "gold": 23,
+      "protected": 23,
+      "partial": 0,
+      "recall": 1.0
+    }
+  },
+  "false_alarms_by_type": {
+    "ADDRESS": 24,
+    "ID_NUMBER": 8,
+    "PERSON": 20
+  },
+  "leaks": [
+    {
+      "id": "ho-0006",
+      "type": "MRN",
+      "text": "BC-592110",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0017",
+      "type": "PERSON",
+      "text": "मो. इरफ़ान सिद्दीकी",
+      "covered": "14/16"
+    },
+    {
+      "id": "ho-0024",
+      "type": "ABHA_NUMBER",
+      "text": "91-7892-5102-9423",
+      "covered": "12/14"
+    },
+    {
+      "id": "ho-0025",
+      "type": "PERSON",
+      "text": "गीता दुबे",
+      "covered": "4/8"
+    },
+    {
+      "id": "ho-0036",
+      "type": "PERSON",
+      "text": "रानी",
+      "covered": "0/4"
+    },
+    {
+      "id": "ho-0038",
+      "type": "MRN",
+      "text": "TC2951127524",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0054",
+      "type": "PERSON",
+      "text": "fatima khan",
+      "covered": "4/10"
+    },
+    {
+      "id": "ho-0060",
+      "type": "PERSON",
+      "text": "Sunita Yadav",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0068",
+      "type": "MRN",
+      "text": "hwc/8253/713706",
+      "covered": "10/13"
+    },
+    {
+      "id": "ho-0079",
+      "type": "MRN",
+      "text": "TC3723022598",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0082",
+      "type": "MRN",
+      "text": "5217/25",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0082",
+      "type": "PERSON",
+      "text": "Srinivas Varma",
+      "covered": "10/13"
+    },
+    {
+      "id": "ho-0086",
+      "type": "MRN",
+      "text": "ESJ-2609-7098322",
+      "covered": "11/14"
+    },
+    {
+      "id": "ho-0089",
+      "type": "PERSON",
+      "text": "Murugan P.",
+      "covered": "7/8"
+    },
+    {
+      "id": "ho-0101",
+      "type": "PERSON",
+      "text": "Kiran Jatav",
+      "covered": "5/10"
+    },
+    {
+      "id": "ho-0102",
+      "type": "PERSON",
+      "text": "Anjali Devi",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0114",
+      "type": "MRN",
+      "text": "ESJ-2602-0026240",
+      "covered": "11/14"
+    },
+    {
+      "id": "ho-0118",
+      "type": "PERSON",
+      "text": "pankaj",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0120",
+      "type": "PHONE",
+      "text": "+919043032366",
+      "covered": "12/13"
+    },
+    {
+      "id": "ho-0123",
+      "type": "PHONE",
+      "text": "+919803654021",
+      "covered": "12/13"
+    },
+    {
+      "id": "ho-0124",
+      "type": "MRN",
+      "text": "BC-336921",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0124",
+      "type": "ABHA_NUMBER",
+      "text": "95-7829-8739-6295",
+      "covered": "12/14"
+    },
+    {
+      "id": "ho-0124",
+      "type": "PERSON",
+      "text": "Mousumi",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0132",
+      "type": "MRN",
+      "text": "HWC/1845/753560",
+      "covered": "10/13"
+    },
+    {
+      "id": "ho-0133",
+      "type": "PERSON",
+      "text": "Snehal Joshi",
+      "covered": "9/11"
+    },
+    {
+      "id": "ho-0137",
+      "type": "PERSON",
+      "text": "J MAHATO",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0141",
+      "type": "PERSON",
+      "text": "SRINIVAS VARMA",
+      "covered": "10/13"
+    },
+    {
+      "id": "ho-0149",
+      "type": "PERSON",
+      "text": "Mohd. Iqbal Rizvi",
+      "covered": "9/14"
+    },
+    {
+      "id": "ho-0150",
+      "type": "MRN",
+      "text": "ESJ-2610-2741610",
+      "covered": "11/14"
+    },
+    {
+      "id": "ho-0150",
+      "type": "PERSON",
+      "text": "Snehal More",
+      "covered": "8/10"
+    },
+    {
+      "id": "ho-0151",
+      "type": "PHONE",
+      "text": "+919373119324",
+      "covered": "12/13"
+    },
+    {
+      "id": "ho-0152",
+      "type": "MRN",
+      "text": "HWC/3384/488289",
+      "covered": "10/13"
+    },
+    {
+      "id": "ho-0155",
+      "type": "MRN",
+      "text": "HWC/1913/536185",
+      "covered": "10/13"
+    },
+    {
+      "id": "ho-0157",
+      "type": "PHONE",
+      "text": "(0172) 5084390",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0158",
+      "type": "MRN",
+      "text": "BC-695692",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0158",
+      "type": "PHONE",
+      "text": "(033) 31379977",
+      "covered": "8/11"
+    },
+    {
+      "id": "ho-0164",
+      "type": "PERSON",
+      "text": "Ram Naresh",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0166",
+      "type": "PHONE",
+      "text": "(044) 59732536",
+      "covered": "8/11"
+    },
+    {
+      "id": "ho-0176",
+      "type": "ADDRESS",
+      "text": "ग्राम सेमरा, डाकघर केसरपुर, प्रखंड खरसिया, जिला रायगढ़, छ.ग. - 496058",
+      "covered": "46/52"
+    },
+    {
+      "id": "ho-0179",
+      "type": "PHONE",
+      "text": "(0522) 2509882",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0180",
+      "type": "ABHA_NUMBER",
+      "text": "21-7249-2235-6553",
+      "covered": "12/14"
+    },
+    {
+      "id": "ho-0181",
+      "type": "PERSON",
+      "text": "nisha kumari",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0181",
+      "type": "PERSON",
+      "text": "prem",
+      "covered": "0/4"
+    },
+    {
+      "id": "ho-0186",
+      "type": "PERSON",
+      "text": "Anil Kumar K.",
+      "covered": "9/10"
+    },
+    {
+      "id": "ho-0190",
+      "type": "PERSON",
+      "text": "Md. Sajid Alvi",
+      "covered": "6/11"
+    }
+  ],
+  "false_alarm_examples": [
+    {
+      "id": "ho-0006",
+      "type": "ID_NUMBER",
+      "text": "3928847946"
+    },
+    {
+      "id": "ho-0008",
+      "type": "PERSON",
+      "text": "Krishna"
+    },
+    {
+      "id": "ho-0014",
+      "type": "ID_NUMBER",
+      "text": "2406108471"
+    },
+    {
+      "id": "ho-0015",
+      "type": "ADDRESS",
+      "text": "Urban PHC Guntur"
+    },
+    {
+      "id": "ho-0023",
+      "type": "PERSON",
+      "text": "रिपोर्ट"
+    },
+    {
+      "id": "ho-0025",
+      "type": "PERSON",
+      "text": "रिपोर्ट"
+    },
+    {
+      "id": "ho-0025",
+      "type": "ADDRESS",
+      "text": "पति का मोबाइल"
+    },
+    {
+      "id": "ho-0029",
+      "type": "ID_NUMBER",
+      "text": "5214877766"
+    },
+    {
+      "id": "ho-0034",
+      "type": "PERSON",
+      "text": "गृह भ्रमण रिपोर्ट"
+    },
+    {
+      "id": "ho-0034",
+      "type": "ADDRESS",
+      "text": "माधोपुर"
+    },
+    {
+      "id": "ho-0038",
+      "type": "PERSON",
+      "text": "Semra"
+    },
+    {
+      "id": "ho-0050",
+      "type": "ADDRESS",
+      "text": "प्रसव कक्ष, महाराजा यशवंतराव अस्पताल, इंदौर"
+    },
+    {
+      "id": "ho-0054",
+      "type": "ADDRESS",
+      "text": "phc semra jaane ki salah di"
+    },
+    {
+      "id": "ho-0055",
+      "type": "PERSON",
+      "text": "Venkateswara"
+    },
+    {
+      "id": "ho-0058",
+      "type": "ADDRESS",
+      "text": "Pin"
+    },
+    {
+      "id": "ho-0066",
+      "type": "ADDRESS",
+      "text": "AB-HWC Rongram"
+    },
+    {
+      "id": "ho-0066",
+      "type": "ADDRESS",
+      "text": "AB-HWC Rongram"
+    },
+    {
+      "id": "ho-0071",
+      "type": "ADDRESS",
+      "text": "Sub-District Hospital, Bakshi Ka Talab"
+    },
+    {
+      "id": "ho-0076",
+      "type": "ADDRESS",
+      "text": "District Hospital, Hisar"
+    },
+    {
+      "id": "ho-0078",
+      "type": "ADDRESS",
+      "text": "पिन"
+    },
+    {
+      "id": "ho-0079",
+      "type": "ADDRESS",
+      "text": "District Hospital, Barmer"
+    },
+    {
+      "id": "ho-0090",
+      "type": "PERSON",
+      "text": "रिपोर्ट"
+    },
+    {
+      "id": "ho-0091",
+      "type": "PERSON",
+      "text": "Ram"
+    },
+    {
+      "id": "ho-0100",
+      "type": "PERSON",
+      "text": "Krishna"
+    },
+    {
+      "id": "ho-0101",
+      "type": "ADDRESS",
+      "text": "AB-HWC Barhpur"
+    },
+    {
+      "id": "ho-0103",
+      "type": "ADDRESS",
+      "text": "Community Health Centre, Dharamkot"
+    },
+    {
+      "id": "ho-0105",
+      "type": "PERSON",
+      "text": "रिपोर्ट"
+    },
+    {
+      "id": "ho-0105",
+      "type": "PERSON",
+      "text": "पति"
+    },
+    {
+      "id": "ho-0105",
+      "type": "ADDRESS",
+      "text": "चकिया"
+    },
+    {
+      "id": "ho-0113",
+      "type": "PERSON",
+      "text": "Kheri"
+    },
+    {
+      "id": "ho-0114",
+      "type": "PERSON",
+      "text": "Balaji"
+    },
+    {
+      "id": "ho-0119",
+      "type": "ID_NUMBER",
+      "text": "1208101852"
+    },
+    {
+      "id": "ho-0121",
+      "type": "ADDRESS",
+      "text": "PIN"
+    },
+    {
+      "id": "ho-0129",
+      "type": "ADDRESS",
+      "text": "Pin"
+    },
+    {
+      "id": "ho-0133",
+      "type": "ADDRESS",
+      "text": "Pin code"
+    },
+    {
+      "id": "ho-0149",
+      "type": "PERSON",
+      "text": "Balaji"
+    },
+    {
+      "id": "ho-0150",
+      "type": "PERSON",
+      "text": "kamzori"
+    },
+    {
+      "id": "ho-0155",
+      "type": "PERSON",
+      "text": "gale mein dard"
+    },
+    {
+      "id": "ho-0156",
+      "type": "ADDRESS",
+      "text": "102 वाहन"
+    },
+    {
+      "id": "ho-0158",
+      "type": "ID_NUMBER",
+      "text": "3948463026"
+    },
+    {
+      "id": "ho-0165",
+      "type": "ADDRESS",
+      "text": "108"
+    },
+    {
+      "id": "ho-0169",
+      "type": "ADDRESS",
+      "text": "Sub-District Hospital, Mauganj"
+    },
+    {
+      "id": "ho-0172",
+      "type": "PERSON",
+      "text": "AB-HWC Ramannapeta"
+    },
+    {
+      "id": "ho-0173",
+      "type": "ID_NUMBER",
+      "text": "2508367462"
+    },
+    {
+      "id": "ho-0174",
+      "type": "PERSON",
+      "text": "निदान"
+    },
+    {
+      "id": "ho-0186",
+      "type": "PERSON",
+      "text": "Krishna"
+    },
+    {
+      "id": "ho-0189",
+      "type": "ID_NUMBER",
+      "text": "3185153049"
+    },
+    {
+      "id": "ho-0189",
+      "type": "ADDRESS",
+      "text": "108/102"
+    },
+    {
+      "id": "ho-0191",
+      "type": "ID_NUMBER",
+      "text": "3636260523"
+    },
+    {
+      "id": "ho-0196",
+      "type": "ADDRESS",
+      "text": "108"
+    },
+    {
+      "id": "ho-0197",
+      "type": "ADDRESS",
+      "text": "Pin"
+    },
+    {
+      "id": "ho-0198",
+      "type": "PERSON",
+      "text": "हस्ताक्षर"
+    }
+  ],
+  "config": {
+    "set": "data/heldout.jsonl",
+    "ner": "ollama:qwen2.5:7b-instruct",
+    "lang": null
+  }
+}

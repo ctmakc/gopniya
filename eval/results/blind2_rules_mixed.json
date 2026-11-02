@@ -1,0 +1,602 @@
+{
+  "notes": 25,
+  "gold_entities": 241,
+  "protection_recall": 0.6929,
+  "precision": 0.9403,
+  "predicted_spans": 201,
+  "false_alarms": 12,
+  "leak_free_notes": 0.04,
+  "seconds_total": 0.08,
+  "ms_per_note": 3.15,
+  "per_type": {
+    "AADHAAR": {
+      "gold": 6,
+      "protected": 6,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_ADDRESS": {
+      "gold": 2,
+      "protected": 2,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_NUMBER": {
+      "gold": 3,
+      "protected": 3,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ADDRESS": {
+      "gold": 10,
+      "protected": 10,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "DOB": {
+      "gold": 5,
+      "protected": 3,
+      "partial": 0,
+      "recall": 0.6
+    },
+    "EMAIL": {
+      "gold": 1,
+      "protected": 1,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "MRN": {
+      "gold": 32,
+      "protected": 15,
+      "partial": 9,
+      "recall": 0.4688
+    },
+    "PAN": {
+      "gold": 1,
+      "protected": 1,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PERSON": {
+      "gold": 148,
+      "protected": 97,
+      "partial": 8,
+      "recall": 0.6554
+    },
+    "PHONE": {
+      "gold": 25,
+      "protected": 21,
+      "partial": 4,
+      "recall": 0.84
+    },
+    "PINCODE": {
+      "gold": 5,
+      "protected": 5,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "VOTER_ID": {
+      "gold": 3,
+      "protected": 3,
+      "partial": 0,
+      "recall": 1.0
+    }
+  },
+  "false_alarms_by_type": {
+    "ID_NUMBER": 6,
+    "PERSON": 6
+  },
+  "leaks": [
+    {
+      "id": "b2-0002",
+      "type": "MRN",
+      "text": "104-TY-82012595",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0002",
+      "type": "PERSON",
+      "text": "Naseem Siddiqui",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0008",
+      "type": "PERSON",
+      "text": "Arindam",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0008",
+      "type": "DOB",
+      "text": "19th May 1981",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0008",
+      "type": "PERSON",
+      "text": "Arindam",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0010",
+      "type": "DOB",
+      "text": "1994-05-26",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0015",
+      "type": "MRN",
+      "text": "104-ER-11158400",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0015",
+      "type": "PERSON",
+      "text": "Jignesh Solanki",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0027",
+      "type": "PERSON",
+      "text": "Kusum Srivastava",
+      "covered": "10/15"
+    },
+    {
+      "id": "b2-0027",
+      "type": "PERSON",
+      "text": "Harpreet Kaur Dhillon",
+      "covered": "0/19"
+    },
+    {
+      "id": "b2-0040",
+      "type": "PERSON",
+      "text": "Nayana",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0040",
+      "type": "PERSON",
+      "text": "Nayana",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0040",
+      "type": "PERSON",
+      "text": "Bhavna Desai",
+      "covered": "5/11"
+    },
+    {
+      "id": "b2-0040",
+      "type": "PERSON",
+      "text": "Nayana",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0040",
+      "type": "PERSON",
+      "text": "Kulkarni",
+      "covered": "0/8"
+    },
+    {
+      "id": "b2-0040",
+      "type": "PERSON",
+      "text": "Nayana",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0040",
+      "type": "PERSON",
+      "text": "Nayana",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0040",
+      "type": "PERSON",
+      "text": "Nayana",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0043",
+      "type": "PHONE",
+      "text": "(+91) 95761 46699",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0043",
+      "type": "PERSON",
+      "text": "Ketan",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0054",
+      "type": "MRN",
+      "text": "IP8051991",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0054",
+      "type": "PERSON",
+      "text": "Nayana Parmar",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0054",
+      "type": "MRN",
+      "text": "26-17367",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0054",
+      "type": "PERSON",
+      "text": "Jasinta",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0055",
+      "type": "MRN",
+      "text": "70424/26",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0055",
+      "type": "PHONE",
+      "text": "(+91) 75704 96731",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0055",
+      "type": "MRN",
+      "text": "26-30806",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0055",
+      "type": "MRN",
+      "text": "IP/2026/66863",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0055",
+      "type": "PERSON",
+      "text": "Kiran Yadav",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0055",
+      "type": "MRN",
+      "text": "26-64482",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0055",
+      "type": "PERSON",
+      "text": "Shambhu",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0055",
+      "type": "PERSON",
+      "text": "Yadav",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0055",
+      "type": "PERSON",
+      "text": "Ambili",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0059",
+      "type": "MRN",
+      "text": "104-PR-49332605",
+      "covered": "8/13"
+    },
+    {
+      "id": "b2-0059",
+      "type": "PHONE",
+      "text": "(+91) 93287 43216",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0059",
+      "type": "PERSON",
+      "text": "Naseem Siddiqui",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0061",
+      "type": "PERSON",
+      "text": "Jignesh Patel",
+      "covered": "0/12"
+    },
+    {
+      "id": "b2-0061",
+      "type": "PERSON",
+      "text": "Jignesh",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0062",
+      "type": "PERSON",
+      "text": "Rukhsar Ansari",
+      "covered": "6/13"
+    },
+    {
+      "id": "b2-0066",
+      "type": "PERSON",
+      "text": "Rukhsar",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0066",
+      "type": "PERSON",
+      "text": "Rukhsar",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0066",
+      "type": "PERSON",
+      "text": "Farzana Qureshi",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0066",
+      "type": "PERSON",
+      "text": "Md. Shakeel",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0066",
+      "type": "PERSON",
+      "text": "Rukhsar",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0066",
+      "type": "PERSON",
+      "text": "Rukhsar",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0067",
+      "type": "PERSON",
+      "text": "Rinku",
+      "covered": "0/5"
+    },
+    {
+      "id": "b2-0069",
+      "type": "PERSON",
+      "text": "Manisha Jadhav",
+      "covered": "6/13"
+    },
+    {
+      "id": "b2-0069",
+      "type": "PERSON",
+      "text": "Anand Lakra",
+      "covered": "0/10"
+    },
+    {
+      "id": "b2-0071",
+      "type": "PERSON",
+      "text": "Bhupendra",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0078",
+      "type": "MRN",
+      "text": "C-8856-70494",
+      "covered": "9/10"
+    },
+    {
+      "id": "b2-0078",
+      "type": "PERSON",
+      "text": "Ashwini Kulkarni",
+      "covered": "0/15"
+    },
+    {
+      "id": "b2-0080",
+      "type": "PERSON",
+      "text": "Phoolmati Kushwaha",
+      "covered": "8/17"
+    },
+    {
+      "id": "b2-0080",
+      "type": "PERSON",
+      "text": "Moti Lal Bhan",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0093",
+      "type": "PERSON",
+      "text": "Sunita",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0098",
+      "type": "PERSON",
+      "text": "Varsha",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0099",
+      "type": "PERSON",
+      "text": "Mohd. Arif Ansari",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0099",
+      "type": "PERSON",
+      "text": "Shahid",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0108",
+      "type": "MRN",
+      "text": "IPD-660987",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0108",
+      "type": "MRN",
+      "text": "26-90833",
+      "covered": "0/7"
+    },
+    {
+      "id": "b2-0108",
+      "type": "PHONE",
+      "text": "(+91) 65797 95183",
+      "covered": "10/13"
+    },
+    {
+      "id": "b2-0108",
+      "type": "PERSON",
+      "text": "Ashwini Shinde",
+      "covered": "0/13"
+    },
+    {
+      "id": "b2-0108",
+      "type": "MRN",
+      "text": "IP/2026/10523",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0108",
+      "type": "PERSON",
+      "text": "Shinde",
+      "covered": "0/6"
+    },
+    {
+      "id": "b2-0108",
+      "type": "MRN",
+      "text": "IP/2026/58620",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0108",
+      "type": "PERSON",
+      "text": "Md. Shakeel",
+      "covered": "2/9"
+    },
+    {
+      "id": "b2-0108",
+      "type": "PERSON",
+      "text": "Muhammed Ashraf",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0118",
+      "type": "PERSON",
+      "text": "Monika Hooda",
+      "covered": "5/11"
+    },
+    {
+      "id": "b2-0118",
+      "type": "PERSON",
+      "text": "Harish Kushwaha",
+      "covered": "0/14"
+    },
+    {
+      "id": "b2-0127",
+      "type": "MRN",
+      "text": "IP/2026/88598",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0127",
+      "type": "PERSON",
+      "text": "Geeta Shukla",
+      "covered": "0/11"
+    },
+    {
+      "id": "b2-0127",
+      "type": "MRN",
+      "text": "IP/2026/90362",
+      "covered": "9/11"
+    },
+    {
+      "id": "b2-0127",
+      "type": "MRN",
+      "text": "IP5560537",
+      "covered": "0/9"
+    },
+    {
+      "id": "b2-0127",
+      "type": "PERSON",
+      "text": "Md. Rafiqul Sheikh",
+      "covered": "2/15"
+    },
+    {
+      "id": "b2-0127",
+      "type": "PERSON",
+      "text": "Ambili",
+      "covered": "0/6"
+    }
+  ],
+  "false_alarm_examples": [
+    {
+      "id": "b2-0027",
+      "type": "PERSON",
+      "text": "hua"
+    },
+    {
+      "id": "b2-0027",
+      "type": "ID_NUMBER",
+      "text": "198597615762"
+    },
+    {
+      "id": "b2-0056",
+      "type": "PERSON",
+      "text": "roz sharab"
+    },
+    {
+      "id": "b2-0061",
+      "type": "PERSON",
+      "text": "kaan"
+    },
+    {
+      "id": "b2-0067",
+      "type": "ID_NUMBER",
+      "text": "3071/9794"
+    },
+    {
+      "id": "b2-0069",
+      "type": "PERSON",
+      "text": "hui"
+    },
+    {
+      "id": "b2-0069",
+      "type": "ID_NUMBER",
+      "text": "483413127076"
+    },
+    {
+      "id": "b2-0071",
+      "type": "ID_NUMBER",
+      "text": "1377/7980"
+    },
+    {
+      "id": "b2-0080",
+      "type": "PERSON",
+      "text": "hua"
+    },
+    {
+      "id": "b2-0080",
+      "type": "ID_NUMBER",
+      "text": "567609587585"
+    },
+    {
+      "id": "b2-0118",
+      "type": "PERSON",
+      "text": "hua"
+    },
+    {
+      "id": "b2-0118",
+      "type": "ID_NUMBER",
+      "text": "823421971214"
+    }
+  ],
+  "config": {
+    "set": "data/blind2.jsonl",
+    "ner": null,
+    "lang": "mixed"
+  }
+}

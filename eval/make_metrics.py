@@ -4,9 +4,11 @@ from pathlib import Path
 
 R = Path(__file__).resolve().parent / "results"
 ROWS = [
-    ("heldout_rules.json", "Held-out (independent author) · rules only"),
-    ("heldout_rules_ner.json", "Held-out · rules + local LLM-NER (qwen2.5 7B)"),
-    ("dev_rules.json", "Dev set (used for tuning) · rules only"),
+    ("blind2_rules.json", "Blind set 2 (unseen) · rules v2"),
+    ("blind2_rules_ner.json", "Blind set 2 (unseen) · rules v2 + local LLM-NER"),
+    ("heldout_rules_v1_frozen.json", "Held-out set 1 (unseen at the time) · rules v1"),
+    ("heldout_rules.json", "Held-out set 1 after error analysis · rules v2"),
+    ("heldout_rules_ner.json", "Held-out set 1 · rules v2 + local LLM-NER"),
 ]
 out = []
 for fname, label in ROWS:
