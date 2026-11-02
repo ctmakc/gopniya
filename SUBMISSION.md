@@ -1,0 +1,115 @@
+# Submission draft — Code for a Billion 2026
+
+Where: GitHub issue form **https://github.com/karlmehta/code-for-a-billion/issues/new?template=submission.yml**
+(the form creates a public issue labelled `submission`; one is filed per project). Deadline: 15 November 2026.
+Fields below follow `.github/ISSUE_TEMPLATE/submission.yml` in that repository, in order.
+
+---
+
+**Title:** `[Submission] Gopniya — keep patient identifiers out of cloud AI (Health)`
+
+### Team / Project name
+Gopniya (गोपनीय)
+
+### Team members (names + GitHub handles)
+TO FILL BY PUBLISHER: name (@github-handle)
+
+### Problem statement
+Clinics, ASHA programmes and district hospitals in India want cloud AI to turn clinical notes into
+discharge advice in Hindi, referral letters and visit summaries. Those notes carry Aadhaar and ABHA
+numbers, phone numbers, names and home addresses, and pasting them into a cloud model hands that
+data to a third party. India has issued 93.95 crore ABHA numbers and linked over 105 crore digital
+health records (as of 10 July 2026), so more and more clinical text is tied to a national
+identifier. Gopniya lets a health worker use any cloud model while the identifiers stay on the
+clinic's own device.
+
+### What you built
+An open-source agent (Python, standard library only, MIT) that de-identifies Indian clinical notes
+in English, Hindi and Hinglish before they reach a cloud model, and restores the values afterwards.
+
+- **Detect** Aadhaar (Verhoeff check digit or "Aadhaar/आधार" label, masked forms, Devanagari
+  digits), ABHA number and ABHA address, PAN, voter ID, mobiles, e-mail, UHID/MRN/IPD numbers, DOB,
+  PIN codes, names (honorifics, field labels, S/o–W/o, पुत्र/पत्नी, kinship words like beti/भाई) and
+  home addresses (Address, R/o, पता, निवासी, Village, ग्राम). Each name is propagated to its later mentions.
+- **Guard**: an independent re-scan of the redacted text; anything that still looks like an
+  identifier is mapped back and redacted, up to three rounds, and the call is blocked if a leak remains.
+- **Cloud call** with placeholders only (`[PERSON_1]`, `[AADHAAR_1]`), then **verify**: invented
+  placeholders or identifier-shaped numbers in the answer trigger one corrective retry.
+- **Restore** the real values locally.
+- Optional **local LLM-NER** pass (Ollama) for names with no cue; the agent refuses a non-local NER backend.
+- **Live demo** on Cloudflare Pages: the redaction engine runs in the visitor's browser through
+  Pyodide, so the raw note never leaves the tab. The server function re-checks every request and
+  refuses text that still contains Aadhaar/ABHA/PAN/phone/e-mail patterns (HTTP 422).
+- CLI with four backends (demo endpoint, Workers AI, Ollama for fully offline use, Gemini CLI),
+  unit tests, and a reproducible evaluation on two synthetic sets.
+
+How we used AgentFoundry (AF): TO FILL BY PUBLISHER, truthfully. The code was written outside
+AgentFoundry with Claude Code. See the note at the end of this file before ticking the AF checkbox.
+
+### GitHub repository URL
+TO FILL BY PUBLISHER: https://github.com/<org-or-user>/gopniya
+
+### Demo URL (live app or video)
+https://gopniya.pages.dev (live). Video: TO FILL BY PUBLISHER after uploading `video/gopniya-demo.mp4` (YouTube/Drive link).
+
+### Scale & severity of the problem
+- Scale: 93.95 crore ABHA numbers issued and over 105 crore digital health records linked as of
+  10 July 2026; 5.33 lakh health facilities and 9.85 lakh healthcare professionals registered on the
+  national registries (GKToday report on the ABDM Mission Steering Group,
+  https://www.gktoday.in/ayushman-bharat-digital-mission-crosses-93-95-crore-health-accounts/).
+  Every one of those facilities that tries a cloud model on clinical text faces this problem.
+- Severity for patients: a leaked Aadhaar plus phone number plus diagnosis exposes a person to
+  identity fraud, and diagnoses such as TB, HIV or a pregnancy complication carry stigma.
+- Severity for providers: under the Digital Personal Data Protection Act, 2023, failure to take
+  reasonable security safeguards to prevent a personal data breach can be penalised up to
+  ₹250 crore (Schedule, item 1).
+- Health systems are already targets: the AIIMS Delhi e-hospital servers went down in a ransomware
+  attack on 23 November 2022 and services ran manually for days
+  (https://www.healthcareitnews.com/news/asia/aiims-delhi-turns-manual-following-ransomware-attack).
+- We do not have a measured count of Indian clinicians who paste notes into chatbots; we did not
+  find a published survey and do not claim a number.
+
+### Deployment & impact data
+No field deployment yet, and no real users. What we can show is measured detection quality on
+synthetic notes (no real personal data anywhere):
+
+HELDOUT_SUMMARY_PLACEHOLDER
+
+Method: protection recall counts an identifier as protected only when every character is covered;
+precision counts a redaction as correct when it overlaps a labelled identifier. The held-out set was
+generated by a separate author who did not see the detection code, after the rules were committed.
+Template-generated notes are cleaner than real ones, so these numbers are an upper bound. The next
+step is a pilot with a clinic or health programme on consented notes, with a person labelling leaks.
+
+### Track / category
+Health
+
+### Contact email
+TO FILL BY PUBLISHER
+
+### Confirmations
+- [ ] Built using AgentFoundry (AF), the official IDE — **see note below; do not tick unless true**
+- [x] Our repository is public and includes a README with setup steps (after the repo is published)
+- [x] The demo link works and is accessible to judges (https://gopniya.pages.dev, checked 1 Nov 2026)
+
+---
+
+## Note for the publisher: the AgentFoundry requirement
+
+- The form's first confirmation, "Built using AgentFoundry (AF), the official IDE", is marked
+  `required: true`, and JUDGING.md lists "Built using AgentFoundry (AF)" under Eligibility.
+  The landing page says "Every project is built in the AgentFoundry.me IDE".
+- Participants asked organisers whether projects built elsewhere qualify (Discussions #13, #18, #30
+  in karlmehta/code-for-a-billion). As of 1 Nov 2026 we saw no organiser answer in those threads.
+- AgentFoundry sign-up (https://agentfoundry.me/signup) asks for a work e-mail and a password, sends
+  a confirmation link, and then offers a desktop IDE download (Mac, Windows, Linux). The page says
+  "Editor + Developer mode — free forever. No credit card. SMART-Code free for 3 months" (1,000
+  credits/month, then $14.99/month, or bring your own key, which it calls always free).
+- Honest path: sign up, open this repository in AgentFoundry, do real work there (for example run
+  the tests and the evaluation, make and commit a change), then describe exactly that in "What you
+  built" and tick the box. Alternatively ask in Discussions first.
+- Separately, the CFI registration form (https://codeforindia.org/hackathon/register) asks for first
+  and last name, e-mail, mobile with country code, country, city, state, PIN/zip, impact area and a
+  problem statement.
+- The FAQ says projects are released open source (Apache-2.0 or MIT) "to the Code for India GitHub
+  organization". This repository is MIT, so a transfer or fork into that org is possible later.

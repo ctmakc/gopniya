@@ -1,0 +1,683 @@
+{
+  "notes": 50,
+  "gold_entities": 425,
+  "protection_recall": 0.8024,
+  "precision": 0.9607,
+  "predicted_spans": 407,
+  "false_alarms": 16,
+  "leak_free_notes": 0.2,
+  "seconds_total": 0.13,
+  "ms_per_note": 2.58,
+  "per_type": {
+    "AADHAAR": {
+      "gold": 19,
+      "protected": 18,
+      "partial": 0,
+      "recall": 0.9474
+    },
+    "ABHA_ADDRESS": {
+      "gold": 1,
+      "protected": 1,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_NUMBER": {
+      "gold": 7,
+      "protected": 6,
+      "partial": 1,
+      "recall": 0.8571
+    },
+    "ADDRESS": {
+      "gold": 50,
+      "protected": 45,
+      "partial": 4,
+      "recall": 0.9
+    },
+    "DOB": {
+      "gold": 17,
+      "protected": 16,
+      "partial": 0,
+      "recall": 0.9412
+    },
+    "EMAIL": {
+      "gold": 1,
+      "protected": 1,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "MRN": {
+      "gold": 46,
+      "protected": 21,
+      "partial": 5,
+      "recall": 0.4565
+    },
+    "PAN": {
+      "gold": 2,
+      "protected": 2,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PERSON": {
+      "gold": 203,
+      "protected": 153,
+      "partial": 22,
+      "recall": 0.7537
+    },
+    "PHONE": {
+      "gold": 55,
+      "protected": 55,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PINCODE": {
+      "gold": 16,
+      "protected": 15,
+      "partial": 0,
+      "recall": 0.9375
+    },
+    "VOTER_ID": {
+      "gold": 8,
+      "protected": 8,
+      "partial": 0,
+      "recall": 1.0
+    }
+  },
+  "false_alarms_by_type": {
+    "ADDRESS": 11,
+    "ID_NUMBER": 1,
+    "PERSON": 4
+  },
+  "leaks": [
+    {
+      "id": "ho-0001",
+      "type": "MRN",
+      "text": "1943118",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0001",
+      "type": "PERSON",
+      "text": "अनीता देवी",
+      "covered": "4/9"
+    },
+    {
+      "id": "ho-0002",
+      "type": "MRN",
+      "text": "1997713",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0002",
+      "type": "PERSON",
+      "text": "लीलावती सिंह",
+      "covered": "4/11"
+    },
+    {
+      "id": "ho-0005",
+      "type": "MRN",
+      "text": "3109124",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0005",
+      "type": "PERSON",
+      "text": "मीना देवी",
+      "covered": "4/8"
+    },
+    {
+      "id": "ho-0017",
+      "type": "PERSON",
+      "text": "मो. इरफ़ान सिद्दीकी",
+      "covered": "10/16"
+    },
+    {
+      "id": "ho-0017",
+      "type": "MRN",
+      "text": "IPD-2470-1526",
+      "covered": "8/11"
+    },
+    {
+      "id": "ho-0017",
+      "type": "PERSON",
+      "text": "नसीम सिद्दीकी",
+      "covered": "8/12"
+    },
+    {
+      "id": "ho-0021",
+      "type": "PERSON",
+      "text": "जसलीन कौर",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0023",
+      "type": "PERSON",
+      "text": "रेखा साहू",
+      "covered": "4/8"
+    },
+    {
+      "id": "ho-0024",
+      "type": "ABHA_NUMBER",
+      "text": "91-7892-5102-9423",
+      "covered": "12/14"
+    },
+    {
+      "id": "ho-0024",
+      "type": "PERSON",
+      "text": "कमला देवी",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0025",
+      "type": "PERSON",
+      "text": "गीता दुबे",
+      "covered": "4/8"
+    },
+    {
+      "id": "ho-0030",
+      "type": "MRN",
+      "text": "1146307",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0030",
+      "type": "PERSON",
+      "text": "पुष्पा रावत",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0031",
+      "type": "MRN",
+      "text": "IPD-2585-6940",
+      "covered": "8/11"
+    },
+    {
+      "id": "ho-0031",
+      "type": "PERSON",
+      "text": "अनिल गुप्ता",
+      "covered": "6/10"
+    },
+    {
+      "id": "ho-0032",
+      "type": "MRN",
+      "text": "PCQ51NN6V",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0032",
+      "type": "MRN",
+      "text": "34125/26",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0032",
+      "type": "PERSON",
+      "text": "महेश",
+      "covered": "0/4"
+    },
+    {
+      "id": "ho-0036",
+      "type": "PINCODE",
+      "text": "835352",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0036",
+      "type": "AADHAAR",
+      "text": "xxxx-xxxx-7913",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0036",
+      "type": "PERSON",
+      "text": "बबीता राजभर",
+      "covered": "5/10"
+    },
+    {
+      "id": "ho-0036",
+      "type": "PERSON",
+      "text": "रानी",
+      "covered": "0/4"
+    },
+    {
+      "id": "ho-0037",
+      "type": "MRN",
+      "text": "24-78965",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0037",
+      "type": "PERSON",
+      "text": "रमेश दुबे",
+      "covered": "4/8"
+    },
+    {
+      "id": "ho-0037",
+      "type": "PERSON",
+      "text": "फूलमती पासवान",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0039",
+      "type": "PERSON",
+      "text": "राकेश मिश्रा",
+      "covered": "6/11"
+    },
+    {
+      "id": "ho-0045",
+      "type": "ADDRESS",
+      "text": "मकान नं. १, गली नं. ७, कंकड़बाग, पटना",
+      "covered": "6/25"
+    },
+    {
+      "id": "ho-0045",
+      "type": "MRN",
+      "text": "58884/24",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0045",
+      "type": "PERSON",
+      "text": "मुकेश साहू",
+      "covered": "4/9"
+    },
+    {
+      "id": "ho-0049",
+      "type": "MRN",
+      "text": "37055/26",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0049",
+      "type": "MRN",
+      "text": "GMC/24/870475",
+      "covered": "8/11"
+    },
+    {
+      "id": "ho-0050",
+      "type": "PERSON",
+      "text": "लीलावती चौहान",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0051",
+      "type": "ADDRESS",
+      "text": "ग्राम बरियारपुर, डाकघर सरायमीर, प्रखंड मोहनलालगंज, जिला लखनऊ, उ.प्र. पिन कोड 226100",
+      "covered": "60/66"
+    },
+    {
+      "id": "ho-0056",
+      "type": "PERSON",
+      "text": "कमला देवी",
+      "covered": "4/8"
+    },
+    {
+      "id": "ho-0077",
+      "type": "MRN",
+      "text": "26-61757",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0077",
+      "type": "PERSON",
+      "text": "मुकेश गुप्ता",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0077",
+      "type": "PERSON",
+      "text": "गुप्ता",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0078",
+      "type": "PERSON",
+      "text": "मुकेश राजभर",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0078",
+      "type": "PERSON",
+      "text": "नीलम देवी",
+      "covered": "4/8"
+    },
+    {
+      "id": "ho-0083",
+      "type": "PERSON",
+      "text": "मंजू निषाद",
+      "covered": "5/9"
+    },
+    {
+      "id": "ho-0083",
+      "type": "PERSON",
+      "text": "मंजू निषाद",
+      "covered": "5/9"
+    },
+    {
+      "id": "ho-0085",
+      "type": "MRN",
+      "text": "LBJJLNG43",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0085",
+      "type": "MRN",
+      "text": "26-66408",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0085",
+      "type": "PERSON",
+      "text": "संतोष निषाद",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0085",
+      "type": "PERSON",
+      "text": "रेखा मिश्रा",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0090",
+      "type": "PERSON",
+      "text": "शबाना अंसारी",
+      "covered": "6/11"
+    },
+    {
+      "id": "ho-0093",
+      "type": "PERSON",
+      "text": "जितेंद्र",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0093",
+      "type": "PERSON",
+      "text": "सुनीता देवी",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0105",
+      "type": "PERSON",
+      "text": "रानी देवी",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0111",
+      "type": "MRN",
+      "text": "IP/24/273209",
+      "covered": "8/10"
+    },
+    {
+      "id": "ho-0111",
+      "type": "PERSON",
+      "text": "रवि मौर्य",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0111",
+      "type": "PERSON",
+      "text": "मौर्य",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0122",
+      "type": "ADDRESS",
+      "text": "मकान नं. ४७, गली नं. ७, कोलार रोड, भोपाल",
+      "covered": "6/27"
+    },
+    {
+      "id": "ho-0131",
+      "type": "MRN",
+      "text": "31508/25",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0131",
+      "type": "PERSON",
+      "text": "अनिल निषाद",
+      "covered": "5/9"
+    },
+    {
+      "id": "ho-0143",
+      "type": "PERSON",
+      "text": "कुसुम गुप्ता",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0147",
+      "type": "MRN",
+      "text": "PXFWF4LMD",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0147",
+      "type": "MRN",
+      "text": "24-73975",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0147",
+      "type": "PERSON",
+      "text": "रानी देवी",
+      "covered": "4/8"
+    },
+    {
+      "id": "ho-0153",
+      "type": "PERSON",
+      "text": "खुशबू साहू",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0153",
+      "type": "PERSON",
+      "text": "संतोष साहू",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0156",
+      "type": "PERSON",
+      "text": "शिवम कुशवाहा",
+      "covered": "7/11"
+    },
+    {
+      "id": "ho-0156",
+      "type": "PERSON",
+      "text": "पूजा",
+      "covered": "0/4"
+    },
+    {
+      "id": "ho-0174",
+      "type": "MRN",
+      "text": "26-98967",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0174",
+      "type": "ADDRESS",
+      "text": "मकान नं. ४५, वार्ड नं. ८, सिकंदरपुर, ब्लॉक आसींद, जिला भीलवाड़ा-३११३१६",
+      "covered": "45/53"
+    },
+    {
+      "id": "ho-0174",
+      "type": "PERSON",
+      "text": "कमला कुमारी",
+      "covered": "6/10"
+    },
+    {
+      "id": "ho-0177",
+      "type": "MRN",
+      "text": "PUY2CPURT",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0177",
+      "type": "MRN",
+      "text": "IP/24/708108",
+      "covered": "8/10"
+    },
+    {
+      "id": "ho-0177",
+      "type": "PERSON",
+      "text": "बबलू शर्मा",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0177",
+      "type": "PERSON",
+      "text": "जितेंद्र",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0182",
+      "type": "ADDRESS",
+      "text": "ग्राम महुली, डाकघर सरायमीर, प्रखंड बिसवां, जिला सीतापुर, उ.प्र.",
+      "covered": "0/49"
+    },
+    {
+      "id": "ho-0187",
+      "type": "PERSON",
+      "text": "कमला देवी",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0187",
+      "type": "PERSON",
+      "text": "रवि गुप्ता",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0194",
+      "type": "PERSON",
+      "text": "राजेश पटेल",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0194",
+      "type": "DOB",
+      "text": "19 नवंबर 2000",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0195",
+      "type": "MRN",
+      "text": "X33QN05UV",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0195",
+      "type": "MRN",
+      "text": "33219/25",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0195",
+      "type": "PERSON",
+      "text": "अनीता कुमारी",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0198",
+      "type": "MRN",
+      "text": "IP8089490",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0198",
+      "type": "PERSON",
+      "text": "जावेद सिद्दीकी",
+      "covered": "8/13"
+    },
+    {
+      "id": "ho-0198",
+      "type": "PERSON",
+      "text": "लीलावती कुमारी",
+      "covered": "0/13"
+    }
+  ],
+  "false_alarm_examples": [
+    {
+      "id": "ho-0014",
+      "type": "ID_NUMBER",
+      "text": "2406108471"
+    },
+    {
+      "id": "ho-0017",
+      "type": "PERSON",
+      "text": "मो"
+    },
+    {
+      "id": "ho-0023",
+      "type": "ADDRESS",
+      "text": "ग्राम।\nआशा"
+    },
+    {
+      "id": "ho-0025",
+      "type": "ADDRESS",
+      "text": "ग्राम।\nआशा"
+    },
+    {
+      "id": "ho-0039",
+      "type": "ADDRESS",
+      "text": "ग्राम/डेसीलीटर"
+    },
+    {
+      "id": "ho-0040",
+      "type": "ADDRESS",
+      "text": "ग्राम/डेसीलीटर"
+    },
+    {
+      "id": "ho-0049",
+      "type": "ADDRESS",
+      "text": "ग्राम दिन में दो बार"
+    },
+    {
+      "id": "ho-0090",
+      "type": "ADDRESS",
+      "text": "ग्राम।\nआशा"
+    },
+    {
+      "id": "ho-0105",
+      "type": "ADDRESS",
+      "text": "ग्राम।\nआशा"
+    },
+    {
+      "id": "ho-0111",
+      "type": "ADDRESS",
+      "text": "ग्राम दिन में दो बार"
+    },
+    {
+      "id": "ho-0153",
+      "type": "ADDRESS",
+      "text": "दिनांक 09-09-2026 को"
+    },
+    {
+      "id": "ho-0156",
+      "type": "ADDRESS",
+      "text": "), दिनांक 03/01/2026 को सीएचसी तोकापाल में तेज़ बुखार, आंखों के पीछे दर्द, बदन दर्द की शिकायत लेकर आए"
+    },
+    {
+      "id": "ho-0174",
+      "type": "PERSON",
+      "text": "निदान"
+    },
+    {
+      "id": "ho-0182",
+      "type": "PERSON",
+      "text": "श्री"
+    },
+    {
+      "id": "ho-0198",
+      "type": "ADDRESS",
+      "text": "ग्राम/डेसीलीटर"
+    },
+    {
+      "id": "ho-0198",
+      "type": "PERSON",
+      "text": "हस्ताक्षर"
+    }
+  ],
+  "config": {
+    "set": "data/heldout.jsonl",
+    "ner": null,
+    "lang": "hi"
+  }
+}

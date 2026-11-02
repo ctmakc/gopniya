@@ -1,0 +1,2758 @@
+{
+  "notes": 120,
+  "gold_entities": 1136,
+  "protection_recall": 0.6532,
+  "precision": 0.9368,
+  "predicted_spans": 934,
+  "false_alarms": 59,
+  "leak_free_notes": 0.0083,
+  "seconds_total": 0.2,
+  "ms_per_note": 1.67,
+  "per_type": {
+    "AADHAAR": {
+      "gold": 32,
+      "protected": 32,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_ADDRESS": {
+      "gold": 20,
+      "protected": 20,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_NUMBER": {
+      "gold": 26,
+      "protected": 24,
+      "partial": 2,
+      "recall": 0.9231
+    },
+    "ADDRESS": {
+      "gold": 103,
+      "protected": 57,
+      "partial": 37,
+      "recall": 0.5534
+    },
+    "DOB": {
+      "gold": 46,
+      "protected": 25,
+      "partial": 0,
+      "recall": 0.5435
+    },
+    "EMAIL": {
+      "gold": 19,
+      "protected": 19,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "MRN": {
+      "gold": 132,
+      "protected": 80,
+      "partial": 11,
+      "recall": 0.6061
+    },
+    "PAN": {
+      "gold": 22,
+      "protected": 22,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PERSON": {
+      "gold": 545,
+      "protected": 287,
+      "partial": 69,
+      "recall": 0.5266
+    },
+    "PHONE": {
+      "gold": 136,
+      "protected": 129,
+      "partial": 5,
+      "recall": 0.9485
+    },
+    "PINCODE": {
+      "gold": 45,
+      "protected": 37,
+      "partial": 0,
+      "recall": 0.8222
+    },
+    "VOTER_ID": {
+      "gold": 10,
+      "protected": 10,
+      "partial": 0,
+      "recall": 1.0
+    }
+  },
+  "false_alarms_by_type": {
+    "ADDRESS": 8,
+    "ID_NUMBER": 41,
+    "PERSON": 10
+  },
+  "leaks": [
+    {
+      "id": "ho-0004",
+      "type": "ADDRESS",
+      "text": "H.No. 113, Moti Bandibar, Tal. Wani, Yavatmal",
+      "covered": "21/33"
+    },
+    {
+      "id": "ho-0004",
+      "type": "PERSON",
+      "text": "Ganesh Joshi",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0006",
+      "type": "PERSON",
+      "text": "H Baruah",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0006",
+      "type": "MRN",
+      "text": "BC-592110",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0006",
+      "type": "PERSON",
+      "text": "Sunita Yadav",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0006",
+      "type": "PERSON",
+      "text": "Sunita Gupta",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0007",
+      "type": "MRN",
+      "text": "HWC/9490/038576",
+      "covered": "10/13"
+    },
+    {
+      "id": "ho-0007",
+      "type": "PERSON",
+      "text": "Jasleen Kaur Sandhu",
+      "covered": "4/17"
+    },
+    {
+      "id": "ho-0007",
+      "type": "PERSON",
+      "text": "Raghavendra Shetty",
+      "covered": "0/17"
+    },
+    {
+      "id": "ho-0007",
+      "type": "ADDRESS",
+      "text": "VPO Takhtupura, Teh. Dharamkot, Distt. Moga",
+      "covered": "16/34"
+    },
+    {
+      "id": "ho-0008",
+      "type": "MRN",
+      "text": "R05KAZCQM",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0008",
+      "type": "PERSON",
+      "text": "Shagufta",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0008",
+      "type": "MRN",
+      "text": "PA/2603/MH/0805312",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0009",
+      "type": "PERSON",
+      "text": "S. Karthik",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0009",
+      "type": "PERSON",
+      "text": "rukhsana mirza",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0009",
+      "type": "ADDRESS",
+      "text": "110, Mariamman Koil Street, Ammapettai village, Pennagaram Tk, Dharmapuri Dt",
+      "covered": "31/63"
+    },
+    {
+      "id": "ho-0010",
+      "type": "PERSON",
+      "text": "Pooja Srivastava",
+      "covered": "10/15"
+    },
+    {
+      "id": "ho-0010",
+      "type": "PERSON",
+      "text": "POOJA SRIVASTAVA",
+      "covered": "10/15"
+    },
+    {
+      "id": "ho-0010",
+      "type": "ADDRESS",
+      "text": "Vill. Sarai Mir, Post Rampur Khurd, Tehsil Campierganj, Distt. Gorakhpur, UP",
+      "covered": "49/60"
+    },
+    {
+      "id": "ho-0010",
+      "type": "PERSON",
+      "text": "Meena Devi",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0010",
+      "type": "PERSON",
+      "text": "M.S. Mirza",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0011",
+      "type": "PERSON",
+      "text": "Fatima Rizvi",
+      "covered": "6/11"
+    },
+    {
+      "id": "ho-0011",
+      "type": "PERSON",
+      "text": "Mohd. Iqbal Rizvi",
+      "covered": "0/14"
+    },
+    {
+      "id": "ho-0011",
+      "type": "PERSON",
+      "text": "Fatima Alvi",
+      "covered": "6/10"
+    },
+    {
+      "id": "ho-0013",
+      "type": "PERSON",
+      "text": "Amit Negi",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0013",
+      "type": "DOB",
+      "text": "March 14, 1997",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0015",
+      "type": "PERSON",
+      "text": "Mallesh Naidu",
+      "covered": "5/12"
+    },
+    {
+      "id": "ho-0015",
+      "type": "ADDRESS",
+      "text": "D.No. 27-73, Narketpally village, Mangalagiri mandal, Guntur district",
+      "covered": "38/56"
+    },
+    {
+      "id": "ho-0015",
+      "type": "PINCODE",
+      "text": "522324",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0016",
+      "type": "PERSON",
+      "text": "Shivakumar Kulkarni",
+      "covered": "8/18"
+    },
+    {
+      "id": "ho-0018",
+      "type": "PERSON",
+      "text": "LALREMRUATA RENTHLEI",
+      "covered": "11/19"
+    },
+    {
+      "id": "ho-0018",
+      "type": "MRN",
+      "text": "3JQMJ8YD9",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0018",
+      "type": "PERSON",
+      "text": "Vanlalhruaia",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0019",
+      "type": "PERSON",
+      "text": "Abdul Rahman Mansuri",
+      "covered": "7/18"
+    },
+    {
+      "id": "ho-0019",
+      "type": "ADDRESS",
+      "text": "Village Naya Gaon, P.O. Kheri, Block Bodh Gaya, District Gaya, Bihar",
+      "covered": "17/52"
+    },
+    {
+      "id": "ho-0019",
+      "type": "PERSON",
+      "text": "D. Gogoi",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0020",
+      "type": "PERSON",
+      "text": "KAMLA SHARMA",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0020",
+      "type": "PERSON",
+      "text": "RAM NARESH SHARMA",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0020",
+      "type": "ADDRESS",
+      "text": "VILLAGE SEMRA, P.O. RATANPURA, BLOCK ORMANJHI, DISTRICT RANCHI, JHARKHAND, PIN-835054",
+      "covered": "20/68"
+    },
+    {
+      "id": "ho-0020",
+      "type": "PERSON",
+      "text": "MOHAMMED BASHEER MIRZA",
+      "covered": "5/20"
+    },
+    {
+      "id": "ho-0020",
+      "type": "PERSON",
+      "text": "Kamla",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0020",
+      "type": "PERSON",
+      "text": "Kamla",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0020",
+      "type": "PERSON",
+      "text": "J. Chacko",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0022",
+      "type": "PERSON",
+      "text": "banteilang syiem",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0022",
+      "type": "ADDRESS",
+      "text": "mawlai mawroh, shillong, west garo hills, meghalaya",
+      "covered": "0/42"
+    },
+    {
+      "id": "ho-0022",
+      "type": "PERSON",
+      "text": "wanda",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0026",
+      "type": "MRN",
+      "text": "47181/24",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0026",
+      "type": "PERSON",
+      "text": "Ricky Lyngwa",
+      "covered": "6/11"
+    },
+    {
+      "id": "ho-0026",
+      "type": "PERSON",
+      "text": "W. Momin",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0026",
+      "type": "PERSON",
+      "text": "A. Devi",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0026",
+      "type": "PERSON",
+      "text": "Momin",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0027",
+      "type": "MRN",
+      "text": "2025/TBU-3/7390",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0027",
+      "type": "ADDRESS",
+      "text": "Makan No. 59, Navagam, Tal. Wani, Yavatmal",
+      "covered": "19/31"
+    },
+    {
+      "id": "ho-0027",
+      "type": "PERSON",
+      "text": "Lata More",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0029",
+      "type": "PERSON",
+      "text": "Nasreen Siddiqui",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0029",
+      "type": "PERSON",
+      "text": "Arif Siddiqui",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0029",
+      "type": "DOB",
+      "text": "14.11.2004",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0029",
+      "type": "PERSON",
+      "text": "Nasreen",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0029",
+      "type": "PERSON",
+      "text": "Rukhsana",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0033",
+      "type": "PERSON",
+      "text": "MAHESH KUMAR",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0033",
+      "type": "PERSON",
+      "text": "ANITA MAURYA",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0033",
+      "type": "MRN",
+      "text": "SMP/25/03/9803",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0033",
+      "type": "PERSON",
+      "text": "Jitendra",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0035",
+      "type": "DOB",
+      "text": "09-Jul-1941",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0035",
+      "type": "PERSON",
+      "text": "Raju Chowdary",
+      "covered": "8/12"
+    },
+    {
+      "id": "ho-0035",
+      "type": "MRN",
+      "text": "IP/24/302535",
+      "covered": "8/10"
+    },
+    {
+      "id": "ho-0035",
+      "type": "PERSON",
+      "text": "Ramesh Babu Rao",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0042",
+      "type": "PERSON",
+      "text": "R Verma",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0042",
+      "type": "PERSON",
+      "text": "Seema Devi",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0043",
+      "type": "ADDRESS",
+      "text": "Mannil (H), Kanjirappally, Vaikom Taluk, Kottayam-686217",
+      "covered": "0/45"
+    },
+    {
+      "id": "ho-0043",
+      "type": "PERSON",
+      "text": "Remya Nair",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0043",
+      "type": "PERSON",
+      "text": "D. Panicker",
+      "covered": "8/9"
+    },
+    {
+      "id": "ho-0044",
+      "type": "PERSON",
+      "text": "Narasimha Raju",
+      "covered": "4/13"
+    },
+    {
+      "id": "ho-0047",
+      "type": "ADDRESS",
+      "text": "Vill. Bariyarpur, Post Lakhanpur, Tehsil Barwala, Distt. Hisar, Haryana",
+      "covered": "4/57"
+    },
+    {
+      "id": "ho-0047",
+      "type": "PERSON",
+      "text": "Aslam Malik",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0048",
+      "type": "PERSON",
+      "text": "Rajwant Kaur Brar",
+      "covered": "4/15"
+    },
+    {
+      "id": "ho-0048",
+      "type": "PERSON",
+      "text": "Pooja Meena",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0053",
+      "type": "PERSON",
+      "text": "Celine Pinto",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0053",
+      "type": "PERSON",
+      "text": "SUSAN TOPPO",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0053",
+      "type": "ADDRESS",
+      "text": "House No. 90/5, Moti Bandibar, Tal. Igatpuri, Nashik – 422358",
+      "covered": "25/46"
+    },
+    {
+      "id": "ho-0055",
+      "type": "PERSON",
+      "text": "SWAPNA MAHATO",
+      "covered": "6/12"
+    },
+    {
+      "id": "ho-0055",
+      "type": "MRN",
+      "text": "P8W8NJUJ1",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0055",
+      "type": "PINCODE",
+      "text": "766228",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0055",
+      "type": "MRN",
+      "text": "25-05956",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0055",
+      "type": "PERSON",
+      "text": "Swapna Barik",
+      "covered": "6/11"
+    },
+    {
+      "id": "ho-0059",
+      "type": "PERSON",
+      "text": "Bikram Banerjee",
+      "covered": "8/14"
+    },
+    {
+      "id": "ho-0059",
+      "type": "ADDRESS",
+      "text": "At/Po Gopalpur, Block Kesinga, Dist Kalahandi, Odisha",
+      "covered": "0/43"
+    },
+    {
+      "id": "ho-0059",
+      "type": "PERSON",
+      "text": "M. Sarkar",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0061",
+      "type": "MRN",
+      "text": "2739881",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0061",
+      "type": "ADDRESS",
+      "text": "Vill. Kot Ise Khan, P.O. Bilaspur, Tehsil Batala, Distt. Gurdaspur, Punjab",
+      "covered": "16/56"
+    },
+    {
+      "id": "ho-0061",
+      "type": "PERSON",
+      "text": "Savitri Kumari",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0061",
+      "type": "PERSON",
+      "text": "Radha",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0062",
+      "type": "ADDRESS",
+      "text": "Qtr. No. D-29, Ward No. 5, Ratanpura, Teh. Bastanar, Dist. Bastar-494021",
+      "covered": "19/51"
+    },
+    {
+      "id": "ho-0062",
+      "type": "PERSON",
+      "text": "Rani Kumari",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0062",
+      "type": "PERSON",
+      "text": "Rekha Kumari",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0064",
+      "type": "MRN",
+      "text": "UZ09PJ4W1",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0064",
+      "type": "ADDRESS",
+      "text": "Talav Faliyu, Rampura, Ta. Devgadh Baria, Dahod",
+      "covered": "20/37"
+    },
+    {
+      "id": "ho-0064",
+      "type": "PERSON",
+      "text": "Anjali K.",
+      "covered": "6/7"
+    },
+    {
+      "id": "ho-0064",
+      "type": "PERSON",
+      "text": "Shakeel Ansari",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0065",
+      "type": "MRN",
+      "text": "2025/TBU-2/5526",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0065",
+      "type": "PINCODE",
+      "text": "311356",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0065",
+      "type": "PERSON",
+      "text": "Mohammed Basheer Rizvi",
+      "covered": "0/20"
+    },
+    {
+      "id": "ho-0065",
+      "type": "PERSON",
+      "text": "R. Devi",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0066",
+      "type": "PERSON",
+      "text": "Chimchi",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0067",
+      "type": "PERSON",
+      "text": "Pushpa Devi",
+      "covered": "6/10"
+    },
+    {
+      "id": "ho-0067",
+      "type": "PERSON",
+      "text": "Ramkishan Prajapati",
+      "covered": "0/18"
+    },
+    {
+      "id": "ho-0067",
+      "type": "ADDRESS",
+      "text": "VPO Chuhar Chak, Teh. Batala, Distt. Gurdaspur",
+      "covered": "0/36"
+    },
+    {
+      "id": "ho-0067",
+      "type": "DOB",
+      "text": "June 22, 2026",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0069",
+      "type": "PERSON",
+      "text": "GEORGE MINJ",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0069",
+      "type": "PERSON",
+      "text": "George",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0069",
+      "type": "PERSON",
+      "text": "George",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0070",
+      "type": "ADDRESS",
+      "text": "VPO Kot Ise Khan, Teh. Baghapurana, Distt. Moga-142107",
+      "covered": "16/42"
+    },
+    {
+      "id": "ho-0070",
+      "type": "PERSON",
+      "text": "B. Karthik",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0071",
+      "type": "PERSON",
+      "text": "Nasreen Khan",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0071",
+      "type": "PERSON",
+      "text": "P Devi",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0072",
+      "type": "PERSON",
+      "text": "Kulwant Singh",
+      "covered": "5/12"
+    },
+    {
+      "id": "ho-0072",
+      "type": "PERSON",
+      "text": "F. Parveen",
+      "covered": "7/8"
+    },
+    {
+      "id": "ho-0073",
+      "type": "PERSON",
+      "text": "Anil Mishra",
+      "covered": "6/10"
+    },
+    {
+      "id": "ho-0073",
+      "type": "PERSON",
+      "text": "Pushpa Pandey",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0074",
+      "type": "PERSON",
+      "text": "NAZIA BANO",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0074",
+      "type": "ADDRESS",
+      "text": "#195, Ward No. 7, Mahuli, Teh. Berasia, Dist. Bhopal",
+      "covered": "20/37"
+    },
+    {
+      "id": "ho-0075",
+      "type": "PERSON",
+      "text": "Sanjay Mishra",
+      "covered": "6/12"
+    },
+    {
+      "id": "ho-0075",
+      "type": "MRN",
+      "text": "IP2841961",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0076",
+      "type": "MRN",
+      "text": "TC4360798425",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0076",
+      "type": "PERSON",
+      "text": "Sunil Mandal",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0076",
+      "type": "PERSON",
+      "text": "POOJA RAWAT",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0079",
+      "type": "MRN",
+      "text": "TC3723022598",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0079",
+      "type": "PERSON",
+      "text": "Pooja Rajbhar",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0079",
+      "type": "PERSON",
+      "text": "Manju Sharma",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0080",
+      "type": "DOB",
+      "text": "20/09/26",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0080",
+      "type": "PERSON",
+      "text": "Remya Menon",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0080",
+      "type": "PERSON",
+      "text": "A.R. Khan",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0081",
+      "type": "DOB",
+      "text": "02-Apr-2026",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0081",
+      "type": "PERSON",
+      "text": "Venkata Rao Chowdary",
+      "covered": "8/18"
+    },
+    {
+      "id": "ho-0081",
+      "type": "PERSON",
+      "text": "Sreelekha Panicker",
+      "covered": "0/17"
+    },
+    {
+      "id": "ho-0082",
+      "type": "MRN",
+      "text": "5217/25",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0082",
+      "type": "PERSON",
+      "text": "NARASIMHA VARMA",
+      "covered": "0/14"
+    },
+    {
+      "id": "ho-0082",
+      "type": "PERSON",
+      "text": "B. Deka",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0084",
+      "type": "MRN",
+      "text": "MR/79730/26",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0087",
+      "type": "PERSON",
+      "text": "Shagufta Qureshi",
+      "covered": "8/15"
+    },
+    {
+      "id": "ho-0087",
+      "type": "PERSON",
+      "text": "Mohd. Iqbal Qureshi",
+      "covered": "0/16"
+    },
+    {
+      "id": "ho-0088",
+      "type": "MRN",
+      "text": "2544160",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0088",
+      "type": "MRN",
+      "text": "2025/TU-2/1799",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0088",
+      "type": "PERSON",
+      "text": "RUKHSANA PARVEEN",
+      "covered": "8/15"
+    },
+    {
+      "id": "ho-0088",
+      "type": "PERSON",
+      "text": "Irfan Shaikh",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0088",
+      "type": "PERSON",
+      "text": "Pradhan",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0089",
+      "type": "PERSON",
+      "text": "P. Pandiammal",
+      "covered": "10/11"
+    },
+    {
+      "id": "ho-0089",
+      "type": "PERSON",
+      "text": "Murugan P.",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0089",
+      "type": "DOB",
+      "text": "11-Jun-2026",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0091",
+      "type": "DOB",
+      "text": "22 May 2026",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0091",
+      "type": "PERSON",
+      "text": "George Ekka",
+      "covered": "4/10"
+    },
+    {
+      "id": "ho-0091",
+      "type": "PERSON",
+      "text": "V. K.",
+      "covered": "0/2"
+    },
+    {
+      "id": "ho-0092",
+      "type": "MRN",
+      "text": "K7TA8T137",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0092",
+      "type": "PERSON",
+      "text": "G. Selvam",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0092",
+      "type": "PERSON",
+      "text": "Radha",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0094",
+      "type": "PERSON",
+      "text": "Manju Meena",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0094",
+      "type": "PERSON",
+      "text": "Anil Mandal",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0094",
+      "type": "ADDRESS",
+      "text": "House No. 73/4, Ward No. 6, Bhawanipur, Teh. Sheo, Dist. Barmer",
+      "covered": "30/44"
+    },
+    {
+      "id": "ho-0094",
+      "type": "PINCODE",
+      "text": "344007",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0094",
+      "type": "PERSON",
+      "text": "Kusum Maurya",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0095",
+      "type": "MRN",
+      "text": "3525872",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0095",
+      "type": "ADDRESS",
+      "text": "Qtr. No. A-42, Gali No. 6, Dakshinpuri, New Delhi, Delhi",
+      "covered": "0/39"
+    },
+    {
+      "id": "ho-0095",
+      "type": "PERSON",
+      "text": "Saroj Devi",
+      "covered": "4/9"
+    },
+    {
+      "id": "ho-0095",
+      "type": "PERSON",
+      "text": "G Sahu",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0096",
+      "type": "MRN",
+      "text": "P1JDPFV24",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0096",
+      "type": "ADDRESS",
+      "text": "Village Kheri, P.O. Gopalpur Kalan, Block Bansdih, District Ballia, Uttar Pradesh",
+      "covered": "14/65"
+    },
+    {
+      "id": "ho-0096",
+      "type": "PERSON",
+      "text": "Priya",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0096",
+      "type": "MRN",
+      "text": "PA/2607/KA/4091232",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0097",
+      "type": "PERSON",
+      "text": "Vineeth Kurup",
+      "covered": "5/12"
+    },
+    {
+      "id": "ho-0097",
+      "type": "MRN",
+      "text": "IPD-2476-6489",
+      "covered": "8/11"
+    },
+    {
+      "id": "ho-0097",
+      "type": "PERSON",
+      "text": "Vineeth Kurup",
+      "covered": "5/12"
+    },
+    {
+      "id": "ho-0098",
+      "type": "PERSON",
+      "text": "K. Senthil Kumar",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0098",
+      "type": "PERSON",
+      "text": "Leima",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0099",
+      "type": "PERSON",
+      "text": "Kulwant Singh Gill",
+      "covered": "0/16"
+    },
+    {
+      "id": "ho-0099",
+      "type": "ADDRESS",
+      "text": "Vill. Chuhar Chak, P.O. Dhudike, Tehsil Batala, Distt. Gurdaspur, Punjab 143373",
+      "covered": "4/61"
+    },
+    {
+      "id": "ho-0099",
+      "type": "PERSON",
+      "text": "Jonali Das",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0099",
+      "type": "PERSON",
+      "text": "Simran",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0100",
+      "type": "PERSON",
+      "text": "K. Senthil Kumar",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0100",
+      "type": "MRN",
+      "text": "IP/24/571459",
+      "covered": "8/10"
+    },
+    {
+      "id": "ho-0100",
+      "type": "PERSON",
+      "text": "Siddappa Gowda",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0101",
+      "type": "PERSON",
+      "text": "Kiran Jatav",
+      "covered": "5/10"
+    },
+    {
+      "id": "ho-0101",
+      "type": "ADDRESS",
+      "text": "House No. 95/8, Ward No. 11, Bhagwanpur, Teh. Sahjanwa, Dist. Gorakhpur 273114",
+      "covered": "31/58"
+    },
+    {
+      "id": "ho-0103",
+      "type": "ADDRESS",
+      "text": "VPO Kot Ise Khan, Teh. Dharamkot, Distt. Moga, Pin code 142177",
+      "covered": "6/47"
+    },
+    {
+      "id": "ho-0103",
+      "type": "PERSON",
+      "text": "Gurmeet",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0103",
+      "type": "PERSON",
+      "text": "Harpreet Kaur",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0104",
+      "type": "PERSON",
+      "text": "Sheeba Varghese",
+      "covered": "0/14"
+    },
+    {
+      "id": "ho-0104",
+      "type": "PERSON",
+      "text": "Babita",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0106",
+      "type": "PERSON",
+      "text": "Tabassum Rizvi",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0107",
+      "type": "ADDRESS",
+      "text": "VPO Kot Ise Khan, Teh. Maur, Distt. Bathinda",
+      "covered": "16/33"
+    },
+    {
+      "id": "ho-0108",
+      "type": "ADDRESS",
+      "text": "Vill. Sikandarpur, Bahraich",
+      "covered": "4/23"
+    },
+    {
+      "id": "ho-0110",
+      "type": "PERSON",
+      "text": "Bijayalaxmi Hansda",
+      "covered": "6/17"
+    },
+    {
+      "id": "ho-0113",
+      "type": "PERSON",
+      "text": "Kiran Devi",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0113",
+      "type": "PERSON",
+      "text": "kiran devi",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0113",
+      "type": "PERSON",
+      "text": "Lalit Tiwari",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0113",
+      "type": "PERSON",
+      "text": "Sasmita Murmu",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0114",
+      "type": "MRN",
+      "text": "ESJ-2602-0026240",
+      "covered": "11/14"
+    },
+    {
+      "id": "ho-0114",
+      "type": "PERSON",
+      "text": "Nitin Pawar",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0114",
+      "type": "PERSON",
+      "text": "hitesh patil",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0115",
+      "type": "PERSON",
+      "text": "Zainab Pathan",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0115",
+      "type": "PERSON",
+      "text": "Rizwan Pathan",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0115",
+      "type": "ADDRESS",
+      "text": "At/Po Natungram, Block Chhatrapur, Dist Ganjam, Odisha",
+      "covered": "0/44"
+    },
+    {
+      "id": "ho-0115",
+      "type": "PINCODE",
+      "text": "761013",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0115",
+      "type": "PERSON",
+      "text": "Rukhsana",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0115",
+      "type": "PERSON",
+      "text": "K. Pawar",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0117",
+      "type": "PERSON",
+      "text": "SUNITA BISHT",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0117",
+      "type": "PERSON",
+      "text": "Phoolmati Devi",
+      "covered": "9/13"
+    },
+    {
+      "id": "ho-0117",
+      "type": "PERSON",
+      "text": "Prem Yadav",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0120",
+      "type": "MRN",
+      "text": "3411389",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0120",
+      "type": "MRN",
+      "text": "2025/TBU-3/5308",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0120",
+      "type": "ADDRESS",
+      "text": "Makan No. 81, Ward No. 6, Madhopur, Teh. Berasia, Dist. Bhopal - 462024",
+      "covered": "27/50"
+    },
+    {
+      "id": "ho-0120",
+      "type": "PERSON",
+      "text": "Farzana Qureshi",
+      "covered": "7/14"
+    },
+    {
+      "id": "ho-0120",
+      "type": "PHONE",
+      "text": "+919043032366",
+      "covered": "12/13"
+    },
+    {
+      "id": "ho-0121",
+      "type": "DOB",
+      "text": "13-May-2026",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0121",
+      "type": "PERSON",
+      "text": "Imran Mansuri",
+      "covered": "7/12"
+    },
+    {
+      "id": "ho-0121",
+      "type": "PINCODE",
+      "text": "676058",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0121",
+      "type": "PERSON",
+      "text": "Bindu Panicker",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0123",
+      "type": "PERSON",
+      "text": "Joseph Ekka",
+      "covered": "4/10"
+    },
+    {
+      "id": "ho-0123",
+      "type": "ADDRESS",
+      "text": "Door No. 3/120, Mariamman Koil Street, Ammapettai, Tindivanam Taluk, Villupuram District, Tamil Nadu, Pin-604071",
+      "covered": "6/90"
+    },
+    {
+      "id": "ho-0123",
+      "type": "PHONE",
+      "text": "+919803654021",
+      "covered": "12/13"
+    },
+    {
+      "id": "ho-0123",
+      "type": "PERSON",
+      "text": "Jessy Fernandes",
+      "covered": "0/14"
+    },
+    {
+      "id": "ho-0124",
+      "type": "PERSON",
+      "text": "B Mondal",
+      "covered": "6/7"
+    },
+    {
+      "id": "ho-0124",
+      "type": "MRN",
+      "text": "BC-336921",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0124",
+      "type": "ABHA_NUMBER",
+      "text": "95-7829-8739-6295",
+      "covered": "12/14"
+    },
+    {
+      "id": "ho-0124",
+      "type": "ADDRESS",
+      "text": "Vill. Haripur, P.O. Natungram, P.S. Kandi, Dist. Murshidabad, PIN 742258",
+      "covered": "10/53"
+    },
+    {
+      "id": "ho-0124",
+      "type": "PERSON",
+      "text": "Mousumi",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0125",
+      "type": "PERSON",
+      "text": "Savitri Devi",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0125",
+      "type": "PERSON",
+      "text": "Sanjay Srivastava",
+      "covered": "10/16"
+    },
+    {
+      "id": "ho-0125",
+      "type": "ADDRESS",
+      "text": "Makan No. 70, Ward No. 5, Bariyarpur, Teh. Sheo, Dist. Barmer",
+      "covered": "29/43"
+    },
+    {
+      "id": "ho-0125",
+      "type": "MRN",
+      "text": "IP/25/016863",
+      "covered": "8/10"
+    },
+    {
+      "id": "ho-0125",
+      "type": "PERSON",
+      "text": "Ankit Srivastava",
+      "covered": "10/15"
+    },
+    {
+      "id": "ho-0126",
+      "type": "PERSON",
+      "text": "B. Sumathi",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0126",
+      "type": "PERSON",
+      "text": "Elizabeth",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0128",
+      "type": "PERSON",
+      "text": "Gulnaz Bano",
+      "covered": "6/10"
+    },
+    {
+      "id": "ho-0128",
+      "type": "PERSON",
+      "text": "Salim Siddiqui",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0128",
+      "type": "DOB",
+      "text": "08-Sep-2026",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0128",
+      "type": "PERSON",
+      "text": "Bornali Gogoi",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0130",
+      "type": "PERSON",
+      "text": "Bornali Hazarika",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0132",
+      "type": "MRN",
+      "text": "HWC/1845/753560",
+      "covered": "10/13"
+    },
+    {
+      "id": "ho-0132",
+      "type": "PERSON",
+      "text": "Shivakumar Kamath",
+      "covered": "0/16"
+    },
+    {
+      "id": "ho-0132",
+      "type": "PERSON",
+      "text": "Roopa Patil",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0132",
+      "type": "ADDRESS",
+      "text": "Qtr. No. D-9, Kyathanahalli, Yelahanka Taluk, Bengaluru Urban District, Karnataka - 560394",
+      "covered": "0/71"
+    },
+    {
+      "id": "ho-0133",
+      "type": "PERSON",
+      "text": "Jignesh Joshi",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0133",
+      "type": "DOB",
+      "text": "29-Apr-2026",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0133",
+      "type": "PERSON",
+      "text": "Snehal Joshi",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0133",
+      "type": "PERSON",
+      "text": "Rameshbhai Joshi",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0133",
+      "type": "PERSON",
+      "text": "Sangita Shinde",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0134",
+      "type": "PERSON",
+      "text": "Sindhu",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0135",
+      "type": "ADDRESS",
+      "text": "Vill. Bilaspur, P.O. Dhudike, Tehsil Rampura Phul, Distt. Bathinda, Punjab",
+      "covered": "4/57"
+    },
+    {
+      "id": "ho-0135",
+      "type": "PERSON",
+      "text": "M. Vasava",
+      "covered": "6/7"
+    },
+    {
+      "id": "ho-0135",
+      "type": "PERSON",
+      "text": "Kulwinder",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0135",
+      "type": "PERSON",
+      "text": "H Singh",
+      "covered": "5/6"
+    },
+    {
+      "id": "ho-0136",
+      "type": "PERSON",
+      "text": "Javed Mansuri",
+      "covered": "7/12"
+    },
+    {
+      "id": "ho-0136",
+      "type": "DOB",
+      "text": "November 10, 1993",
+      "covered": "0/14"
+    },
+    {
+      "id": "ho-0137",
+      "type": "PERSON",
+      "text": "JHARNA BEHERA",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0137",
+      "type": "PERSON",
+      "text": "J MAHATO",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0137",
+      "type": "DOB",
+      "text": "19-08-2003",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0137",
+      "type": "PERSON",
+      "text": "Rina Mukherjee",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0137",
+      "type": "PERSON",
+      "text": "Fatima Rizvi",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0138",
+      "type": "PERSON",
+      "text": "Shanti Devi",
+      "covered": "4/10"
+    },
+    {
+      "id": "ho-0138",
+      "type": "PERSON",
+      "text": "Ravi Kumar Sahu",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0138",
+      "type": "ADDRESS",
+      "text": "Vill. Ratanpura, Post Kesarpur, Tehsil Balotra, Distt. Barmer, Raj., PIN 344170",
+      "covered": "10/61"
+    },
+    {
+      "id": "ho-0138",
+      "type": "PERSON",
+      "text": "Bindu Warrier",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0140",
+      "type": "MRN",
+      "text": "LB2608-52981",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0140",
+      "type": "PERSON",
+      "text": "Manjulaben Parmar",
+      "covered": "0/16"
+    },
+    {
+      "id": "ho-0140",
+      "type": "PERSON",
+      "text": "R. Balaji",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0141",
+      "type": "PERSON",
+      "text": "VENKATA RAO VARMA",
+      "covered": "5/15"
+    },
+    {
+      "id": "ho-0141",
+      "type": "PERSON",
+      "text": "SRINIVAS VARMA",
+      "covered": "5/13"
+    },
+    {
+      "id": "ho-0141",
+      "type": "PERSON",
+      "text": "VENKATA RAO VARMA",
+      "covered": "5/15"
+    },
+    {
+      "id": "ho-0141",
+      "type": "PERSON",
+      "text": "Venkata",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0141",
+      "type": "PERSON",
+      "text": "Venkata",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0141",
+      "type": "PERSON",
+      "text": "R Raju",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0142",
+      "type": "DOB",
+      "text": "02-Apr-2026",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0142",
+      "type": "PERSON",
+      "text": "Remya Panicker",
+      "covered": "5/13"
+    },
+    {
+      "id": "ho-0142",
+      "type": "PERSON",
+      "text": "Anjali",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0144",
+      "type": "PERSON",
+      "text": "SHAKEEL SHAIKH",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0144",
+      "type": "PERSON",
+      "text": "I. MANSURI",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0144",
+      "type": "MRN",
+      "text": "SMP/26/12/4369",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0144",
+      "type": "PERSON",
+      "text": "Fatima",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0144",
+      "type": "PERSON",
+      "text": "Suresh Nishad",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0145",
+      "type": "PERSON",
+      "text": "Rakesh Prajapati",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0145",
+      "type": "ADDRESS",
+      "text": "#68, Sector 25, Seelampur, North East Delhi",
+      "covered": "0/34"
+    },
+    {
+      "id": "ho-0145",
+      "type": "PERSON",
+      "text": "Savitri Rajbhar",
+      "covered": "0/14"
+    },
+    {
+      "id": "ho-0145",
+      "type": "PERSON",
+      "text": "Manju Maurya",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0146",
+      "type": "PERSON",
+      "text": "DIPIKA DEKA",
+      "covered": "6/10"
+    },
+    {
+      "id": "ho-0146",
+      "type": "PERSON",
+      "text": "Rupam Deka",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0146",
+      "type": "ADDRESS",
+      "text": "Vill. Tingrai, P.O. Borbari, P.S. Chabua, Dist. Dibrugarh, Assam-786004",
+      "covered": "13/52"
+    },
+    {
+      "id": "ho-0146",
+      "type": "DOB",
+      "text": "18 Aug 1998",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0146",
+      "type": "PERSON",
+      "text": "Pallabi",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0148",
+      "type": "PERSON",
+      "text": "S. Arumugam",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0148",
+      "type": "DOB",
+      "text": "19 Oct 1947",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0148",
+      "type": "PERSON",
+      "text": "Selvam S.",
+      "covered": "6/7"
+    },
+    {
+      "id": "ho-0148",
+      "type": "MRN",
+      "text": "28512/26",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0148",
+      "type": "PERSON",
+      "text": "M. Valli",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0148",
+      "type": "PERSON",
+      "text": "Balaji S.",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0148",
+      "type": "PERSON",
+      "text": "Selvi Perumal",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0149",
+      "type": "DOB",
+      "text": "26-03-1938",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0149",
+      "type": "PERSON",
+      "text": "Mohd. Iqbal Rizvi",
+      "covered": "5/14"
+    },
+    {
+      "id": "ho-0149",
+      "type": "ADDRESS",
+      "text": "Vill. Kusumpur, P.O. Haripur, P.S. Domkal, Dist. Murshidabad",
+      "covered": "4/44"
+    },
+    {
+      "id": "ho-0149",
+      "type": "MRN",
+      "text": "IPD-2472-3161",
+      "covered": "8/11"
+    },
+    {
+      "id": "ho-0149",
+      "type": "PERSON",
+      "text": "Md. Sajid Rizvi",
+      "covered": "7/12"
+    },
+    {
+      "id": "ho-0151",
+      "type": "PERSON",
+      "text": "MEENA MAURYA",
+      "covered": "5/11"
+    },
+    {
+      "id": "ho-0151",
+      "type": "PERSON",
+      "text": "Rajesh Maurya",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0151",
+      "type": "ADDRESS",
+      "text": "Vill. Harraiya, Post Kheri, Tehsil Dhamdaha, Distt. Purnia, Bihar",
+      "covered": "4/51"
+    },
+    {
+      "id": "ho-0151",
+      "type": "PINCODE",
+      "text": "854377",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0151",
+      "type": "PHONE",
+      "text": "+919373119324",
+      "covered": "12/13"
+    },
+    {
+      "id": "ho-0151",
+      "type": "PERSON",
+      "text": "Manju",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0152",
+      "type": "MRN",
+      "text": "HWC/3384/488289",
+      "covered": "10/13"
+    },
+    {
+      "id": "ho-0152",
+      "type": "PERSON",
+      "text": "Suresh Srivastava",
+      "covered": "0/16"
+    },
+    {
+      "id": "ho-0152",
+      "type": "PERSON",
+      "text": "RADHA VERMA",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0154",
+      "type": "PERSON",
+      "text": "Bikash Baruah",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0154",
+      "type": "PERSON",
+      "text": "NADEEM RIZVI",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0157",
+      "type": "PERSON",
+      "text": "RAMKISHAN PASWAN",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0157",
+      "type": "MRN",
+      "text": "PPZEU5V6B",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0157",
+      "type": "PHONE",
+      "text": "(0172) 5084390",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0157",
+      "type": "PERSON",
+      "text": "Ramkishan",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0157",
+      "type": "PERSON",
+      "text": "Meena",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0158",
+      "type": "PERSON",
+      "text": "SUNIL GUPTA",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0158",
+      "type": "PERSON",
+      "text": "J. SAIKIA",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0158",
+      "type": "MRN",
+      "text": "BC-695692",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0158",
+      "type": "PHONE",
+      "text": "(033) 31379977",
+      "covered": "8/11"
+    },
+    {
+      "id": "ho-0158",
+      "type": "PERSON",
+      "text": "Rohit Kumar Pandey",
+      "covered": "5/16"
+    },
+    {
+      "id": "ho-0160",
+      "type": "MRN",
+      "text": "25-81957",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0161",
+      "type": "ADDRESS",
+      "text": "Makan No. 86, Ward No. 11, Chuhar Chak, Bathinda, Punjab-151178",
+      "covered": "38/47"
+    },
+    {
+      "id": "ho-0161",
+      "type": "PERSON",
+      "text": "Jasleen Kaur",
+      "covered": "4/11"
+    },
+    {
+      "id": "ho-0161",
+      "type": "PERSON",
+      "text": "N Reddy",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0162",
+      "type": "PERSON",
+      "text": "S Kulkarni",
+      "covered": "8/9"
+    },
+    {
+      "id": "ho-0166",
+      "type": "PERSON",
+      "text": "Pushpa Prajapati",
+      "covered": "9/15"
+    },
+    {
+      "id": "ho-0166",
+      "type": "ADDRESS",
+      "text": "Vill. Kesarpur, Post Mahuli, Tehsil Thandla, Distt. Jhabua, MP",
+      "covered": "4/48"
+    },
+    {
+      "id": "ho-0166",
+      "type": "MRN",
+      "text": "IP5493734",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0166",
+      "type": "PHONE",
+      "text": "(044) 59732536",
+      "covered": "8/11"
+    },
+    {
+      "id": "ho-0169",
+      "type": "PERSON",
+      "text": "Faizan Pathan",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0169",
+      "type": "PERSON",
+      "text": "L. Mishra",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0170",
+      "type": "DOB",
+      "text": "06/06/2026",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0170",
+      "type": "PERSON",
+      "text": "Swati Kulkarni",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0170",
+      "type": "PERSON",
+      "text": "Sachin Kulkarni",
+      "covered": "0/14"
+    },
+    {
+      "id": "ho-0170",
+      "type": "ADDRESS",
+      "text": "Nishal Faliyu, Bhatwada, Ta. Vav, Banaskantha",
+      "covered": "22/36"
+    },
+    {
+      "id": "ho-0170",
+      "type": "PINCODE",
+      "text": "385082",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0170",
+      "type": "PERSON",
+      "text": "Bhavna Patel",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0170",
+      "type": "PERSON",
+      "text": "S. Pandian",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0171",
+      "type": "PERSON",
+      "text": "M. Balaji",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0171",
+      "type": "MRN",
+      "text": "PRU9BPAK1",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0171",
+      "type": "MRN",
+      "text": "IP1745482",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0171",
+      "type": "PERSON",
+      "text": "K. Sivakumar",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0172",
+      "type": "ADDRESS",
+      "text": "H.No. 4-94/7, Chintalapudi (V), Indervelli (M), Adilabad (Dt), TS, PIN: 504349",
+      "covered": "6/52"
+    },
+    {
+      "id": "ho-0173",
+      "type": "ADDRESS",
+      "text": "Vill. Mawkyrwat, Mawsynram C&RD Block, East Khasi Hills",
+      "covered": "4/45"
+    },
+    {
+      "id": "ho-0173",
+      "type": "PERSON",
+      "text": "Bandarishisha Nongrum",
+      "covered": "0/20"
+    },
+    {
+      "id": "ho-0173",
+      "type": "PERSON",
+      "text": "B Lyngdoh",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0175",
+      "type": "PERSON",
+      "text": "BANDARISHISHA SANGMA",
+      "covered": "0/19"
+    },
+    {
+      "id": "ho-0175",
+      "type": "PERSON",
+      "text": "W. MOMIN",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0175",
+      "type": "MRN",
+      "text": "SMP/26/08/8920",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0175",
+      "type": "PERSON",
+      "text": "Saljrang Nongrum",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0178",
+      "type": "PERSON",
+      "text": "Saroj Tiwari",
+      "covered": "6/11"
+    },
+    {
+      "id": "ho-0178",
+      "type": "MRN",
+      "text": "15213/25",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0178",
+      "type": "PERSON",
+      "text": "Salim Siddiqui",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0179",
+      "type": "PERSON",
+      "text": "gurnam singh sandhu",
+      "covered": "0/17"
+    },
+    {
+      "id": "ho-0179",
+      "type": "PERSON",
+      "text": "Balwinder Singh Dhillon",
+      "covered": "0/21"
+    },
+    {
+      "id": "ho-0179",
+      "type": "ADDRESS",
+      "text": "Vill. Dhudike, P.O. Ghall Kalan, Tehsil Talwandi Sabo, Distt. Bathinda, Punjab, Pin-151181",
+      "covered": "10/69"
+    },
+    {
+      "id": "ho-0179",
+      "type": "PHONE",
+      "text": "(0522) 2509882",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0179",
+      "type": "PERSON",
+      "text": "Rajwant Kaur",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0179",
+      "type": "PERSON",
+      "text": "H Shetty",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0180",
+      "type": "MRN",
+      "text": "PN7CYPG1X",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0180",
+      "type": "ABHA_NUMBER",
+      "text": "21-7249-2235-6553",
+      "covered": "12/14"
+    },
+    {
+      "id": "ho-0180",
+      "type": "MRN",
+      "text": "IPD-2485-5161",
+      "covered": "8/11"
+    },
+    {
+      "id": "ho-0180",
+      "type": "PERSON",
+      "text": "Abdul Rahman Mirza",
+      "covered": "0/16"
+    },
+    {
+      "id": "ho-0180",
+      "type": "MRN",
+      "text": "PA/2602/RJ/9104658",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0184",
+      "type": "PERSON",
+      "text": "NAVNEET KAUR SANDHU",
+      "covered": "7/17"
+    },
+    {
+      "id": "ho-0184",
+      "type": "MRN",
+      "text": "TKH4VNM0X",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0184",
+      "type": "PERSON",
+      "text": "Gurnam Singh Dhillon",
+      "covered": "0/18"
+    },
+    {
+      "id": "ho-0185",
+      "type": "MRN",
+      "text": "IP/25/699962",
+      "covered": "8/10"
+    },
+    {
+      "id": "ho-0185",
+      "type": "PERSON",
+      "text": "Anil Kumar Menon",
+      "covered": "5/14"
+    },
+    {
+      "id": "ho-0185",
+      "type": "ADDRESS",
+      "text": "Chirayil House, Erattupetta P.O., Thodupuzha, Idukki District, Kerala – 685300",
+      "covered": "0/63"
+    },
+    {
+      "id": "ho-0185",
+      "type": "PERSON",
+      "text": "F Malik",
+      "covered": "5/6"
+    },
+    {
+      "id": "ho-0186",
+      "type": "PERSON",
+      "text": "Joseph Chacko",
+      "covered": "6/12"
+    },
+    {
+      "id": "ho-0186",
+      "type": "PERSON",
+      "text": "Anil Kumar K.",
+      "covered": "9/10"
+    },
+    {
+      "id": "ho-0188",
+      "type": "PERSON",
+      "text": "Kusum",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0188",
+      "type": "DOB",
+      "text": "June 23, 2026",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0188",
+      "type": "PERSON",
+      "text": "Geeta Devi",
+      "covered": "5/9"
+    },
+    {
+      "id": "ho-0188",
+      "type": "PERSON",
+      "text": "Vijay Kumar Prajapati",
+      "covered": "0/19"
+    },
+    {
+      "id": "ho-0188",
+      "type": "PERSON",
+      "text": "Kavya Nayak",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0188",
+      "type": "PERSON",
+      "text": "Kamla",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0191",
+      "type": "DOB",
+      "text": "08-02-2026",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0191",
+      "type": "PERSON",
+      "text": "F Qureshi",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0192",
+      "type": "MRN",
+      "text": "2778701",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0192",
+      "type": "PERSON",
+      "text": "Swarupa Yadav",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0192",
+      "type": "PERSON",
+      "text": "V. Chowdary",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0193",
+      "type": "PERSON",
+      "text": "Kavya Patil",
+      "covered": "5/10"
+    },
+    {
+      "id": "ho-0193",
+      "type": "PERSON",
+      "text": "Manjunath Patil",
+      "covered": "5/14"
+    },
+    {
+      "id": "ho-0199",
+      "type": "PERSON",
+      "text": "RANI SRIVASTAVA",
+      "covered": "0/14"
+    },
+    {
+      "id": "ho-0199",
+      "type": "PERSON",
+      "text": "Babita Mandal",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0199",
+      "type": "PERSON",
+      "text": "Ravi Maurya",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0200",
+      "type": "PERSON",
+      "text": "Sebastian Chacko",
+      "covered": "6/15"
+    },
+    {
+      "id": "ho-0200",
+      "type": "DOB",
+      "text": "31-Oct-2002",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0200",
+      "type": "PERSON",
+      "text": "M. Pandiammal",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0200",
+      "type": "PERSON",
+      "text": "Molly",
+      "covered": "0/5"
+    }
+  ],
+  "false_alarm_examples": [
+    {
+      "id": "ho-0006",
+      "type": "ID_NUMBER",
+      "text": "24/10/2026 7"
+    },
+    {
+      "id": "ho-0006",
+      "type": "ID_NUMBER",
+      "text": "3928847946"
+    },
+    {
+      "id": "ho-0007",
+      "type": "ADDRESS",
+      "text": "gram stain"
+    },
+    {
+      "id": "ho-0008",
+      "type": "PERSON",
+      "text": "Krishna"
+    },
+    {
+      "id": "ho-0016",
+      "type": "ID_NUMBER",
+      "text": "2027-02-05"
+    },
+    {
+      "id": "ho-0019",
+      "type": "ID_NUMBER",
+      "text": "2026-04-14"
+    },
+    {
+      "id": "ho-0020",
+      "type": "ID_NUMBER",
+      "text": "2026-04-12"
+    },
+    {
+      "id": "ho-0027",
+      "type": "ID_NUMBER",
+      "text": "2026-02-21"
+    },
+    {
+      "id": "ho-0029",
+      "type": "ID_NUMBER",
+      "text": "2026-11-22"
+    },
+    {
+      "id": "ho-0029",
+      "type": "ID_NUMBER",
+      "text": "5214877766"
+    },
+    {
+      "id": "ho-0042",
+      "type": "ID_NUMBER",
+      "text": "02/05/2026 5"
+    },
+    {
+      "id": "ho-0055",
+      "type": "PERSON",
+      "text": "Venkateswara Ramnarain Ruia"
+    },
+    {
+      "id": "ho-0061",
+      "type": "PERSON",
+      "text": "Follow-up"
+    },
+    {
+      "id": "ho-0061",
+      "type": "PERSON",
+      "text": "Follow-up"
+    },
+    {
+      "id": "ho-0062",
+      "type": "ID_NUMBER",
+      "text": "2026-10-01"
+    },
+    {
+      "id": "ho-0062",
+      "type": "PERSON",
+      "text": "Medical"
+    },
+    {
+      "id": "ho-0065",
+      "type": "ID_NUMBER",
+      "text": "2026-09-29"
+    },
+    {
+      "id": "ho-0069",
+      "type": "ID_NUMBER",
+      "text": "2026-05-29"
+    },
+    {
+      "id": "ho-0071",
+      "type": "ID_NUMBER",
+      "text": "13/03/26 17"
+    },
+    {
+      "id": "ho-0074",
+      "type": "ID_NUMBER",
+      "text": "2026-06-22"
+    },
+    {
+      "id": "ho-0084",
+      "type": "ADDRESS",
+      "text": ") (MRD No"
+    },
+    {
+      "id": "ho-0091",
+      "type": "PERSON",
+      "text": "Ram Manohar Lohia"
+    },
+    {
+      "id": "ho-0091",
+      "type": "ID_NUMBER",
+      "text": "2026-05-23"
+    },
+    {
+      "id": "ho-0095",
+      "type": "ID_NUMBER",
+      "text": "2026-06-02"
+    },
+    {
+      "id": "ho-0097",
+      "type": "ID_NUMBER",
+      "text": "03-04-2026 7"
+    },
+    {
+      "id": "ho-0098",
+      "type": "ID_NUMBER",
+      "text": "09/04/2026 8"
+    },
+    {
+      "id": "ho-0100",
+      "type": "PERSON",
+      "text": "Krishna"
+    },
+    {
+      "id": "ho-0110",
+      "type": "ADDRESS",
+      "text": "gram stain"
+    },
+    {
+      "id": "ho-0114",
+      "type": "PERSON",
+      "text": "Balaji"
+    },
+    {
+      "id": "ho-0114",
+      "type": "ADDRESS",
+      "text": "gram stain"
+    },
+    {
+      "id": "ho-0121",
+      "type": "ID_NUMBER",
+      "text": "2026-05-14"
+    },
+    {
+      "id": "ho-0123",
+      "type": "ADDRESS",
+      "text": "Father's e-mail"
+    },
+    {
+      "id": "ho-0124",
+      "type": "ID_NUMBER",
+      "text": "14-09-2026 5"
+    },
+    {
+      "id": "ho-0125",
+      "type": "ID_NUMBER",
+      "text": "29/08/26 11"
+    },
+    {
+      "id": "ho-0135",
+      "type": "ID_NUMBER",
+      "text": "2026-03-09"
+    },
+    {
+      "id": "ho-0135",
+      "type": "ID_NUMBER",
+      "text": "2026-03-29"
+    },
+    {
+      "id": "ho-0137",
+      "type": "ID_NUMBER",
+      "text": "2026-03-11 2"
+    },
+    {
+      "id": "ho-0140",
+      "type": "ID_NUMBER",
+      "text": "27/01/2026 8"
+    },
+    {
+      "id": "ho-0144",
+      "type": "ID_NUMBER",
+      "text": "14/01/2026 11"
+    },
+    {
+      "id": "ho-0144",
+      "type": "ID_NUMBER",
+      "text": "2026-01-15 2"
+    },
+    {
+      "id": "ho-0149",
+      "type": "PERSON",
+      "text": "Balaji"
+    },
+    {
+      "id": "ho-0149",
+      "type": "ID_NUMBER",
+      "text": "26/07/2026 11"
+    },
+    {
+      "id": "ho-0154",
+      "type": "ID_NUMBER",
+      "text": "2026-02-24"
+    },
+    {
+      "id": "ho-0158",
+      "type": "ID_NUMBER",
+      "text": "27-07-2026 5"
+    },
+    {
+      "id": "ho-0158",
+      "type": "ID_NUMBER",
+      "text": "3948463026"
+    },
+    {
+      "id": "ho-0160",
+      "type": "ID_NUMBER",
+      "text": "12/07/2026 6"
+    },
+    {
+      "id": "ho-0166",
+      "type": "ID_NUMBER",
+      "text": "2026-07-24 7"
+    },
+    {
+      "id": "ho-0173",
+      "type": "ID_NUMBER",
+      "text": "28/07/2026 3"
+    },
+    {
+      "id": "ho-0173",
+      "type": "ID_NUMBER",
+      "text": "2508367462"
+    },
+    {
+      "id": "ho-0175",
+      "type": "ID_NUMBER",
+      "text": "25-02-2026 4"
+    },
+    {
+      "id": "ho-0178",
+      "type": "ID_NUMBER",
+      "text": "2026-05-17 4"
+    },
+    {
+      "id": "ho-0179",
+      "type": "ID_NUMBER",
+      "text": "14/02/2026 8"
+    },
+    {
+      "id": "ho-0186",
+      "type": "PERSON",
+      "text": "Krishna"
+    },
+    {
+      "id": "ho-0186",
+      "type": "ADDRESS",
+      "text": "Dept. - Chest & TB, Room No. 30"
+    },
+    {
+      "id": "ho-0191",
+      "type": "ID_NUMBER",
+      "text": "3636260523"
+    },
+    {
+      "id": "ho-0192",
+      "type": "ADDRESS",
+      "text": "contact"
+    },
+    {
+      "id": "ho-0192",
+      "type": "ADDRESS",
+      "text": "Contact"
+    },
+    {
+      "id": "ho-0193",
+      "type": "ID_NUMBER",
+      "text": "2027-03-02"
+    },
+    {
+      "id": "ho-0199",
+      "type": "ID_NUMBER",
+      "text": "2026-04-12"
+    }
+  ],
+  "config": {
+    "set": "data/heldout.jsonl",
+    "ner": null,
+    "lang": "en"
+  }
+}

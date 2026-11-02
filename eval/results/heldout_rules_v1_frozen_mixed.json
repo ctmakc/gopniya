@@ -1,0 +1,794 @@
+{
+  "notes": 30,
+  "gold_entities": 234,
+  "protection_recall": 0.547,
+  "precision": 0.9202,
+  "predicted_spans": 163,
+  "false_alarms": 13,
+  "leak_free_notes": 0.0333,
+  "seconds_total": 0.03,
+  "ms_per_note": 1.04,
+  "per_type": {
+    "AADHAAR": {
+      "gold": 8,
+      "protected": 8,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_ADDRESS": {
+      "gold": 4,
+      "protected": 4,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_NUMBER": {
+      "gold": 4,
+      "protected": 4,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ADDRESS": {
+      "gold": 25,
+      "protected": 8,
+      "partial": 7,
+      "recall": 0.32
+    },
+    "DOB": {
+      "gold": 5,
+      "protected": 2,
+      "partial": 0,
+      "recall": 0.4
+    },
+    "EMAIL": {
+      "gold": 3,
+      "protected": 3,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "MRN": {
+      "gold": 26,
+      "protected": 18,
+      "partial": 4,
+      "recall": 0.6923
+    },
+    "PERSON": {
+      "gold": 116,
+      "protected": 39,
+      "partial": 6,
+      "recall": 0.3362
+    },
+    "PHONE": {
+      "gold": 30,
+      "protected": 30,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PINCODE": {
+      "gold": 8,
+      "protected": 7,
+      "partial": 0,
+      "recall": 0.875
+    },
+    "VOTER_ID": {
+      "gold": 5,
+      "protected": 5,
+      "partial": 0,
+      "recall": 1.0
+    }
+  },
+  "false_alarms_by_type": {
+    "ADDRESS": 2,
+    "ID_NUMBER": 10,
+    "PERSON": 1
+  },
+  "leaks": [
+    {
+      "id": "ho-0012",
+      "type": "PERSON",
+      "text": "Pooja Kumari",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0012",
+      "type": "PERSON",
+      "text": "Harish Chaudhary",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0012",
+      "type": "ADDRESS",
+      "text": "Chakia gaon, post Madhopur, Jaipur (Raj.), Pin-302098",
+      "covered": "6/40"
+    },
+    {
+      "id": "ho-0012",
+      "type": "PERSON",
+      "text": "Pooja",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0012",
+      "type": "PERSON",
+      "text": "Sammakka Goud",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0038",
+      "type": "MRN",
+      "text": "TC2951127524",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0038",
+      "type": "PERSON",
+      "text": "Salim",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0038",
+      "type": "PERSON",
+      "text": "Aslam Khan",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0038",
+      "type": "PERSON",
+      "text": "A. Patel",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0041",
+      "type": "PERSON",
+      "text": "Geeta Kushwaha",
+      "covered": "8/13"
+    },
+    {
+      "id": "ho-0052",
+      "type": "MRN",
+      "text": "30253/24",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0052",
+      "type": "PERSON",
+      "text": "Pooja Rajbhar",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0052",
+      "type": "PERSON",
+      "text": "Prem Rajbhar",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0052",
+      "type": "DOB",
+      "text": "10/07/1995",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0052",
+      "type": "PERSON",
+      "text": "Pooja",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0054",
+      "type": "PERSON",
+      "text": "sabiha parveen",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0054",
+      "type": "PERSON",
+      "text": "fatima khan",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0054",
+      "type": "PERSON",
+      "text": "imran khan",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0054",
+      "type": "ADDRESS",
+      "text": "gram ratanpura, post semra, thana bahadurpur, zila darbhanga - 847184",
+      "covered": "0/56"
+    },
+    {
+      "id": "ho-0054",
+      "type": "PERSON",
+      "text": "shaheen",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0057",
+      "type": "PERSON",
+      "text": "Rekha Devi",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0057",
+      "type": "PERSON",
+      "text": "Ankit Patel",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0057",
+      "type": "PERSON",
+      "text": "Rekha",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0057",
+      "type": "PERSON",
+      "text": "Nasreen Parveen",
+      "covered": "0/14"
+    },
+    {
+      "id": "ho-0058",
+      "type": "MRN",
+      "text": "6401/25",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0058",
+      "type": "PERSON",
+      "text": "Shivam Chaudhary",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0058",
+      "type": "PERSON",
+      "text": "Deepak Chaudhary",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0058",
+      "type": "ADDRESS",
+      "text": "D-184/4, Tigri Extension, South Delhi",
+      "covered": "0/29"
+    },
+    {
+      "id": "ho-0058",
+      "type": "PINCODE",
+      "text": "110099",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0058",
+      "type": "DOB",
+      "text": "13 Dec 1955",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0060",
+      "type": "PERSON",
+      "text": "Priya Devi",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0060",
+      "type": "PERSON",
+      "text": "Sunita Yadav",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0060",
+      "type": "ADDRESS",
+      "text": "E-211/5, Najafgarh, West Delhi, PIN: 110058",
+      "covered": "6/32"
+    },
+    {
+      "id": "ho-0063",
+      "type": "PERSON",
+      "text": "Neelam Devi",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0063",
+      "type": "PERSON",
+      "text": "Sunil Kumar Pandey",
+      "covered": "0/16"
+    },
+    {
+      "id": "ho-0063",
+      "type": "ADDRESS",
+      "text": "Chakia gaon, post Barhpur, Muzaffarpur (Bihar), PIN: 843388",
+      "covered": "6/46"
+    },
+    {
+      "id": "ho-0063",
+      "type": "PERSON",
+      "text": "Srivastava",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0068",
+      "type": "MRN",
+      "text": "hwc/8253/713706",
+      "covered": "10/13"
+    },
+    {
+      "id": "ho-0068",
+      "type": "PERSON",
+      "text": "khushboo",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0068",
+      "type": "PERSON",
+      "text": "khushboo paswan",
+      "covered": "0/14"
+    },
+    {
+      "id": "ho-0068",
+      "type": "PERSON",
+      "text": "sunita",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0068",
+      "type": "PERSON",
+      "text": "mary kurian",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0086",
+      "type": "MRN",
+      "text": "ESJ-2609-7098322",
+      "covered": "11/14"
+    },
+    {
+      "id": "ho-0086",
+      "type": "PERSON",
+      "text": "Urmila Tiwari",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0086",
+      "type": "PERSON",
+      "text": "Radha Gupta",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0086",
+      "type": "PERSON",
+      "text": "R. Verma",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0102",
+      "type": "PERSON",
+      "text": "Shanti Sharma",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0102",
+      "type": "PERSON",
+      "text": "Anjali Devi",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0102",
+      "type": "ADDRESS",
+      "text": "gaon Bariyarpur, block Banmankhi, jila Purnia",
+      "covered": "0/38"
+    },
+    {
+      "id": "ho-0109",
+      "type": "PERSON",
+      "text": "Pankaj Maurya",
+      "covered": "0/12"
+    },
+    {
+      "id": "ho-0109",
+      "type": "PERSON",
+      "text": "Amit Maurya",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0109",
+      "type": "ADDRESS",
+      "text": "Dhanaura gaon, post Chakia, Purnia (Bihar)",
+      "covered": "0/33"
+    },
+    {
+      "id": "ho-0112",
+      "type": "PERSON",
+      "text": "neelam chauhan",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0112",
+      "type": "PERSON",
+      "text": "geeta kumari",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0112",
+      "type": "PERSON",
+      "text": "mahesh prajapati",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0112",
+      "type": "ADDRESS",
+      "text": "e-248/1, sangam vihar, delhi",
+      "covered": "0/21"
+    },
+    {
+      "id": "ho-0112",
+      "type": "PERSON",
+      "text": "sunita",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0118",
+      "type": "PERSON",
+      "text": "meena kushwaha",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0118",
+      "type": "PERSON",
+      "text": "gaurav",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0118",
+      "type": "PERSON",
+      "text": "pankaj",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0119",
+      "type": "PERSON",
+      "text": "rukhsana parveen",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0119",
+      "type": "PERSON",
+      "text": "anwar",
+      "covered": "0/5"
+    },
+    {
+      "id": "ho-0119",
+      "type": "PERSON",
+      "text": "rizwan",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0127",
+      "type": "PERSON",
+      "text": "Arif Rizvi",
+      "covered": "5/9"
+    },
+    {
+      "id": "ho-0127",
+      "type": "ADDRESS",
+      "text": "Talav Faliyu, Moti Bandibar, Ta. Tharad, Banaskantha",
+      "covered": "25/42"
+    },
+    {
+      "id": "ho-0129",
+      "type": "PERSON",
+      "text": "Shabana Siddiqui",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0129",
+      "type": "PERSON",
+      "text": "Shakeel Siddiqui",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0129",
+      "type": "ADDRESS",
+      "text": "gaon Ratanpura, block Danapur, jila Patna",
+      "covered": "0/34"
+    },
+    {
+      "id": "ho-0129",
+      "type": "PERSON",
+      "text": "Shabana",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0129",
+      "type": "PERSON",
+      "text": "Gurmeet Kaur Dhillon",
+      "covered": "0/18"
+    },
+    {
+      "id": "ho-0150",
+      "type": "MRN",
+      "text": "ESJ-2610-2741610",
+      "covered": "11/14"
+    },
+    {
+      "id": "ho-0150",
+      "type": "PERSON",
+      "text": "Vaishali",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0150",
+      "type": "PERSON",
+      "text": "Snehal More",
+      "covered": "4/10"
+    },
+    {
+      "id": "ho-0150",
+      "type": "PERSON",
+      "text": "B. Roy",
+      "covered": "0/4"
+    },
+    {
+      "id": "ho-0155",
+      "type": "MRN",
+      "text": "HWC/1913/536185",
+      "covered": "10/13"
+    },
+    {
+      "id": "ho-0155",
+      "type": "PERSON",
+      "text": "Manju Devi",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0155",
+      "type": "PERSON",
+      "text": "Radha Kumari",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0164",
+      "type": "PERSON",
+      "text": "Anita Devi",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0164",
+      "type": "PERSON",
+      "text": "Khushboo",
+      "covered": "0/8"
+    },
+    {
+      "id": "ho-0164",
+      "type": "PERSON",
+      "text": "Ram Naresh",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0165",
+      "type": "PERSON",
+      "text": "Pushpa Devi",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0165",
+      "type": "ADDRESS",
+      "text": "Gram Bariyarpur, near St. Mary's Church, Tehsil Mihinpurwa, Bahraich",
+      "covered": "20/56"
+    },
+    {
+      "id": "ho-0167",
+      "type": "PERSON",
+      "text": "Shivam Negi",
+      "covered": "4/10"
+    },
+    {
+      "id": "ho-0167",
+      "type": "ADDRESS",
+      "text": "gaon Rampur Khurd, block Sanganer, jila Jaipur - 302000",
+      "covered": "0/44"
+    },
+    {
+      "id": "ho-0167",
+      "type": "PERSON",
+      "text": "Harbhajan Singh Sidhu",
+      "covered": "0/19"
+    },
+    {
+      "id": "ho-0168",
+      "type": "PERSON",
+      "text": "Om Prakash Nishad",
+      "covered": "0/15"
+    },
+    {
+      "id": "ho-0168",
+      "type": "ADDRESS",
+      "text": "H. No. 6-2, Ward No. 10, Mahuli, Teh. Adampur, Dist. Hisar, Pin code 125359",
+      "covered": "28/51"
+    },
+    {
+      "id": "ho-0168",
+      "type": "DOB",
+      "text": "02-Jul-1996",
+      "covered": "0/9"
+    },
+    {
+      "id": "ho-0168",
+      "type": "PERSON",
+      "text": "Ravi",
+      "covered": "0/4"
+    },
+    {
+      "id": "ho-0181",
+      "type": "MRN",
+      "text": "3171970",
+      "covered": "0/7"
+    },
+    {
+      "id": "ho-0181",
+      "type": "PERSON",
+      "text": "nisha kumari",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0181",
+      "type": "PERSON",
+      "text": "rajesh kumar rawat",
+      "covered": "0/16"
+    },
+    {
+      "id": "ho-0181",
+      "type": "PERSON",
+      "text": "prem",
+      "covered": "0/4"
+    },
+    {
+      "id": "ho-0189",
+      "type": "PERSON",
+      "text": "Reshma Begum",
+      "covered": "0/11"
+    },
+    {
+      "id": "ho-0189",
+      "type": "PERSON",
+      "text": "Md. Sajid Mansuri",
+      "covered": "0/14"
+    },
+    {
+      "id": "ho-0189",
+      "type": "ADDRESS",
+      "text": "Gram Ratanpura, opp. Panchayat Bhawan, Tehsil Rasra, Ballia",
+      "covered": "16/48"
+    },
+    {
+      "id": "ho-0189",
+      "type": "PERSON",
+      "text": "Reshma",
+      "covered": "0/6"
+    },
+    {
+      "id": "ho-0189",
+      "type": "PERSON",
+      "text": "Kalaiselvi",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0190",
+      "type": "PERSON",
+      "text": "Shagufta Begum",
+      "covered": "0/13"
+    },
+    {
+      "id": "ho-0190",
+      "type": "PERSON",
+      "text": "Ayesha Alvi",
+      "covered": "0/10"
+    },
+    {
+      "id": "ho-0190",
+      "type": "PERSON",
+      "text": "Md. Sajid Alvi",
+      "covered": "2/11"
+    },
+    {
+      "id": "ho-0190",
+      "type": "ADDRESS",
+      "text": "Chakia gaon, post Bariyarpur, Varanasi (Uttar Pradesh)",
+      "covered": "0/44"
+    },
+    {
+      "id": "ho-0196",
+      "type": "PERSON",
+      "text": "Gaurav Sahu",
+      "covered": "4/10"
+    },
+    {
+      "id": "ho-0196",
+      "type": "ADDRESS",
+      "text": "gaon Devipur, block Ramnagar, jila West Champaran",
+      "covered": "0/41"
+    },
+    {
+      "id": "ho-0197",
+      "type": "ADDRESS",
+      "text": "Harraiya gaon, post Rampur Khurd, Lucknow (U.P.)",
+      "covered": "0/36"
+    },
+    {
+      "id": "ho-0197",
+      "type": "PERSON",
+      "text": "Kushwaha",
+      "covered": "0/8"
+    }
+  ],
+  "false_alarm_examples": [
+    {
+      "id": "ho-0012",
+      "type": "PERSON",
+      "text": "Pati"
+    },
+    {
+      "id": "ho-0028",
+      "type": "ID_NUMBER",
+      "text": "2026 / 03/08/2026"
+    },
+    {
+      "id": "ho-0052",
+      "type": "ID_NUMBER",
+      "text": "2026 / 14/10/26"
+    },
+    {
+      "id": "ho-0057",
+      "type": "ID_NUMBER",
+      "text": "2025-10-18"
+    },
+    {
+      "id": "ho-0109",
+      "type": "ID_NUMBER",
+      "text": "2026-05-14"
+    },
+    {
+      "id": "ho-0118",
+      "type": "ADDRESS",
+      "text": "mob"
+    },
+    {
+      "id": "ho-0119",
+      "type": "ADDRESS",
+      "text": "mob"
+    },
+    {
+      "id": "ho-0119",
+      "type": "ID_NUMBER",
+      "text": "1208101852"
+    },
+    {
+      "id": "ho-0127",
+      "type": "ID_NUMBER",
+      "text": "20/07/2026 / 26"
+    },
+    {
+      "id": "ho-0127",
+      "type": "ID_NUMBER",
+      "text": "2026-08-02"
+    },
+    {
+      "id": "ho-0168",
+      "type": "ID_NUMBER",
+      "text": "2026-03-26 / 2026-03-30"
+    },
+    {
+      "id": "ho-0189",
+      "type": "ID_NUMBER",
+      "text": "3185153049"
+    },
+    {
+      "id": "ho-0190",
+      "type": "ID_NUMBER",
+      "text": "2026-07-07"
+    }
+  ],
+  "config": {
+    "set": "data/heldout.jsonl",
+    "ner": null,
+    "lang": "mixed"
+  }
+}

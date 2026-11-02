@@ -19,6 +19,7 @@ import json
 import os
 import re
 import subprocess
+import urllib.error
 import urllib.request
 
 from .detect import Span
@@ -28,10 +29,17 @@ OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://127.0.0.1:11434")
 
 def _post(url: str, payload: dict, headers: dict | None = None, timeout: float = 120) -> dict:
     req = urllib.request.Request(
-        url, data=json.dumps(payload).encode(), headers={"Content-Type": "application/json", **(headers or {})}
+        url, data=json.dumps(payload).encode(),
+        headers={"Content-Type": "application/json", "User-Agent": "gopniya-cli/0.1", **(headers or {})},
     )
-    with urllib.request.urlopen(req, timeout=timeout) as resp:  # noqa: S310 - fixed URLs
-        return json.loads(resp.read().decode())
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:  # noqa: S310 - fixed URLs
+            return json.loads(resp.read().decode())
+    except urllib.error.HTTPError as exc:  # surface the server's JSON error message
+        try:
+            return json.loads(exc.read().decode())
+        except ValueError:
+            raise exc from None
 
 
 def http_endpoint(url: str):
