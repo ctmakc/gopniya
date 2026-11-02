@@ -6,8 +6,8 @@
   "predicted_spans": 1273,
   "false_alarms": 0,
   "leak_free_notes": 1.0,
-  "seconds_total": 0.14,
-  "ms_per_note": 0.94,
+  "seconds_total": 0.26,
+  "ms_per_note": 1.74,
   "per_type": {
     "AADHAAR": {
       "gold": 100,

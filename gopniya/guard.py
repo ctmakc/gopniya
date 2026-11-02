@@ -59,6 +59,9 @@ def scan(redacted: str, known_values: list[tuple[str, str]]) -> list[Finding]:
                 found.append(Finding("known_value", Span(idx, end, typ, redacted[idx:end], 0.6, "guard")))
             idx = low.find(val.casefold(), end)
     norm = normalize_digits(redacted)
+    # blank out dates and clock times so they do not read as long digit runs
+    norm = re.sub(r"\d{4}-\d{2}-\d{2}|\d{1,2}[/\-.]\d{1,2}[/\-.]\d{2,4}|\d{1,2}:\d{2}(?::\d{2})?",
+                  lambda m: " " * len(m.group(0)), norm)
     for m in _DIGIT_RUN_RE.finditer(norm):
         digits = sum(c.isdigit() for c in m.group(0))
         if digits < 8 or _inside_placeholder(redacted, m.start(), m.end()):

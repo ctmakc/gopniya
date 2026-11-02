@@ -176,3 +176,38 @@ def test_ner_spans_are_merged():
     text = "Her brother Mahesh brought her to the PHC."
     red, spans, _, _ = asyncio.run(RedactionAgent(llm=None, ner=ner).deidentify(text))
     assert "Mahesh" not in red
+
+
+# ------------------------------------------------------------------ v2 cues (added after held-out v1 error analysis)
+def test_age_sex_cue_finds_bare_name():
+    assert ("PERSON", "Rakesh Prajapati") in types("Ni-kshay ID 31114707. Rakesh Prajapati, 27 M, cough for 3 weeks.")
+
+
+def test_role_cue_without_colon():
+    assert ("PERSON", "Rajwant Kaur") in types("Escorted by ANM Rajwant Kaur to the FRU.")
+
+
+def test_lowercase_hinglish_kinship():
+    found = types("asha ne aaj fatima khan (pati imran khan) ke ghar visit kiya")
+    assert ("PERSON", "imran khan") in found
+
+
+def test_gram_unit_and_gram_stain_are_not_addresses():
+    for text in ("Sputum gram stain negative.", "आयरन 100 मि.ग्रा., प्रोटीन 2 ग्राम दिन में दो बार", "Hb 9 ग्राम/डेसीलीटर"):
+        assert not any(s.type == "ADDRESS" for s in detect(text)), text
+
+
+def test_address_ends_at_pin_code():
+    text = "resident of Vill. Bariyarpur, Post Lakhanpur, Distt. Hisar, Haryana 125222, who presented with fever"
+    addr = [s for s in detect(text) if s.type == "ADDRESS"]
+    assert addr and addr[0].text.endswith("125222") and "presented" not in addr[0].text
+
+
+def test_facility_named_after_person_is_kept():
+    text = "Referred to Dr. Ram Manohar Lohia Hospital, New Delhi."
+    assert "Ram Manohar Lohia Hospital" in Vault().redact(text, detect(text))
+
+
+def test_flexible_label_separators():
+    found = types("DOB:- 10/07/1995\nNi-kshay ID - 16409322\nजन्म तिथि:- ०४/०७/१९९९")
+    assert ("DOB", "10/07/1995") in found and ("MRN", "16409322") in found and ("DOB", "०४/०७/१९९९") in found
