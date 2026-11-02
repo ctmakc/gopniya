@@ -1,0 +1,81 @@
+{
+  "notes": 150,
+  "gold_entities": 1273,
+  "protection_recall": 1.0,
+  "precision": 1.0,
+  "predicted_spans": 1273,
+  "false_alarms": 0,
+  "leak_free_notes": 1.0,
+  "seconds_total": 0.14,
+  "ms_per_note": 0.94,
+  "per_type": {
+    "AADHAAR": {
+      "gold": 100,
+      "protected": 100,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_ADDRESS": {
+      "gold": 50,
+      "protected": 50,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ABHA_NUMBER": {
+      "gold": 50,
+      "protected": 50,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "ADDRESS": {
+      "gold": 150,
+      "protected": 150,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "DOB": {
+      "gold": 50,
+      "protected": 50,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "MRN": {
+      "gold": 100,
+      "protected": 100,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PAN": {
+      "gold": 23,
+      "protected": 23,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PERSON": {
+      "gold": 550,
+      "protected": 550,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PHONE": {
+      "gold": 150,
+      "protected": 150,
+      "partial": 0,
+      "recall": 1.0
+    },
+    "PINCODE": {
+      "gold": 50,
+      "protected": 50,
+      "partial": 0,
+      "recall": 1.0
+    }
+  },
+  "false_alarms_by_type": {},
+  "leaks": [],
+  "false_alarm_examples": [],
+  "config": {
+    "set": "data/dev.jsonl",
+    "ner": null,
+    "lang": null
+  }
+}

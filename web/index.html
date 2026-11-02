@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gopniya — clinical note redaction</title>
+<meta name="description" content="Open-source agent that removes Aadhaar, ABHA, phone numbers, names and addresses from Indian clinical notes inside the browser before a cloud model sees them, then restores the values in the answer.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E4EAF2'/%3E%3Crect x='5' y='13' width='22' height='7' fill='%231E2A5A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wdth,wght@75..100,400..700&family=Anek+Latin:wdth,wght@75..100,400..700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E4EAF2; --sheet:#F3F6FA; --ink:#1E2A5A; --ink-2:#4A5680; --rule:#B9C4D8;
+  --stamp:#B8322A; --bar:#1E2A5A; --ok:#2F6B4F;
+  --sans:"Anek Latin","Anek Devanagari",system-ui,sans-serif;
+  --mono:"Spline Sans Mono",ui-monospace,monospace;
+  --r:2px; --s1:4px; --s2:8px; --s3:16px; --s4:24px; --s5:40px; --s6:64px;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141A2E; --sheet:#1B2340; --ink:#DCE3F2; --ink-2:#A3AFCB; --rule:#36426A;
+    --stamp:#E0675D; --bar:#DCE3F2; --ok:#7CC4A0;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141A2E; --sheet:#1B2340; --ink:#DCE3F2; --ink-2:#A3AFCB; --rule:#36426A;
+  --stamp:#E0675D; --bar:#DCE3F2; --ok:#7CC4A0;
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5;
+  -webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:3px}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--s4)}
+header.mast{padding:var(--s5) 0 var(--s4);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s5);align-items:end;
+  border-bottom:1px solid var(--rule)}
+.word{font-weight:700;font-stretch:75%;font-size:clamp(56px,8vw,112px);line-height:.9;letter-spacing:-.02em;margin:0}
+.word .hi{font-family:"Anek Devanagari",var(--sans);font-weight:500;font-size:.42em;letter-spacing:0;color:var(--ink-2);margin-left:.2em;vertical-align:.55em}
+.thesis{font-size:clamp(18px,1.6vw,21px);line-height:1.45;margin:0;max-width:52ch;text-wrap:pretty}
+.runtime{font-family:var(--mono);font-size:13px;color:var(--ink-2);margin-top:var(--s3)}
+.runtime b{font-weight:500;color:var(--ink)}
+
+.slip{display:grid;grid-template-columns:minmax(0,1fr) 210px minmax(0,1fr);gap:0;margin:var(--s5) 0 var(--s6)}
+.side{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--r);padding:var(--s4);min-width:0;box-shadow:2px 2px 0 var(--rule)}
+.side h2{font-size:13px;font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin:0 0 var(--s3);color:var(--ink-2);display:flex;justify-content:space-between;gap:var(--s2)}
+.side h3{font-size:15px;font-weight:600;margin:var(--s4) 0 var(--s2);font-stretch:90%}
+.tabs{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s3)}
+.tab{font:inherit;font-size:15px;background:transparent;color:var(--ink);border:1px solid var(--rule);border-radius:var(--r);padding:6px 12px;cursor:pointer;
+  transition:background .18s var(--ease),border-color .18s var(--ease)}
+.tab:hover{border-color:var(--ink-2)}
+.tab[aria-pressed="true"]{background:var(--ink);color:var(--sheet);border-color:var(--ink)}
+.note{font-family:var(--sans);font-size:16px;line-height:1.6;white-space:pre-wrap;word-break:break-word;min-height:320px;margin:0}
+textarea.note{width:100%;border:1px dashed var(--ink-2);background:var(--paper);color:var(--ink);padding:var(--s3);border-radius:var(--r);resize:vertical}
+.marked{padding:var(--s3);border:1px solid transparent}
+.pii{background-image:linear-gradient(var(--bar),var(--bar));background-repeat:no-repeat;background-size:0% 100%;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 2px;border-radius:var(--r);
+  transition:background-size .28s var(--ease),color .12s linear .14s}
+.pii.on{background-size:100% 100%;color:var(--bar)}
+.pii.done{background-size:100% 100%;color:var(--sheet);font-family:var(--mono);font-size:13px;transition:none}
+.row{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center;margin-top:var(--s3)}
+label.sel{font-size:15px;color:var(--ink-2)}
+select{font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:6px 8px;min-height:40px}
+.btn{font:inherit;font-weight:600;font-size:16px;background:var(--ink);color:var(--sheet);border:0;border-radius:var(--r);padding:10px 18px;min-height:44px;cursor:pointer;
+  transition:transform .12s var(--ease),opacity .2s}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:2px 2px 0 var(--stamp)}
+.btn:disabled{opacity:.45;cursor:wait;transform:none;box-shadow:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.counts{font-family:var(--mono);font-size:12px;color:var(--ink-2);margin-top:var(--s2)}
+pre.out{font-family:var(--sans);font-size:15.5px;line-height:1.55;white-space:pre-wrap;word-break:break-word;margin:0;padding:var(--s3);background:var(--paper);border-radius:var(--r);min-height:72px}
+pre.out .ph{font-family:var(--mono);font-size:12.5px;background:var(--bar);color:var(--sheet);padding:1px 4px;border-radius:var(--r)}
+pre.out strong{font-weight:650}
+pre.out .rv{border-bottom:2px solid var(--ok)}
+.empty{color:var(--ink-2);font-style:italic}
+
+/* the perimeter */
+.perimeter{position:relative;padding:var(--s4) var(--s3)}
+.perimeter::before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:2px dashed var(--stamp);opacity:.75}
+.perimeter .lbl{position:relative;display:block;margin:0 auto var(--s3);width:max-content;background:var(--paper);color:var(--stamp);font-family:var(--mono);font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;padding:2px 6px;border:1px solid var(--stamp);border-radius:var(--r)}
+ol.steps{list-style:none;margin:0;padding:0;position:relative;display:flex;flex-direction:column;gap:var(--s2)}
+ol.steps li{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:6px 8px;font-size:13px;line-height:1.35;
+  animation:stamp .16s var(--ease) both;animation-delay:calc(var(--i) * 90ms)}
+ol.steps li b{display:block;font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+ol.steps li.cross{border-color:var(--stamp)}
+ol.steps li.cross b{color:var(--stamp)}
+ol.steps li.bad{border-color:var(--stamp);background:var(--sheet)}
+ol.steps li .ms{font-family:var(--mono);font-size:11px;color:var(--ink-2)}
+@keyframes stamp{from{transform:scale(1.06);opacity:0}to{transform:none;opacity:1}}
+.sent{display:inline-block;transform:rotate(-4deg);border:2px solid var(--stamp);color:var(--stamp);font-family:var(--mono);font-size:11px;letter-spacing:.12em;padding:1px 6px;margin-left:var(--s2)}
+
+.facts{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:var(--s5);padding:var(--s5) 0;border-top:1px solid var(--rule)}
+.facts h2{font-size:clamp(28px,3vw,40px);font-stretch:80%;line-height:1.05;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.tw{overflow-x:auto;max-width:100%}
+table.m{border-collapse:collapse;width:100%;font-size:15px}
+table.m th,table.m td{text-align:left;padding:8px 10px 8px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+table.m th{font-family:var(--mono);font-weight:500;font-size:12px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em}
+table.m td.n{font-family:var(--mono);font-size:14px;white-space:nowrap}
+.fine{font-size:15px;color:var(--ink-2);max-width:72ch}
+.fine p{margin:0 0 var(--s2)}
+footer{border-top:1px solid var(--rule);padding:var(--s4) 0 var(--s5);display:flex;flex-wrap:wrap;gap:var(--s3) var(--s5);align-items:center;justify-content:space-between;font-size:15px;color:var(--ink-2)}
+.credit{display:inline-flex;align-items:center;gap:var(--s2);text-decoration:none}
+.credit img{height:36px;width:auto;background:rgba(255,255,255,.9);padding:3px;border-radius:var(--r)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+@media (max-width:1100px){
+  .slip{grid-template-columns:minmax(0,1fr)}
+  .perimeter{padding:var(--s4) 0}
+  .perimeter::before{left:0;right:0;top:50%;bottom:auto;border-left:0;border-top:2px dashed var(--stamp)}
+  ol.steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  header.mast,.facts{grid-template-columns:minmax(0,1fr);gap:var(--s3)}
+  .side{padding:var(--s3)}
+  .note{min-height:220px}
+  .side h2 span+span{display:none}
+  table.m{font-size:14px;min-width:560px}
+}
+@media (prefers-reduced-motion:reduce){
+  .pii{transition:none}
+  ol.steps li{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <h1 class="word">Gopniya<span class="hi" lang="hi">गोपनीय</span></h1>
+    </div>
+    <div>
+      <p class="thesis">Clinics want cloud AI to write discharge advice in Hindi. The note carries Aadhaar, ABHA and phone numbers, names and home addresses. This agent strips them inside your browser, sends the cloud model only placeholders, checks its answer, and puts the real values back on your side.</p>
+      <div class="runtime" id="runtime" aria-live="polite">Loading the local Python runtime…</div>
+    </div>
+  </header>
+
+  <main class="slip">
+    <section class="side clinic" aria-labelledby="h-clinic">
+      <h2 id="h-clinic"><span>Clinic side · this browser</span><span id="where">raw text stays here</span></h2>
+      <div class="tabs" role="group" aria-label="Sample notes" id="tabs"></div>
+      <div id="noteWrap">
+        <pre class="note marked" id="marked" aria-label="Note with detected identifiers marked"></pre>
+        <textarea class="note" id="note" spellcheck="false" aria-label="Clinical note" hidden></textarea>
+      </div>
+      <div class="row">
+        <button class="btn ghost" id="edit" type="button">Edit note</button>
+        <label class="sel" for="task">Task</label>
+        <select id="task">
+          <option value="summary_hi">Patient summary in Hindi</option>
+          <option value="summary_en">Patient summary in English</option>
+          <option value="referral">Referral letter</option>
+          <option value="extract">Structured JSON</option>
+        </select>
+        <button class="btn" id="run" type="button" disabled>Run agent</button>
+      </div>
+      <div class="counts" id="counts"></div>
+      <h3>Answer, restored on the clinic side</h3>
+      <pre class="out" id="restored"><span class="empty">Run the agent to see the answer with the real values back in place.</span></pre>
+    </section>
+
+    <div class="perimeter" aria-label="Agent steps">
+      <span class="lbl">perimeter</span>
+      <ol class="steps" id="steps"></ol>
+    </div>
+
+    <section class="side cloud" aria-labelledby="h-cloud">
+      <h2 id="h-cloud"><span>Cloud side · Workers AI</span><span id="model">gemma-4-26b</span></h2>
+      <h3 style="margin-top:0">What the cloud model receives<span class="sent" id="sentStamp" hidden>SENT</span></h3>
+      <pre class="out" id="sent"></pre>
+      <h3>What the cloud model returns</h3>
+      <pre class="out" id="answerRed"><span class="empty">Nothing sent yet.</span></pre>
+    </section>
+  </main>
+
+  <section class="facts" aria-labelledby="h-facts">
+    <h2 id="h-facts">Measured on synthetic notes. No field deployment yet.</h2>
+    <div>
+      <div class="tw"><table class="m" id="metrics"><tr><td class="empty">Loading measurements…</td></tr></table></div>
+      <div class="fine" style="margin-top:var(--s3)">
+        <p>Protection recall counts an identifier as protected only when every character of it is covered. Precision counts a redaction as correct when it overlaps a labelled identifier.</p>
+        <p>All test notes are synthetic and generated from templates. The held-out set was written by a separate author who did not see the detection code. Real notes will be messier; the numbers above are an upper bound until a clinic pilot measures them on real text.</p>
+        <p>Redaction runs in your browser through Pyodide. Only the redacted note crosses the perimeter. The demo endpoint re-checks for identifiers and refuses text that still contains them, caches answers, and stops after a small daily number of model calls.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>MIT licence · <a href="https://github.com/" id="repoLink">source code</a> · built for Code for a Billion 2026 (Health)</span>
+    <a class="credit" href="https://mmix.ua/" rel="noopener">Development &amp; promotion — <img src="mmix-logo.png" alt="MMIX — Marketing Mix" width="37" height="36"></a>
+  </footer>
+</div>
+<script src="samples.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

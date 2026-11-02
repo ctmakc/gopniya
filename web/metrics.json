@@ -1,0 +1,13 @@
+{
+  "rows": [
+    {
+      "label": "Dev set (used for tuning) · rules only",
+      "notes": 150,
+      "gold": 1273,
+      "recall": 1.0,
+      "precision": 1.0,
+      "leak_free": 1.0,
+      "source": "eval/results/dev_rules.json"
+    }
+  ]
+}

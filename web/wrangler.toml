@@ -1,0 +1,10 @@
+name = "gopniya"
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "."
+
+[ai]
+binding = "AI"
+
+[[kv_namespaces]]
+binding = "DEMO_KV"
+id = "0bf18160dbd1460a870f1893a58c02bf"
