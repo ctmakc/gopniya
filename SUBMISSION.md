@@ -12,7 +12,7 @@ Fields below follow `.github/ISSUE_TEMPLATE/submission.yml` in that repository, 
 Gopniya (गोपनीय)
 
 ### Team members (names + GitHub handles)
-TO FILL BY PUBLISHER: name (@github-handle)
+Maksym Stepanenko (@ctmakc)
 
 ### Problem statement
 Clinics, ASHA programmes and district hospitals in India want cloud AI to turn clinical notes into
@@ -43,14 +43,22 @@ in English, Hindi and Hinglish before they reach a cloud model, and restores the
 - CLI with four backends (demo endpoint, Workers AI, Ollama for fully offline use, Gemini CLI),
   unit tests, and a reproducible evaluation on two synthetic sets.
 
-How we used AgentFoundry (AF): TO FILL BY PUBLISHER, truthfully. The code was written outside
-AgentFoundry with Claude Code. See the note at the end of this file before ticking the AF checkbox.
+How we used AgentFoundry (AF): the core agent was first written with Claude Code (commits up to
+`1a69838`). We then opened the repository in the AgentFoundry desktop IDE (Linux, v0.1.80) and built
+the next feature there on the branch `agentfoundry`: detection of passport numbers, driving licence
+numbers and PM-JAY/Ayushman IDs. AF's SMART-Code agent read the codebase and wrote the detectors,
+guard re-scan and tests (26 tool calls, each approved in Confirm mode); tests and the evaluation ran
+in the AF terminal. The evaluation caught a regression in the agent's first version (207 false
+alarms on vaccine kit lot numbers, precision 98.6% → 88.6%); SMART-Code fixed most of it, and after
+the free Cloud quota ran out the last fix and three regression tests were written by hand.
+Result: 34 tests pass, held-out precision back to 98.6%. Transcript, approval log and screenshots:
+`docs/AGENTFOUNDRY.md` and `docs/agentfoundry-proof/`.
 
 ### GitHub repository URL
-TO FILL BY PUBLISHER: https://github.com/<org-or-user>/gopniya
+https://github.com/ctmakc/gopniya
 
 ### Demo URL (live app or video)
-https://gopniya.pages.dev (live). Video: TO FILL BY PUBLISHER after uploading `video/gopniya-demo.mp4` (YouTube/Drive link).
+https://gopniya.pages.dev (live). Video (2:32): https://github.com/ctmakc/gopniya/raw/main/video/gopniya-demo.mp4
 
 ### Scale & severity of the problem
 - Scale: 93.95 crore ABHA numbers issued and over 105 crore digital health records linked as of
@@ -92,31 +100,10 @@ step is a pilot with a clinic or health programme on consented notes, with a per
 Health
 
 ### Contact email
-TO FILL BY PUBLISHER
+maksym@innovacg.com
 
 ### Confirmations
-- [ ] Built using AgentFoundry (AF), the official IDE — **see note below; do not tick unless true**
-- [x] Our repository is public and includes a README with setup steps (after the repo is published)
-- [x] The demo link works and is accessible to judges (https://gopniya.pages.dev, checked 1 Nov 2026)
+- [x] Built using AgentFoundry (AF), the official IDE (see `docs/AGENTFOUNDRY.md`)
+- [x] Our repository is public and includes a README with setup steps
+- [x] The demo link works and is accessible to judges (https://gopniya.pages.dev, checked 4 Nov 2026)
 
----
-
-## Note for the publisher: the AgentFoundry requirement
-
-- The form's first confirmation, "Built using AgentFoundry (AF), the official IDE", is marked
-  `required: true`, and JUDGING.md lists "Built using AgentFoundry (AF)" under Eligibility.
-  The landing page says "Every project is built in the AgentFoundry.me IDE".
-- Participants asked organisers whether projects built elsewhere qualify (Discussions #13, #18, #30
-  in karlmehta/code-for-a-billion). As of 1 Nov 2026 we saw no organiser answer in those threads.
-- AgentFoundry sign-up (https://agentfoundry.me/signup) asks for a work e-mail and a password, sends
-  a confirmation link, and then offers a desktop IDE download (Mac, Windows, Linux). The page says
-  "Editor + Developer mode — free forever. No credit card. SMART-Code free for 3 months" (1,000
-  credits/month, then $14.99/month, or bring your own key, which it calls always free).
-- Honest path: sign up, open this repository in AgentFoundry, do real work there (for example run
-  the tests and the evaluation, make and commit a change), then describe exactly that in "What you
-  built" and tick the box. Alternatively ask in Discussions first.
-- Separately, the CFI registration form (https://codeforindia.org/hackathon/register) asks for first
-  and last name, e-mail, mobile with country code, country, city, state, PIN/zip, impact area and a
-  problem statement.
-- The FAQ says projects are released open source (Apache-2.0 or MIT) "to the Code for India GitHub
-  organization". This repository is MIT, so a transfer or fork into that org is possible later.

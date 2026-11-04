@@ -161,6 +161,13 @@ calls a day. Model: `@cf/google/gemma-4-26b-a4b-it` with thinking disabled.
 2. Marathi, Tamil, Bengali and Telugu cues; Urdu script.
 3. A browser extension mode so a clinician can use any chatbot with the guard in front.
 
+## Built in AgentFoundry
+
+The passport, driving licence and PM-JAY detectors were built in the AgentFoundry IDE with its
+SMART-Code agent; the core agent before that was written with Claude Code. What was done where,
+the agent transcript and screenshots: [docs/AGENTFOUNDRY.md](docs/AGENTFOUNDRY.md). The live demo
+still runs the engine from before these three detectors; `scripts/build_web.sh` rebuilds it.
+
 ## Licence and credits
 
 MIT. Detection, vault and merge ideas are adapted from RedactGate by the same authors.
