@@ -58,7 +58,7 @@ Result: 34 tests pass, held-out precision back to 98.6%. Transcript, approval lo
 https://github.com/ctmakc/gopniya
 
 ### Demo URL (live app or video)
-https://gopniya.pages.dev (live). Video (2:32): https://github.com/ctmakc/gopniya/raw/main/video/gopniya-demo.mp4
+https://gopniya.pages.dev (live). Video (2:32): https://github.com/ctmakc/gopniya/blob/main/video/gopniya-demo.mp4
 
 ### Scale & severity of the problem
 - Scale: 93.95 crore ABHA numbers issued and over 105 crore digital health records linked as of
