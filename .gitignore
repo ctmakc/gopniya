@@ -7,3 +7,4 @@ web/py/
 web/.wrangler/
 video/raw/
 .wrangler/
+.codenow/

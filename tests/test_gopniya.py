@@ -211,3 +211,51 @@ def test_facility_named_after_person_is_kept():
 def test_flexible_label_separators():
     found = types("DOB:- 10/07/1995\nNi-kshay ID - 16409322\nजन्म तिथि:- ०४/०७/१९९९")
     assert ("DOB", "10/07/1995") in found and ("MRN", "16409322") in found and ("DOB", "०४/०७/१९९९") in found
+
+
+# ------------------------------------------------------------------ new identifier tests
+
+def test_passport_labelled_english_and_hindi():
+    assert any(s.type == "PASSPORT" for s in detect("Passport: K1234567"))
+    assert any(s.type == "PASSPORT" for s in detect("पासपोर्ट: K1234567"))
+
+
+def test_driving_licence_labelled_and_unlabelled():
+    # labelled forms
+    assert any(s.type == "DRIVING_LICENCE" for s in detect("DL: MH12 20110012345"))
+    assert any(s.type == "DRIVING_LICENCE" for s in detect("Driving Licence: DL-0420110149646"))
+    assert any(s.type == "DRIVING_LICENCE" for s in detect("ड्राइविंग लाइसेंस: DL-0420110149646"))
+    # unlabelled when unambiguous
+    assert any(s.type == "DRIVING_LICENCE" for s in detect("Seen DL MH12 20110012345"))
+    assert any(s.type == "DRIVING_LICENCE" for s in detect("MH12 20110012345 was presented"))
+
+
+def test_pmjay_labelled():
+    assert any(s.type == "PMJAY" for s in detect("PM-JAY: ABCD123456"))
+    assert any(s.type == "PMJAY" for s in detect("Ayushman ID: XYZ987654321"))
+    assert any(s.type == "PMJAY" for s in detect("पीएम-जय: ABCD123456"))
+
+
+def test_negative_similar_tokens_not_redacted():
+    # 'Tab K1234567' — a medicine with code-like token should not be treated as passport
+    assert not any(s.type == "PASSPORT" for s in detect("Patient given Tab K1234567 1 OD"))
+    # lab/dosage numbers should not be caught as DL/PMJAY
+    assert not any(s.type in {"DRIVING_LICENCE", "PMJAY"} for s in detect("Dose 100 mg BD. Hb 6.8 g/dl."))
+
+
+def test_kit_lot_number_is_not_a_passport():
+    text = "Td-1 given 16.05.2026 (Kit Lot B7894686), Td-2 after 4 weeks."
+    assert not any(s.type == "PASSPORT" for s in detect(text))
+    assert not any(f.span.type == "PASSPORT" for f in scan(text, []))
+
+
+def test_driving_licence_needs_real_state_code():
+    text = "Ref ZZ12 20110012345"
+    assert not any(s.type == "DRIVING_LICENCE" for s in detect(text))
+    assert not any(f.span.type == "DRIVING_LICENCE" for f in scan(text, []))
+
+
+def test_ayushman_word_is_not_an_id():
+    text = "Ayushman cardholder since 2021, admitted under PM-JAY package."
+    assert not any(s.type == "PMJAY" for s in detect(text))
+    assert not any(f.span.type == "PMJAY" for f in scan(text, []))
