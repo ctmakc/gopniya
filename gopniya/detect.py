@@ -62,6 +62,9 @@ ENTITY_TYPES = (
     "DOB",
     "PINCODE",
     "ID_NUMBER",
+    "PASSPORT",
+    "DRIVING_LICENCE",
+    "PMJAY",
 )
 
 # ---------------------------------------------------------------- numeric identifiers
@@ -116,6 +119,22 @@ _DOB_RE = re.compile(
     re.IGNORECASE,
 )
 _PIN_LABEL_RE = re.compile(r"(?:PIN|Pin\s*code|Pincode|पिन(?:\s*कोड)?)(?:[ \t]*(?:[:=|\-–.][ \t]*){1,3}|\s+)(\d{6})(?!\d)", re.IGNORECASE)
+_PASSPORT_LABEL_RE = re.compile(
+    r"(?:Passport|पासपोर्ट)(?:\s*(?:no\.?|number|नंबर|संख्या|नं\.?))?"
+    r"(?:[ \t]*(?:[:=|\-–.#][ \t]*){1,3}|\s+)([A-Z]\d{7})",
+    re.IGNORECASE,
+)
+_DL_LABEL_RE = re.compile(
+    r"(?:DL|Driving\s+Licence|Driving\s+License|ड्राइविंग\s+लाइसेंस)(?:\s*(?:no\.?|number|नंबर|संख्या|नं\.?))?"
+    r"(?:[ \t]*(?:[:=|\-–.#][ \t]*){1,3}|\s+)([A-Z]{2}[ \-]?\d{2}[ \-]?\d{11})",
+    re.IGNORECASE,
+)
+_DL_UNLAB_RE = re.compile(r"(?<![A-Za-z0-9])[A-Z]{2}[ \-]?\d{2}[ \-]?\d{11}(?![A-Za-z0-9])")
+_PMJAY_LABEL_RE = re.compile(
+    r"(?:PMJAY|PM-JAY|PM\s*JAY|Ayushman|आयुष्मान|पीएम-?जय|अयुष्मान)(?:\s*(?:card|no\.?|number|ID|कार्ड|नंबर|संख्या|नं\.?))?"
+    r"(?:[ \t]*(?:[:=|\-–.#][ \t]*){1,3}|\s+)([A-Z0-9]{10,})",
+    re.IGNORECASE,
+)
 
 # ---------------------------------------------------------------- names
 
@@ -512,6 +531,25 @@ def _numeric_spans(text: str) -> list[Span]:
     for m in _PIN_LABEL_RE.finditer(t):
         s, e = _group_or_all(m)
         add(s, e, "PINCODE", 0.9)
+    # Passport (labelled only)
+    for m in _PASSPORT_LABEL_RE.finditer(t):
+        s, e = _group_or_all(m)
+        if v.passport_valid(m.group(1)):
+            add(s, e, "PASSPORT", 0.92)
+    # Driving licence: labelled preferred, unlabelled when format unambiguous
+    for m in _DL_LABEL_RE.finditer(t):
+        s, e = _group_or_all(m)
+        if v.driving_licence_valid(m.group(1)):
+            add(s, e, "DRIVING_LICENCE", 0.92)
+    for m in _DL_UNLAB_RE.finditer(t):
+        # avoid matching MRN-like tokens (which are alnum) by requiring at least 11 digits present
+        if v.driving_licence_valid(m.group(0)):
+            add(m.start(), m.end(), "DRIVING_LICENCE", 0.9)
+    # PM-JAY / Ayushman (labelled only)
+    for m in _PMJAY_LABEL_RE.finditer(t):
+        s, e = _group_or_all(m)
+        if v.pmjay_valid(m.group(1)):
+            add(s, e, "PMJAY", 0.9)
     return out
 
 
@@ -519,7 +557,8 @@ def _numeric_spans(text: str) -> list[Span]:
 
 _TYPE_PRIORITY = {
     # structured identifiers beat free-text spans when they overlap
-    "AADHAAR": 9, "ABHA_NUMBER": 9, "ABHA_ADDRESS": 9, "PAN": 8, "VOTER_ID": 7, "EMAIL": 8,
+    "AADHAAR": 9, "ABHA_NUMBER": 9, "ABHA_ADDRESS": 9, "PASSPORT": 9, "PAN": 8, "DRIVING_LICENCE": 8,
+    "VOTER_ID": 7, "EMAIL": 8, "PMJAY": 7,
     "PHONE": 7, "MRN": 6, "ID_NUMBER": 5, "DOB": 6, "PINCODE": 5, "PERSON": 4, "ADDRESS": 3,
 }
 

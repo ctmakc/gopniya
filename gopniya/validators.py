@@ -94,3 +94,39 @@ def abha_number_valid(s: str) -> bool:
 def pincode_valid(s: str) -> bool:
     d = digits_only(s)
     return len(d) == 6 and d.isdigit() and d[0] != "0"
+
+
+# Indian state / union-territory codes used as DL prefixes
+_STATE_CODES = {
+    "AN", "AP", "AR", "AS", "BR", "CG", "CH", "DD", "DL", "DN", "GA", "GJ", "HP", "HR", "JH",
+    "JK", "KA", "KL", "LA", "LD", "MH", "ML", "MN", "MP", "MZ", "NL", "OD", "OR", "PB", "PY",
+    "RJ", "SK", "TN", "TR", "TS", "UK", "UP", "WB",
+}
+
+
+def passport_valid(s: str) -> bool:
+    """Indian passport number: one uppercase letter + 7 digits"""
+    t = _SEP_RE.sub("", s).upper()
+    return bool(re.fullmatch(r"[A-Z]\d{7}", t))
+
+
+def driving_licence_valid(s: str) -> bool:
+    """Driving licence: state code (2 letters) + optional separator + 2 digits (RTO) + optional separator + 11 digits.
+    The state code must be a real Indian state/union-territory code above.
+    """
+    t = _SEP_RE.sub("", s).upper()
+    if len(t) < 2 or not t[:2].isalpha():
+        return False
+    if t[:2] not in _STATE_CODES:
+        return False
+    return bool(re.fullmatch(r"[A-Z]{2}\d{13}", t))
+
+
+def pmjay_valid(s: str) -> bool:
+    """PM-JAY / Ayushman IDs: accept alphanumeric strings of length >=10 (labelled only) and at least 4 digits."""
+    t = _SEP_RE.sub("", s).upper()
+    if not re.fullmatch(r"[A-Z0-9]{10,}", t):
+        return False
+    if sum(c.isdigit() for c in t) < 4:
+        return False
+    return True
